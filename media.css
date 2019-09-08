@@ -1,0 +1,61 @@
+/* 799px and below */
+@media screen and (max-width: 799px) {
+    #daiLy {
+        display: none;
+    }
+
+    .header .headerUpper {
+        justify-content: space-between;
+    }
+
+    #hotLine, #diemGiaoDich {
+        border: none;
+    }
+    .hamburger {
+        display: flex;
+        
+    }
+    .navigationButton {
+        display: none;
+    }
+    .header .headerLower {
+        align-items: center;
+    }
+    .header{
+        background-image: none;
+    }
+}
+
+/* 800px and above */
+@media screen and (min-width: 800px) {
+    #daiLy {
+        display: flex;
+    }
+
+    .header .headerUpper {
+        justify-content: flex-end;
+    }
+
+    #hotLine {
+        border: 1px solid #707070;
+        border-right-style: dashed;
+        border-bottom-left-radius: 5px;
+    }
+
+    #diemGiaoDich {
+        border: 1px solid #707070;
+        border-left: none;
+        border-bottom-right-radius: 5px;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navigationButton {
+        display: flex;
+    }
+    .header .headerLower {
+        align-items: flex-end;
+    }
+    .header {
+        background-image: url("./assets/header_pattern.png");
+}
