@@ -1,5 +1,6 @@
 
 body {
+    font-size: 14px;
     max-width: 1366px;
     margin: auto !important;
     display: flex;
@@ -68,7 +69,6 @@ display: flex;
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
     color: #6B8CAE;
     border: 1px solid #0081B5;
     border-radius: 25px;
@@ -163,4 +163,70 @@ margin-right: 0px;
 }
 #pluginFacebook {
     margin-right: 20px;
+}
+.searchTable {
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0;
+}
+
+.titleRow {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.title {
+    border: 1px solid #707070;
+    border-radius: 5px;
+    background-color: #0081B5;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 100px;
+}
+
+.rowHalf {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.oneThird {
+    display: flex;
+    width: 33.33%;
+    justify-content: flex-end;
+    padding: 0 10px;
+}
+.twoThird {
+    display: flex;
+    width: 66.67%;
+    padding: 0 10px;
+}
+
+.tableButton {
+    color: white;
+    background-color: #677897;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableButton img {
+    padding-right: 10px;
+}
+
+.ui.input.fluid {
+    width: 100%;
 }
