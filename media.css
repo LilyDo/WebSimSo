@@ -1,9 +1,6 @@
 /* 799px and below */
 @media screen and (max-width: 799px) {
-    #daiLy {
-        display: none;
-    }
-
+   
     .header .headerUpper {
         justify-content: space-between;
     }
@@ -18,9 +15,6 @@
     .navigationButton {
         display: none;
     }
-    .header .headerLower {
-        align-items: center;
-    }
     .header{
         background-image: none;
     }
@@ -28,10 +22,7 @@
 
 /* 800px and above */
 @media screen and (min-width: 800px) {
-    #daiLy {
-        display: flex;
-    }
-
+    
     .header .headerUpper {
         justify-content: flex-end;
     }
@@ -55,6 +46,7 @@
     }
     .header .headerLower {
         align-items: flex-end;
+
     }
     .header {
         background-image: url("./assets/header_pattern.png");
