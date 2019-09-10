@@ -1,5 +1,6 @@
 
 body {
+    font-family: 'Montserrat';
     font-size: 14px;
     max-width: 1366px;
     margin: auto !important;
@@ -64,10 +65,10 @@ display: flex;
 }
 
 .navigationButton {
+    font-family: "Montserrat-Bold";
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-weight: bold;
     color: #6B8CAE;
     border: 1px solid #0081B5;
     border-radius: 25px;
@@ -122,15 +123,17 @@ margin-right: 0px;
     flex-direction: column;
 }
 .footerInfo div {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .footerLower {
     align-self: center;
     margin-bottom: 20px;
     font-size: 11px;
+    padding-top: 20px;
 }
 #thongTinLienHe {
+    font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height:25px;
     font-size: 17px;
@@ -139,6 +142,7 @@ margin-right: 0px;
     border-bottom: 1px solid #0081B5;
 }
 #congTy {
+    font-family: "Montserrat-SemiBold";
     font-size: 16px;
     color: #677897;
     margin-left: 37px;
@@ -153,6 +157,7 @@ margin-right: 0px;
 }
 
 #follow {
+    font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height:25px;
     font-size: 17px;
@@ -184,6 +189,7 @@ margin-right: 0px;
 }
 
 .title {
+    font-family: "Montserrat-SemiBold";
     border: 1px solid #707070;
     border-radius: 5px;
     background-color: #0081B5;
@@ -211,6 +217,7 @@ margin-right: 0px;
 }
 
 .tableButton {
+    font-family: "Montserrat-SemiBold";
     color: white;
     background-color: #677897;
     border: 1px solid #707070;
@@ -246,6 +253,7 @@ margin-right: 0px;
     background-color: #DA251D;
     color: white;
     padding: 15px 0;
+    font-family: "Montserrat-SemiBold";
 }
 
 .simTable tbody tr td {
