@@ -17,3 +17,8 @@
     font-family: 'Montserrat-ExtraLight';
     src: url('./Montserrat/Montserrat-ExtraLight.ttf')  format('truetype')
 } 
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('./Montserrat/Montserrat-Italic.ttf')  format('truetype')
+} 
