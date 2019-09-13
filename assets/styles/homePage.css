@@ -36,24 +36,26 @@ font-size: 15px;
     margin-bottom: 10px;
 }
  
-#headerHotLine {
+.headerHotLine {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
     padding-right: 40px;
     padding-left: 10px;
+    color: black;
 }
-#headerHotLine .text {
+.headerHotLine .text {
     padding-left: 5px;
 }
-#HeaderAddress {
+.HeaderAddress {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
     padding-right: 40px;
     padding-left: 40px;
+    color: black;
 }
 
 .headerLower {
@@ -80,11 +82,11 @@ font-size: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#simSoDep {
+.simSoDep {
     color: #ffffff;
     background-color: #0081B5;
 }
-#lienHe {
+.lienHe {
 margin-right: 0px;
 }
 
@@ -129,7 +131,7 @@ margin-right: 0px;
     padding: 40px 0 20px 0px;;
     font-size: 11px;
 }
-#thongTinLienHe {
+.thongTinLienHe {
     font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height:25px;
@@ -139,7 +141,7 @@ margin-right: 0px;
     margin-bottom: 5px;
     border-bottom: 1px solid #0081B5;
 }
-#congTy {
+.congTy {
     font-family: "Montserrat-SemiBold";
     font-size: 16px;
     color: #677897;
@@ -147,17 +149,17 @@ margin-right: 0px;
     margin-bottom: 5px;
 
 }
-#footerHotline, #footerAddress {
+.footerHotline, .footerAddress {
     display: flex;
     color: #B0B9CA;
     font-size: 16px;
     align-items: center;
 }
-#footerHotline .text, #footerAddress .text {
+.footerHotline .text, .footerAddress .text {
     padding-left: 15px;
 }
 
-#follow {
+.follow {
     font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height:25px;
@@ -166,7 +168,7 @@ margin-right: 0px;
     border-bottom: 1px solid #0081B5;
     margin-bottom: 20px;
 }
-#pluginFacebook {
+.pluginFacebook {
     margin-right: 20px;
 }
 .searchTable {

@@ -5,7 +5,7 @@
         justify-content: space-between;
     }
 
-    #hotLine, #HeaderAddress {
+    .hotLine, .HeaderAddress {
         border: none;
     }
     .hamburger {
@@ -27,13 +27,13 @@
         justify-content: flex-end;
     }
 
-    #headerHotLine {
+    .headerHotLine {
         border: 1px solid #707070;
         border-right-style: dashed;
         border-bottom-left-radius: 5px;
     }
 
-    #HeaderAddress {
+    .HeaderAddress {
         border: 1px solid #707070;
         border-left: none;
         border-bottom-right-radius: 5px;

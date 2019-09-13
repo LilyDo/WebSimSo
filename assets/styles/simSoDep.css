@@ -181,15 +181,17 @@ div.registerInfo {
 }
 
 .checkBox input[type=text] {
-width: 100%;
-background-color: #F5F3F3;
-margin: 5px 0px;
-border: 1px solid #F5F3F3;
-border-radius: 5px;
-line-height: 200%;
+    width: 100%;
+    background-color: #F5F3F3;
+    margin: 5px 0px;
+    border: 1px solid #F5F3F3;
+    border-radius: 5px;
+    line-height: 200%;
 }
-
-#name, #phone, .address, #id, #deliveryAddress {
+.checkBox input[type=checkbox] {
+    width: auto;
+}    
+.name, .phone, .address, .id, .deliveryAddress {
     font-family: Montserrat-SemiBold;
     font-size: 17px;
 }
@@ -217,7 +219,7 @@ line-height: 200%;
 }
 
 .mapContainer {
-    padding: 40px;
+    padding: 0 40px 40px 40px;
 }
 
 .mapContainer .title {
