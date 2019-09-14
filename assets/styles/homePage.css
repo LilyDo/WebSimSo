@@ -313,3 +313,71 @@ margin-right: 0px;
 .simTable .cart img {
     padding-right: 10px;
 }
+
+.pagination {
+    padding-top: 50px;
+    display: flex;
+    font-size: 12px;
+    font-family: "Montserrat" !important;
+}
+
+.paginationDiv {
+    flex: 1;
+}
+
+.paginationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginationButtons button {
+    font-family: "Montserrat" !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.paginationButtons .previous {
+    color: #0081B5;
+    border: 1px solid #0081B5;
+}
+
+.paginationButtons .previous img {
+    padding-right: 5px;
+}
+
+.paginationButtons .next {
+    background-color: #0081B5;
+    color: white;
+    border: 1px solid #0081B5;
+}
+
+.paginationButtons .next img {
+    padding-left: 5px;
+}
+
+.pageNumbers {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.pageNumbers input[type=text] {
+    font-family: "Montserrat" !important;
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #707070;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.pageNumbers img {
+    padding-left: 5px;
+}
