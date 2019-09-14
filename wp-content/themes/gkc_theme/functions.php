@@ -50,6 +50,40 @@ function sendMail($var = array()){
   }
 }
 
+function serializeData($value=[])
+{
+  $data = explode(',', $value);
+  $response = '';
+  if (is_array($data)) {
+    $response = serialize($data);
+  }
+  else
+    $response = $data;
+
+  return $response;
+}
+
+function processPage($page, $dataGET = []){
+    $response = '?';
+    if ($dataGET){
+        $havePaging = 0;
+        foreach ($dataGET as $key => $item) {
+            if ($key == 'paging'){
+                $response .= $key . '=' . $page . '&';
+                $havePaging = 1;
+            }
+            else
+                $response .= $key . '=' . $item . '&';
+        }
+        if (!$havePaging)
+            $response .= 'paging=' . $page;
+    }
+    else
+        $response .= 'paging=' . $page;
+
+    return $response;
+}
+
 //Ajax demo
 add_action( 'wp_ajax_getDistrict', 'getDistrictWithProvince' );
 add_action( 'wp_ajax_nopriv_getDistrict', 'getDistrictWithProvince' );
