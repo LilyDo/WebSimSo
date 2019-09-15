@@ -20,16 +20,16 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'bansim' );
+define( 'DB_NAME', 'websim_db' );
 
 /** Username của database */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'websim_dbu' );
 
 /** Mật khẩu của database */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'OEeNskKsAA' );
 
 /** Hostname của database */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'vps-dev.giakiemcoder.com' );
 
 /** Database charset sử dụng để tạo bảng database. */
 define( 'DB_CHARSET', 'utf8mb4' );
