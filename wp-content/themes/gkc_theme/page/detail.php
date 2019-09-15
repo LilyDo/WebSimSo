@@ -33,7 +33,7 @@ get_header();
                 </tr>
                 <tr>
                     <td>Loại số</td>
-                    <td><?= strip_tags(get_the_term_list(get_the_ID(), "tbtypes", "", ", ", "")) ?></td>
+                    <td><?= strip_tags(get_the_term_list(get_the_ID(), "types", "", ", ", "")) ?></td>
                 </tr>
                 <tr>
                     <td>Giá sim</td>
