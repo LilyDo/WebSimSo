@@ -57,7 +57,7 @@ body {
 
 .headerLower {
     margin-bottom: 10px;
-    padding-top: 20px;
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
     margin-right: 40px;
@@ -132,7 +132,6 @@ body {
     font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height: 25px;
-    font-size: 17px;
     color: #0081B5;
     margin-left: 37px;
     margin-bottom: 5px;
@@ -141,7 +140,6 @@ body {
 
 .congTy {
     font-family: "Montserrat-SemiBold";
-    font-size: 16px;
     color: #677897;
     margin-left: 37px;
     margin-bottom: 5px;
@@ -151,7 +149,6 @@ body {
 .footerAddress {
     display: flex;
     color: #B0B9CA;
-    font-size: 16px;
     align-items: center;
 }
 
@@ -164,7 +161,6 @@ body {
     font-family: "Montserrat-SemiBold";
     width: 318.5px;
     height: 25px;
-    font-size: 17px;
     color: #0081B5;
     border-bottom: 1px solid #0081B5;
     margin-bottom: 20px;
@@ -286,7 +282,6 @@ body {
 .simTable thead tr th {
     background-color: #DA251D;
     color: white;
-    padding: 15px 0;
     font-family: "Montserrat-SemiBold";
 }
 

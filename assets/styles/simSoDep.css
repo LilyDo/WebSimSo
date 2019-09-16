@@ -9,9 +9,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     color: #0081B5;
-    font-size: 20px;
     font-family: Montserrat-Bold;
-    margin: 30px 0px 40px 0px;
 }
 
 .anchorHome {
@@ -32,15 +30,13 @@ body {
 
 .simNumber .number {
     display: flex;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
     border: 1px solid #FF0000;
     color: #707070;
     border-radius: 100px;
-    padding: 15px 50px;
     font-family: Montserrat-SemiBold;
-    font-size: 20px;
-    margin-left: 30px;
 }
 
 .simNumber .title,
@@ -48,7 +44,6 @@ body {
 .numberRegister .title,
 .mapContainer .title {
     font-family: Montserrat-Bold;
-    font-size: 17px;
     color: #677897;
 }
 
@@ -64,7 +59,6 @@ body {
 
 .numberDetail td {
     border: 0.5px solid #707070;
-    padding: 15px 20px;
     border-collapse: collapse;
 }
 
@@ -74,7 +68,6 @@ body {
     justify-content: space-between;
     border: 0.5px solid #707070;
     border-radius: 5px;
-    padding: 15px 20px;
 }
 
 .numberRegister .title {
@@ -151,11 +144,9 @@ div.registerInfo {
     width: 49%;
     flex-direction: column;
     border: 1px solid #707070;
-    padding: 20px;
 }
 
 .orderForm .text {
-    font-size: 17px;
     font-family: Montserrat-SemiBold;
     padding: 0 0 15px 0;
 }
@@ -206,20 +197,13 @@ div.registerInfo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px 0 70px 0;
 }
 
 .buttonContainer .orderButton {
     font-family: Montserrat-Bold;
-    font-size: 20px;
     color: #ffffff;
     background-color: #DA251D;
-    padding: 15px 130px;
     border-radius: 20px;
-}
-
-.mapContainer {
-    padding: 0 40px 40px 40px;
 }
 
 .mapContainer .title {

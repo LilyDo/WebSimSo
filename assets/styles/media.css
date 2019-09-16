@@ -6,7 +6,14 @@
         justify-content: space-between;
     }
     .headerUpper {
-        padding: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #0081B5;
+        color: white;
+    }
+    .headerLogo img,
+    .footerLogo img {
+        max-width: 90%;
     }
     .hotLine,
     .HeaderAddress {
@@ -33,9 +40,17 @@
     .headerRight {
         width: 100%;
     }
+    .headerHotLine img {
+        display: none;
+    }
     .headerHotLine,
     .HeaderAddress {
-        font-size: 13px;
+        font-size: 12px;
+        background-color: #0081B5;
+        color: white;
+    }
+    .footerPlugin {
+        margin-left: 37px;
     }
     /* search table */
     .searchTable {
@@ -74,6 +89,7 @@
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 12px;
+        padding: 5px 0;
     }
     .simTable tbody tr td {
         padding-left: 5px;
@@ -99,7 +115,19 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .footerHotline,
+    .footerAddress,
+    .congTy {
+        font-size: 12px;
+    }
+    .thongTinLienHe,
+    .follow {
+        font-size: 15px;
+    }
     /* simSoDep page */
+    .pageAnchor {
+        margin: 15px 0px 20px 0px;
+    }
     .pageAnchor,
     .simNumber,
     .simDetail,
@@ -108,10 +136,45 @@
     }
     .simDetail {
         flex-direction: column;
+        font-size: 12px;
     }
     .numberDetail {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+    .simNumber .title,
+    .simOrder .title,
+    .numberRegister .title,
+    .mapContainer .title,
+    .pageAnchor,
+    .orderForm .text {
+        font-size: 15px;
+    }
+    .simOrder {
+        font-size: 12px;
+    }
+    .buttonContainer .orderButton {
+        font-size: 15px;
+        padding: 10px 70px;
+    }
+    .simNumber .number {
+        padding: 10px 20px;
+        margin-left: 20px;
+    }
+    .orderForm .payment,
+    .orderForm .delivery {
+        padding: 10px;
+    }
+    .buttonContainer {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .mapContainer {
+        padding: 0 0 20px 0;
+    }
+    .numberDetail td,
+    .numberRegister {
+        padding: 10px;
     }
 }
 
@@ -191,10 +254,7 @@
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 15px;
-    }
-    .simTable tbody tr td {
-        padding-right: 0;
-        padding-left: 0;
+        padding: 15px 5px;
     }
     .paginationDiv.pageNumbers {
         padding-right: 30px;
@@ -207,7 +267,19 @@
         margin-right: 40px;
         margin-top: 20px;
     }
+    .footerHotline,
+    .footerAddress,
+    .congTy {
+        font-size: 16px;
+    }
+    .thongTinLienHe,
+    .follow {
+        font-size: 17px;
+    }
     /* simSoDep page */
+    .pageAnchor {
+        margin: 30px 0px 40px 0px;
+    }
     .pageAnchor,
     .simNumber,
     .simDetail,
@@ -219,5 +291,40 @@
     }
     .numberDetail {
         margin-right: 20px;
+    }
+    .simNumber .title,
+    .simOrder .title,
+    .numberRegister .title,
+    .mapContainer .title {
+        font-size: 17px;
+    }
+    .pageAnchor {
+        font-size: 20px;
+    }
+    .orderForm .text {
+        font-size: 17px;
+    }
+    .buttonContainer .orderButton {
+        font-size: 20px;
+        padding: 15px 130px;
+    }
+    .simNumber .number {
+        padding: 15px 50px;
+        margin-left: 30px;
+    }
+    .orderForm .payment,
+    .orderForm .delivery {
+        padding: 20px;
+    }
+    .buttonContainer {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .mapContainer {
+        padding: 0 40px 40px 40px;
+    }
+    .numberDetail td,
+    .numberRegister {
+        padding: 15px 20px;
     }
 }
