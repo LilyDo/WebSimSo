@@ -1,38 +1,71 @@
 /* 799px and below */
+
 @media screen and (max-width: 799px) {
-   
+    /* header */
     .header .headerUpper {
         justify-content: space-between;
     }
-
-    .hotLine, .HeaderAddress {
+    .hotLine,
+    .HeaderAddress {
         border: none;
     }
     .hamburger {
         display: flex;
-        
     }
     .navigationButton {
         display: none;
     }
-    .header{
+    .header {
         background-image: none;
+        flex-direction: column;
+    }
+    .headerLeft {
+        order: 1;
+    }
+    .headerRight {
+        width: 100%;
+    }
+    .headerHotLine,
+    .HeaderAddress {
+        font-size: 13px;
+    }
+    /* table */
+    .searchTable {
+        padding: 10px;
+    }
+    .searchTable .title {
+        font-size: 16px;
+        padding: 5px;
+        width: 100%;
+        align-content: center;
+    }
+    .tableRow {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+    /* footer */
+    .footerUpper {
+        flex-direction: column;
     }
 }
 
+
 /* 800px and above */
+
 @media screen and (min-width: 800px) {
-    
+    /* header */
     .header .headerUpper {
         justify-content: flex-end;
     }
-
     .headerHotLine {
         border: 1px solid #707070;
         border-right-style: dashed;
         border-bottom-left-radius: 5px;
     }
-
     .HeaderAddress {
         border: 1px solid #707070;
         border-left: none;
@@ -44,10 +77,45 @@
     .navigationButton {
         display: flex;
     }
+    .header {
+        flex-direction: row;
+    }
     .header .headerLower {
         align-items: flex-end;
-
     }
     .header {
         background-image: url("../images/header_pattern.png");
+    }
+    .headerHotLine {
+        padding-right: 40px;
+        padding-left: 10px;
+    }
+    .HeaderAddress {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    /* table */
+    .searchTable {
+        padding: 25px 40px;
+    }
+    .searchTable .title {
+        font-size: 20px;
+        padding: 10px 80px;
+    }
+    .titleRow {
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+    .tableRow {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px 0;
+    }
+    /* footer */
+    .footerUpper {
+        flex-direction: row;
+    }
 }
