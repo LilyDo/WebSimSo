@@ -275,10 +275,8 @@ body {
 }
 
 .dataContent {
-    padding-left: 40px;
-    padding-right: 40px;
     margin-bottom: 100px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 
@@ -292,7 +290,6 @@ body {
 
 .simTable thead tr th {
     background-color: #DA251D;
-    font-size: 15px;
     color: white;
     padding: 15px 0;
     font-family: "Montserrat-SemiBold";
@@ -300,7 +297,8 @@ body {
 
 .simTable tbody tr td {
     color: #677897;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .simTable tbody tr {
@@ -380,8 +378,6 @@ body {
 .pageNumbers {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 30px;
 }
 
 .pageNumbers input[type=text] {
