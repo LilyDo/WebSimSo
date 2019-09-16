@@ -33,13 +33,25 @@
 </div>
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>/assets/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?= base_url() ?>/assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
 
 <!-- Custom scripts -->
 <script>
-    // Init Semantic UI components
-    $('.ui.dropdown')
-        .dropdown();
+    $(document).ready(function () {
+        // Init Semantic UI components
+        $('.ui.dropdown').dropdown();
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            responsive:{
+                0: {
+                    items: 1
+                }
+            }
+        });
+    })
 </script>
 <script>
     function postPage(cur_page, next_page) {

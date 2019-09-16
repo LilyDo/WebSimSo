@@ -66,7 +66,7 @@
     <title>Trang chủ</title>
     <div class="content">
         <div class="bannerCenter">
-            <img src="<?= base_url() ?>/assets/images/banner_center.png">
+            <?php get_header('banner') ?>
         </div>
         <div class=searchTable>
             <form action="<?= get_site_url() ?>" method="get">

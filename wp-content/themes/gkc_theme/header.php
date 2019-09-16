@@ -9,6 +9,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="<?=base_url()?>/assets/owl-carousel/assets/owl.carousel.css" rel='stylesheet'>
+  <link href="<?=base_url()?>/assets/owl-carousel/assets/owl.theme.default.css" rel='stylesheet'>
   <link href="<?=base_url()?>/assets/styles/homePage.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url()?>/assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url()?>/assets/styles/media.css" rel="stylesheet" type="text/css">

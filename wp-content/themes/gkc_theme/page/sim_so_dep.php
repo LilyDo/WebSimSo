@@ -74,7 +74,7 @@
     <title>Sim Số Đẹp</title>
     <div class="content">
         <div class="bannerCenter">
-            <img src="<?= base_url() ?>/assets/images/banner_center.png">
+            <?php get_header('banner') ?>
         </div>
         <div class="pageAnchor">
             <div class="anchorHome">TRANG CHỦ</div>
