@@ -69,6 +69,7 @@
     /* sim table */
     .dataContent {
         padding: 0;
+        margin-bottom: 50px;
     }
     .simTable thead tr th,
     .simTable tbody tr td {
@@ -92,6 +93,11 @@
     /* footer */
     .footerUpper {
         flex-direction: column;
+        align-items: center;
+    }
+    .footerInfo {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -164,6 +170,7 @@
     }
     /* sim table */
     .dataContent {
+        margin-bottom: 100px;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -182,5 +189,8 @@
     /* footer */
     .footerUpper {
         flex-direction: row;
+        margin-left: 20px;
+        margin-right: 40px;
+        margin-top: 20px;
     }
 }
