@@ -1,12 +1,7 @@
-
 body {
     font-family: Monserrat;
     font-size: 14px;
     color: #677897 !important;
-}
-
-.pageAnchor, .simNumber, .simDetail, .simOrder {
-padding: 0px 40px;
 }
 
 .pageAnchor {
@@ -16,8 +11,9 @@ padding: 0px 40px;
     color: #0081B5;
     font-size: 20px;
     font-family: Montserrat-Bold;
-    margin:30px 0px 40px 0px;
+    margin: 30px 0px 40px 0px;
 }
+
 .anchorHome {
     border-right: 2px solid #0081B5;
     padding-right: 15px;
@@ -45,24 +41,26 @@ padding: 0px 40px;
     font-family: Montserrat-SemiBold;
     font-size: 20px;
     margin-left: 30px;
-    }
-    
-.simNumber .title, .simOrder .title, .numberRegister .title, .mapContainer .title  {
+}
+
+.simNumber .title,
+.simOrder .title,
+.numberRegister .title,
+.mapContainer .title {
     font-family: Montserrat-Bold;
-    font-size:17px;
+    font-size: 17px;
     color: #677897;
 }
-    
+
 .simDetail {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
 .numberDetail {
     display: flex;
+    border-collapse: collapse;
 }
-
 
 .numberDetail td {
     border: 0.5px solid #707070;
@@ -70,22 +68,16 @@ padding: 0px 40px;
     border-collapse: collapse;
 }
 
-table {
-    display: flex;
-    border-collapse: collapse;
-    margin-right: 20px;
-}
-
-.numberRegister{
+.numberRegister {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 0.5px solid  #707070;
+    border: 0.5px solid #707070;
     border-radius: 5px;
     padding: 15px 20px;
 }
 
-.numberRegister .title  {
+.numberRegister .title {
     border-bottom: 1px solid #0081B5;
     margin-bottom: 15px;
     padding-bottom: 5px;
@@ -99,6 +91,7 @@ table {
     border-radius: 5px;
     line-height: 200%;
 }
+
 .idUpload input[type=text] {
     width: 70%
 }
@@ -112,7 +105,7 @@ div.registerInfo {
     margin-bottom: 10px;
 }
 
-.idUpload{
+.idUpload {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -148,18 +141,18 @@ div.registerInfo {
 .orderForm {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 20px;
-
 }
 
-.orderForm .payment, .orderForm .delivery {
+.orderForm .payment,
+.orderForm .delivery {
     display: flex;
     width: 49%;
     flex-direction: column;
     border: 1px solid #707070;
     padding: 20px;
-} 
+}
 
 .orderForm .text {
     font-size: 17px;
@@ -167,11 +160,12 @@ div.registerInfo {
     padding: 0 0 15px 0;
 }
 
-.checkBox  {
+.checkBox {
     display: flex;
     flex-direction: row;
-    align-items: center ;
+    align-items: center;
 }
+
 .checkBox div {
     padding: 10px;
 }
@@ -188,10 +182,16 @@ div.registerInfo {
     border-radius: 5px;
     line-height: 200%;
 }
+
 .checkBox input[type=checkbox] {
     width: auto;
-}    
-.name, .phone, .address, .id, .deliveryAddress {
+}
+
+.name,
+.phone,
+.address,
+.id,
+.deliveryAddress {
     font-family: Montserrat-SemiBold;
     font-size: 17px;
 }
@@ -215,7 +215,7 @@ div.registerInfo {
     color: #ffffff;
     background-color: #DA251D;
     padding: 15px 130px;
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 
 .mapContainer {

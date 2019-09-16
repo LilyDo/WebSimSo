@@ -99,6 +99,20 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    /* simSoDep page */
+    .pageAnchor,
+    .simNumber,
+    .simDetail,
+    .simOrder {
+        padding: 0px 10px;
+    }
+    .simDetail {
+        flex-direction: column;
+    }
+    .numberDetail {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -192,5 +206,18 @@
         margin-left: 20px;
         margin-right: 40px;
         margin-top: 20px;
+    }
+    /* simSoDep page */
+    .pageAnchor,
+    .simNumber,
+    .simDetail,
+    .simOrder {
+        padding: 0px 40px;
+    }
+    .simDetail {
+        flex-direction: row;
+    }
+    .numberDetail {
+        margin-right: 20px;
     }
 }
