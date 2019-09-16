@@ -5,14 +5,18 @@
     .header .headerUpper {
         justify-content: space-between;
     }
+    .headerUpper {
+        padding: 10px;
+    }
     .hotLine,
     .HeaderAddress {
         border: none;
     }
     .hamburger {
         display: flex;
+        padding: 10px;
     }
-    .navigationButton {
+    .headerLower {
         display: none;
     }
     .header {
@@ -21,7 +25,11 @@
     }
     .headerLeft {
         order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+    .headerLeft,
     .headerRight {
         width: 100%;
     }
@@ -70,6 +78,9 @@
         border: 1px solid #707070;
         border-left: none;
         border-bottom-right-radius: 5px;
+    }
+    .headerLeft {
+        margin-left: 20px;
     }
     .hamburger {
         display: none;
