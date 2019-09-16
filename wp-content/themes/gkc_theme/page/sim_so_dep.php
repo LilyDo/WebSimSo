@@ -76,6 +76,10 @@
         <div class="bannerCenter">
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
+        <div class="pageAnchor">
+            <div class="anchorHome">TRANG CHỦ</div>
+            <div class="anchorCurrent">SIM SỐ ĐẸP</div>
+        </div>
         <div class=searchTable>
             <form action="<?= get_site_url() ?>" method="get">
                 <div class="tableRow titleRow">
@@ -163,10 +167,12 @@
                         <td><?= strip_tags(get_the_term_list($item->ID, "types", "", ", ", "")) ?></td>
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
-                            <div class="cart">
-                                <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
-                                Mua
-                            </div>
+                            <a href="<?=get_permalink($item->ID)?>">
+                                <div class="cart">
+                                    <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
+                                    Mua
+                                </div>
+                            </a>
                             <a href="<?=get_permalink($item->ID)?>">Chi tiết</a>
                         </td>
                     </tr>

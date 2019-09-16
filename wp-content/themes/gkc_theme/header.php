@@ -27,7 +27,7 @@
         <div class="headerHotLine">
           <span> <img src="<?=base_url()?>/assets/images/phone.svg"> </span>
           <span class="text">
-            Hotline 0932 100 700
+            Hotline 077 388 5678
           </span>
         </div>
         <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>

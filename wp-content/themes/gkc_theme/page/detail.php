@@ -12,11 +12,6 @@ get_header();
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
 
-        <div class="pageAnchor">
-            <div class="anchorHome">TRANG CHỦ</div>
-            <div class="anchorCurrent">SIM SỐ ĐẸP</div>
-        </div>
-
         <div class="simNumber">
             <div class="title">THÔNG TIN CHI TIẾT SIM SỐ</div>
             <div class="number"><?=get_field('number')?></div>

@@ -97,4 +97,4 @@ function getDistrictWithProvince() {
 }
 
 require_once "init/sim.php";
-
+require_once "init/banner.php";
