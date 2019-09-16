@@ -187,6 +187,12 @@ body {
     flex-direction: column;
 }
 
+.tableRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .titleRow {
     margin-bottom: 10px;
 }
@@ -200,7 +206,6 @@ body {
 }
 
 .rowHalf {
-    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -248,7 +253,6 @@ body {
 .ui.input>input,
 .ui.fluid.input>input::placeholder {
     font-family: 'Montserrat' !important;
-    font-size: 14px !important;
     color: #677897 !important;
     font-weight: bold;
 }

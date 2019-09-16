@@ -48,12 +48,23 @@
         align-content: center;
     }
     .tableRow {
-        width: 100%;
-        display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
-        padding: 5px 0;
+        padding: 0;
+    }
+    .rowHalf {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .searchTable {
+        font-size: 12px !important;
+    }
+    .ui.fluid.input>input::placeholder {
+        font-size: 12px !important;
+    }
+    .noPaddingLeft {
+        padding-left: 0 !important;
     }
     /* footer */
     .footerUpper {
@@ -118,12 +129,15 @@
         align-items: center;
     }
     .tableRow {
-        width: 100%;
-        display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-evenly;
         padding: 5px 0;
+    }
+    .rowHalf {
+        width: 50%;
+    }
+    .ui.fluid.input>input::placeholder {
+        font-size: 14px !important;
     }
     /* footer */
     .footerUpper {
