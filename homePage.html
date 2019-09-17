@@ -235,9 +235,9 @@
         function toggleDropdownContainer() {
             var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
 
-            if (dropdownContainer && dropdownContainer.style.display == "none") {
+            if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
                 dropdownContainer.style.display = "flex";
-            } else {
+            } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
                 dropdownContainer.style.display = "none";
             }
 

@@ -29,7 +29,7 @@
         display: none;
     }
     .dropdownContainer {
-        display: flex;
+        display: none;
         flex-direction: column;
         order: 2;
         width: 100%;
@@ -228,9 +228,6 @@
     }
     .header {
         flex-direction: row;
-    }
-    .header .headerLower {
-        align-items: flex-end;
     }
     .header {
         background-image: url("../images/header_pattern.png");
