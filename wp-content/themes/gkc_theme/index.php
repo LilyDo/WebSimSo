@@ -155,10 +155,12 @@
                         <td><?= strip_tags(get_the_term_list($item->ID, "types", "", ", ", "")) ?></td>
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
-                            <div class="cart">
-                                <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
-                                Mua
-                            </div>
+                            <a href="<?=get_permalink($item->ID)?>">
+                                <div class="cart">
+                                    <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
+                                    Mua
+                                </div>
+                            </a>
                             <a href="<?=get_permalink($item->ID)?>">Chi tiết</a>
                         </td>
                     </tr>

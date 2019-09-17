@@ -11,6 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="<?=base_url()?>/assets/owl-carousel/assets/owl.carousel.css" rel='stylesheet'>
   <link href="<?=base_url()?>/assets/owl-carousel/assets/owl.theme.default.css" rel='stylesheet'>
+  <link href="<?=base_url()?>/assets/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel='stylesheet'>
   <link href="<?=base_url()?>/assets/styles/homePage.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url()?>/assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url()?>/assets/styles/media.css" rel="stylesheet" type="text/css">
@@ -22,7 +23,19 @@
   <div class="header">
     <div class="headerLeft">
       <div id="headerLogo">
-        <img src="<?=base_url()?>/assets/images/logo.png"></div>
+        <img src="<?=base_url()?>/assets/images/logo.png">
+      </div>
+      <div class="hamburger">
+          <img onClick="toggleDropdownContainer()" src="<?=base_url()?>/assets/images/nav_menu.png">
+      </div>
+    </div>
+    <div class=dropdownContainer>
+        <button class="hamburgerDropdown <?=($cur_url == get_site_url())? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url()?>'">HOME</button>
+        <button class="hamburgerDropdown <?=($cur_url == get_site_url('', 'sim-so-dep'))? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url('', 'sim-so-dep')?>'">SIM SỐ ĐẸP</button>
+        <button class="hamburgerDropdown">NẠP TIỀN</button>
+        <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
+        <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
+        <button class="hamburgerDropdown">LIÊN HỆ</button>
     </div>
     <div class=headerRight>
       <div class="headerUpper">

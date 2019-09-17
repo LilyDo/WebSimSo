@@ -36,7 +36,7 @@ get_header();
                 </tr>
                 <tr>
                     <td>Cước thuê bao</td>
-                    <td><?= get_field('cuoc_tb') ?></td>
+                    <td><?= (get_field('cuoc_tb'))? get_field('cuoc_tb') : "Không bao gồm cước thuê bao" ?></td>
                 </tr>
                 <tr>
                     <td>Cước cam kết</td>

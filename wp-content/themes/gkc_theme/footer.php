@@ -38,18 +38,32 @@
 
 <!-- Custom scripts -->
 <script>
+    function toggleDropdownContainer() {
+        let dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+        if (dropdownContainer && dropdownContainer.style.display == "none") {
+            dropdownContainer.style.display = "flex";
+        } else {
+            dropdownContainer.style.display = "none";
+        }
+
+    }
+
     $(document).ready(function () {
         // Init Semantic UI components
         $('.ui.dropdown').dropdown();
         $(".owl-carousel").owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2500,
-            responsive:{
+            responsive: {
                 0: {
                     items: 1
                 }
-            }
+            },
+            loop  : true,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            nav    : true,
+            smartSpeed :900,
+            navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
         });
     })
 </script>

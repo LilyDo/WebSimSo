@@ -77,8 +77,8 @@
             <?php get_header('banner') ?>
         </div>
         <div class="pageAnchor">
-            <div class="anchorHome">TRANG CHỦ</div>
-            <div class="anchorCurrent">SIM SỐ ĐẸP</div>
+            <div class="anchorHome"><a href="<?=get_site_url()?>">TRANG CHỦ</a></div>
+            <div class="anchorCurrent"><a href="<?=get_site_url('', 'sim-so-dep')?>">SIM SỐ ĐẸP</a></div>
         </div>
         <div class=searchTable>
             <form action="<?= get_site_url() ?>" method="get">
