@@ -19,8 +19,17 @@
                 <img src="assets/images/logo.png">
             </div>
             <div class="hamburger">
-                <img src="assets/images/nav_menu.png">
+                <img onClick="toggleDropdownContainer()" src="assets/images/nav_menu.png">
             </div>
+        </div>
+
+        <div class=dropdownContainer>
+            <button class="hamburgerDropdown">HOME</button>
+            <button class="hamburgerDropdown">SIM SỐ ĐẸP</button>
+            <button class="hamburgerDropdown">NẠP TIỀN</button>
+            <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
+            <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
+            <button class="hamburgerDropdown">LIÊN HỆ</button>
         </div>
         <div class=headerRight>
             <div class="headerUpper">
@@ -223,6 +232,16 @@
 
     <!-- Custom scripts -->
     <script>
+        function toggleDropdownContainer() {
+            var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+            if (dropdownContainer && dropdownContainer.style.display == "none") {
+                dropdownContainer.style.display = "flex";
+            } else {
+                dropdownContainer.style.display = "none";
+            }
+
+        }
         // Init Semantic UI components
         $('.ui.dropdown')
             .dropdown();
