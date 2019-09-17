@@ -348,4 +348,16 @@
     .numberRegister {
         padding: 15px 20px;
     }
+    .owl-carousel .owl-prev{
+        top: 40%;
+        left: 5px;
+    }
+    .owl-carousel .owl-next{
+        top: 40%;
+        right: 5px;
+    }
+    .owl-carousel .owl-next i,
+    .owl-carousel .owl-prev i{
+        font-size: 30px;
+    }
 }
