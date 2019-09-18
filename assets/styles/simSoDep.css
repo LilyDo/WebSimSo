@@ -1,15 +1,12 @@
-body {
-    font-family: Monserrat;
-    font-size: 14px;
-    color: #677897 !important;
-}
-
 .pageAnchor {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: flex-start;
+    -webkit-box-pack: flex-start;
     color: #0081B5;
-    font-family: Montserrat-Bold;
+    font-family: "Montserrat"-Bold;
 }
 
 .anchorHome {
@@ -23,37 +20,44 @@ body {
 
 .simNumber {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .simNumber .number {
     display: flex;
+    display: -webkit-flex;
     font-size: 20px;
     justify-content: center;
+    -webkit-box-pack: center;
     align-items: center;
     border: 1px solid #FF0000;
     color: #707070;
     border-radius: 100px;
-    font-family: Montserrat-SemiBold;
+    font-family: "Montserrat"-SemiBold;
 }
 
 .simNumber .title,
 .simOrder .title,
 .numberRegister .title,
 .mapContainer .title {
-    font-family: Montserrat-Bold;
+    font-family: "Montserrat"-Bold;
     color: #677897;
 }
 
 .simDetail {
     display: flex;
+    display: -webkit-flex;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
 }
 
 .numberDetail {
     display: flex;
+    display: -webkit-flex;
     border-collapse: collapse;
 }
 
@@ -64,8 +68,11 @@ body {
 
 .numberRegister {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
     border: 0.5px solid #707070;
     border-radius: 5px;
 }
@@ -100,8 +107,11 @@ div.registerInfo {
 
 .idUpload {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
     align-items: center
 }
 
@@ -111,7 +121,7 @@ div.registerInfo {
 }
 
 .idUpload .text {
-    font-family: Montserrat-Italic;
+    font-family: "Montserrat"-Italic;
     font-size: 8px;
     line-height: normal;
     padding-left: 10px;
@@ -119,41 +129,53 @@ div.registerInfo {
 
 .idUpload div {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    -webkit-box-pack: flex-end;
 }
 
 .simOrder {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     margin: 40px 0px;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 .orderForm {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
     margin-top: 20px;
 }
 
 .orderForm .payment,
 .orderForm .delivery {
     display: flex;
+    display: -webkit-flex;
     width: 49%;
     flex-direction: column;
+    -webkit-flex-direction: column;
     border: 1px solid #707070;
 }
 
 .orderForm .text {
-    font-family: Montserrat-SemiBold;
+    font-family: "Montserrat"-SemiBold;
     padding: 0 0 15px 0;
 }
 
 .checkBox {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
 }
 
@@ -183,24 +205,26 @@ div.registerInfo {
 .address,
 .id,
 .deliveryAddress {
-    font-family: Montserrat-SemiBold;
+    font-family: "Montserrat"-SemiBold;
     font-size: 17px;
 }
 
 .checkBox input::placeholder {
-    font-family: Montserrat-Italic;
+    font-family: "Montserrat"-Italic;
     font-size: 11px;
     color: #677897;
 }
 
 .buttonContainer {
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-box-pack: center;
     align-items: center;
 }
 
 .buttonContainer .orderButton {
-    font-family: Montserrat-Bold;
+    font-family: "Montserrat"-Bold;
     color: #ffffff;
     background-color: #DA251D;
     border-radius: 20px;
