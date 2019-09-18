@@ -3,17 +3,30 @@ body {
     font-size: 14px;
     max-width: 1366px;
     margin: auto !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    color: #677897
 }
 
 .header {
     width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 .bannerCenter img {
@@ -26,19 +39,26 @@ body {
 
 .headerRight {
     display: flex;
+    display: -webkit-flex;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .headerUpper {
     display: flex;
+    display: -webkit-flex;
     font-size: 15px;
 }
 
 .headerHotLine {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
     background-color: #ffffff;
     color: black;
 }
@@ -49,8 +69,11 @@ body {
 
 .HeaderAddress {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
     background-color: #ffffff;
     color: black;
 }
@@ -59,16 +82,21 @@ body {
     margin-bottom: 10px;
     padding-top: 50px;
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     margin-right: 40px;
     justify-content: space-between;
-    align-items: stretch
+    -webkit-box-pack: space-between;
+    align-items: stretch -webkit-box-align: stretch
 }
 
 .navigationButton {
     font-family: "Montserrat-Bold";
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
     text-align: center;
     color: #6B8CAE;
     border: 1px solid #0081B5;
@@ -92,33 +120,46 @@ body {
 
 .content {
     width: 100%;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 
 /* footer */
 
 .footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     background-color: #E6EFFA;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 .footerUpper {
     display: flex;
+    display: -webkit-flex;
     justify-content: space-between;
+    -webkit-box-pack: space-between;
 }
 
 .footerInfo {
     display: flex;
+    display: -webkit-flex;
     flex-grow: 2;
     margin-left: 10px;
     align-items: flex-start;
+    -webkit-box-align: flex-start;
     justify-content: center;
+    -webkit-box-pack: center;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .footerLower {
@@ -148,8 +189,10 @@ body {
 .footerHotline,
 .footerAddress {
     display: flex;
+    display: -webkit-flex;
     color: #B0B9CA;
     align-items: center;
+    -webkit-box-align: center;
 }
 
 .footerHotline .text,
@@ -176,13 +219,17 @@ body {
 .searchTable {
     color: #677897;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .tableRow {
     width: 100%;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
 }
 
 .titleRow {
@@ -199,20 +246,26 @@ body {
 
 .rowHalf {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
+    -webkit-box-align: center;
 }
 
 .oneThird {
     display: flex;
+    display: -webkit-flex;
     font-weight: bold;
     width: 33.33%;
     justify-content: flex-end;
+    -webkit-box-pack: flex-end;
     padding: 0 10px;
 }
 
 .twoThird {
     display: flex;
+    display: -webkit-flex;
     font-weight: bold;
     width: 66.67%;
     padding: 0 10px;
@@ -227,8 +280,11 @@ body {
     padding: 10px 15px;
     margin-top: 20px;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
 }
 
 .tableButton img {
@@ -297,14 +353,20 @@ body {
 
 .simTable .cart-cell {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: flex-end;
+    -webkit-box-pack: flex-end;
 }
 
 .simTable .cart {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
     color: white;
     background-color: #0081B5;
     border-radius: 100px;
@@ -322,25 +384,33 @@ body {
 .pagination {
     padding-top: 50px;
     display: flex;
+    display: -webkit-flex;
     font-size: 12px;
     font-family: "Montserrat" !important;
 }
 
 .paginationDiv {
     flex: 1;
+    -webkit-flex: 1;
 }
 
 .paginationButtons {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
 }
 
 .paginationButtons button {
     font-family: "Montserrat" !important;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
     justify-content: center;
+    -webkit-box-pack: center;
     margin: 0 5px;
     border-radius: 2px;
     padding: 5px;
@@ -367,7 +437,9 @@ body {
 
 .pageNumbers {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-box-align: center;
 }
 
 .pageNumbers input[type=text] {
