@@ -4,6 +4,7 @@
     /* header */
     .header .headerUpper {
         justify-content: space-between;
+        -webkit-justify-content: space-between;
     }
     .headerUpper {
         padding-top: 5px;
@@ -31,7 +32,9 @@
     .dropdownContainer {
         display: none;
         flex-direction: column;
+        -webkit-flex-direction: column;
         order: 2;
+        -webkit-order: 2;
         width: 100%;
         padding-bottom: 10px;
     }
@@ -47,12 +50,17 @@
     .header {
         background-image: none;
         flex-direction: column;
+        -webkit-flex-direction: column;
     }
     .headerLeft {
         order: 1;
+        -webkit-order: 1;
         display: flex;
+        display: -webkit-flex;
         align-items: center;
+        -webkit-align-items: center;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
     }
     .headerLeft,
     .headerRight {
@@ -82,7 +90,9 @@
     }
     .tableRow {
         flex-direction: column;
+        -webkit-flex-direction: column;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
         padding: 0;
     }
     .rowHalf {
@@ -115,19 +125,23 @@
     }
     .pagination {
         flex-direction: column;
+        -webkit-flex-direction: column;
     }
     .paginationDiv.blank {
         display: none;
     }
     .paginationDiv.pageNumbers {
         justify-content: center;
+        -webkit-justify-content: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
     /* footer */
     .footerUpper {
         flex-direction: column;
+        -webkit-flex-direction: column;
         align-items: center;
+        -webkit-align-items: center;
     }
     .footerInfo {
         padding-top: 10px;
@@ -154,6 +168,7 @@
     }
     .simDetail {
         flex-direction: column;
+        -webkit-flex-direction: column;
         font-size: 12px;
     }
     .numberDetail {
@@ -203,6 +218,7 @@
     /* header */
     .header .headerUpper {
         justify-content: flex-end;
+        -webkit-justify-content: flex-end;
     }
     .headerHotLine {
         border: 1px solid #707070;
@@ -225,9 +241,11 @@
     }
     .navigationButton {
         display: flex;
+        display: -webkit-flex;
     }
     .header {
         flex-direction: row;
+        -webkit-flex-direction: row;
     }
     .header {
         background-image: url("../images/header_pattern.png");
@@ -250,11 +268,15 @@
     }
     .titleRow {
         justify-content: flex-start !important;
+        -webkit-justify-content: flex-start !important;
         align-items: center;
+        -webkit-align-items: center;
     }
     .tableRow {
         flex-direction: row;
+        -webkit-flex-direction: row;
         justify-content: space-evenly;
+        -webkit-justify-content: space-evenly;
         padding: 5px 0;
     }
     .rowHalf {
@@ -277,10 +299,12 @@
     .paginationDiv.pageNumbers {
         padding-right: 30px;
         justify-content: flex-end;
+        -webkit-justify-content: flex-end;
     }
     /* footer */
     .footerUpper {
         flex-direction: row;
+        -webkit-flex-direction: row;
         margin-left: 20px;
         margin-right: 40px;
         margin-top: 20px;
@@ -306,6 +330,7 @@
     }
     .simDetail {
         flex-direction: row;
+        -webkit-flex-direction: row;
     }
     .numberDetail {
         margin-right: 20px;
@@ -345,16 +370,16 @@
     .numberRegister {
         padding: 15px 20px;
     }
-    .owl-carousel .owl-prev{
+    .owl-carousel .owl-prev {
         top: 40%;
         left: 5px;
     }
-    .owl-carousel .owl-next{
+    .owl-carousel .owl-next {
         top: 40%;
         right: 5px;
     }
     .owl-carousel .owl-next i,
-    .owl-carousel .owl-prev i{
+    .owl-carousel .owl-prev i {
         font-size: 30px;
     }
 }

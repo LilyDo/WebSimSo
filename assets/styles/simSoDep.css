@@ -6,8 +6,11 @@ body {
 
 .pageAnchor {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: flex-start;
+    -webkit-justify-content: flex-start;
     color: #0081B5;
     font-family: Montserrat-Bold;
 }
@@ -23,15 +26,19 @@ body {
 
 .simNumber {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .simNumber .number {
     display: flex;
+    display: -webkit-flex;
     font-size: 20px;
     justify-content: center;
+    -webkit-justify-content: center;
     align-items: center;
     border: 1px solid #FF0000;
     color: #707070;
@@ -49,11 +56,14 @@ body {
 
 .simDetail {
     display: flex;
+    display: -webkit-flex;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
 }
 
 .numberDetail {
     display: flex;
+    display: -webkit-flex;
     border-collapse: collapse;
 }
 
@@ -64,8 +74,11 @@ body {
 
 .numberRegister {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     border: 0.5px solid #707070;
     border-radius: 5px;
 }
@@ -100,8 +113,11 @@ div.registerInfo {
 
 .idUpload {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     align-items: center
 }
 
@@ -119,30 +135,40 @@ div.registerInfo {
 
 .idUpload div {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    -webkit-justify-content: flex-end;
 }
 
 .simOrder {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     margin: 40px 0px;
     font-family: Montserrat;
 }
 
 .orderForm {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     margin-top: 20px;
 }
 
 .orderForm .payment,
 .orderForm .delivery {
     display: flex;
+    display: -webkit-flex;
     width: 49%;
     flex-direction: column;
+    -webkit-flex-direction: column;
     border: 1px solid #707070;
 }
 
@@ -153,7 +179,9 @@ div.registerInfo {
 
 .checkBox {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
 }
 
@@ -195,7 +223,9 @@ div.registerInfo {
 
 .buttonContainer {
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-justify-content: center;
     align-items: center;
 }
 
