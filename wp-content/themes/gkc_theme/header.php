@@ -22,7 +22,7 @@
 <body>
   <div class="header">
     <div class="headerLeft">
-      <div id="headerLogo">
+      <div class="headerLogo">
         <img src="<?=base_url()?>/assets/images/logo.png">
       </div>
       <div class="hamburger">
@@ -54,7 +54,7 @@
         <button class="navigationButton">NẠP TIỀN</button>
         <button class="navigationButton">ĐĂNG KÝ 4G ONLINE</button>
         <button class="navigationButton">CHUYỂN SANG MOBI</button>
-        <button class="navigationButton" id="lienHe">LIÊN HỆ</button>
+        <button class="navigationButton" class="lienHe">LIÊN HỆ</button>
       </div>
       <div class="hamburger">
         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>

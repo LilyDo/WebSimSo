@@ -5,22 +5,22 @@
         </div>
 
         <div class="footerInfo">
-            <div id="thongTinLienHe">Thông tin liên hệ:</div>
-            <div id="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
-            <div id="footerAddress">
+            <div class="thongTinLienHe">Thông tin liên hệ:</div>
+            <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
+            <div class="footerAddress">
                 <span> <img src="<?= base_url() ?>/assets/images/icon_location.svg"> </span>
                 <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
             </div>
-            <div id="footerHotline">
+            <div class="footerHotline">
                 <span> <img src="<?= base_url() ?>/assets/images/icon_phone.svg"></span>
                 <span class="text"> 077 388 5678</span>
             </div>
         </div>
         <div class="footerPlugin">
-            <div id="follow">Follow us:</div>
+            <div class="follow">Follow us:</div>
             <div>
-                <img id="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg">
-                <img id="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg">
+                <img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg">
+                <img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg">
             </div>
 
         </div>
