@@ -4,7 +4,7 @@
     /* header */
     .header .headerUpper {
         justify-content: space-between;
-        -webkit-justify-content: space-between;
+        -webkit-box-pack: space-between;
     }
     .headerUpper {
         padding-top: 5px;
@@ -39,7 +39,7 @@
         padding-bottom: 10px;
     }
     .hamburgerDropdown {
-        font-family: Montserrat-SemiBold;
+        font-family: "Montserrat"-SemiBold;
         font-size: 15px;
         color: white;
         border-top: 1px solid white;
@@ -49,8 +49,10 @@
     }
     .header {
         background-image: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-flex-direction: column;
     }
     .headerLeft {
         order: 1;
@@ -58,9 +60,9 @@
         display: flex;
         display: -webkit-flex;
         align-items: center;
-        -webkit-align-items: center;
+        -webkit-box-align: center;
         justify-content: space-between;
-        -webkit-justify-content: space-between;
+        -webkit-box-pack: space-between;
     }
     .headerLeft,
     .headerRight {
@@ -92,7 +94,7 @@
         flex-direction: column;
         -webkit-flex-direction: column;
         justify-content: space-between;
-        -webkit-justify-content: space-between;
+        -webkit-box-pack: space-between;
         padding: 0;
     }
     .rowHalf {
@@ -132,7 +134,7 @@
     }
     .paginationDiv.pageNumbers {
         justify-content: center;
-        -webkit-justify-content: center;
+        -webkit-box-pack: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -141,7 +143,7 @@
         flex-direction: column;
         -webkit-flex-direction: column;
         align-items: center;
-        -webkit-align-items: center;
+        -webkit-box-align: center;
     }
     .footerInfo {
         padding-top: 10px;
@@ -218,7 +220,7 @@
     /* header */
     .header .headerUpper {
         justify-content: flex-end;
-        -webkit-justify-content: flex-end;
+        -webkit-box-pack: flex-end;
     }
     .headerHotLine {
         border: 1px solid #707070;
@@ -244,8 +246,10 @@
         display: -webkit-flex;
     }
     .header {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-flex-direction: row;
     }
     .header {
         background-image: url("../images/header_pattern.png");
@@ -268,15 +272,15 @@
     }
     .titleRow {
         justify-content: flex-start !important;
-        -webkit-justify-content: flex-start !important;
+        -webkit-box-pack: flex-start !important;
         align-items: center;
-        -webkit-align-items: center;
+        -webkit-box-align: center;
     }
     .tableRow {
         flex-direction: row;
         -webkit-flex-direction: row;
         justify-content: space-evenly;
-        -webkit-justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
         padding: 5px 0;
     }
     .rowHalf {
@@ -299,7 +303,7 @@
     .paginationDiv.pageNumbers {
         padding-right: 30px;
         justify-content: flex-end;
-        -webkit-justify-content: flex-end;
+        -webkit-box-pack: flex-end;
     }
     /* footer */
     .footerUpper {
