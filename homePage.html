@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homepage</title>
+    <link href="./assets/styles/homePage.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/media.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/semantic/semantic.min.css">
+    <link href="./assets/fonts/fonts.css" rel='stylesheet'>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerLeft">
+            <div class="headerLogo">
+                <img src="assets/images/logo.png">
+            </div>
+            <div class="hamburger">
+                <img onClick="toggleDropdownContainer()" src="assets/images/nav_menu.png">
+            </div>
+        </div>
+
+        <div class=dropdownContainer>
+            <button class="hamburgerDropdown">HOME</button>
+            <button class="hamburgerDropdown">SIM SỐ ĐẸP</button>
+            <button class="hamburgerDropdown">NẠP TIỀN</button>
+            <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
+            <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
+            <button class="hamburgerDropdown">LIÊN HỆ</button>
+        </div>
+        <div class=headerRight>
+            <div class="headerUpper">
+                <div class="headerHotLine">
+                    <span> <img src="assets/images/phone.svg"> </span>
+                    <span class="text">
+            Hotline 077 388 5678
+          </span>
+                </div>
+                <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>
+            </div>
+
+            <div class="headerLower">
+                <button class="navigationButton">HOME</button>
+                <button class="navigationButton simSoDep">SIM SỐ ĐẸP</button>
+                <button class="navigationButton">NẠP TIỀN</button>
+                <button class="navigationButton">ĐĂNG KÝ 4G ONLINE</button>
+                <button class="navigationButton">CHUYỂN SANG MOBI</button>
+                <button class="navigationButton" class="lienHe">LIÊN HỆ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="bannerCenter">
+            <img src="assets/images/banner_center.png">
+        </div>
+        <div class=searchTable>
+            <div class="tableRow titleRow">
+                <div class="title">HƯỚNG DẪN</div>
+            </div>
+            <div class="tableRow">
+                <div class="rowHalf">
+                    <div class="oneThird">Tìm số</div>
+                    <div class="oneThird">
+                        <select class="ui search dropdown fluid">
+              <option value="">Đầu số</option>
+              <option value="089">089</option>
+              <option value="090">090</option>
+              <option value="093">093</option>
+              <option value="076">070</option>
+              <option value="076">076</option>
+              <option value="076">077</option>
+              <option value="076">078</option>
+              <option value="076">079</option>
+            </select>
+                    </div>
+                    <div class="oneThird noPaddingLeft">
+                        <div class="ui input fluid">
+                            <input type="text" placeholder="Nhập số cần tìm">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowHalf">
+                    <div class="oneThird">Loại số</div>
+                    <div class="twoThird">
+                        <select class="ui search dropdown fluid">
+              <option value="">Tất cả</option>
+              <option value="soThuong">Số thường</option>
+              <option value="soDep">Số đẹp</option>
+              <option value="soDep450">Số đẹp cam kết 450.000vnd</option>
+              <option value="phatTai">Sim phát tài</option>
+              <option value="locPhat">Sim lộc phát</option>
+              <option value="tamHoa">Tam hoa</option>
+              <option value="tienLen">Sim tiến lên</option>
+            </select>
+                    </div>
+                </div>
+            </div>
+            <div class="tableRow">
+                <div class="rowHalf">
+                    <div class="oneThird">Ưu đãi</div>
+                    <div class="twoThird">
+                        <select class="ui search dropdown fluid">
+              <option value="">Tất cả</option>
+              <option value="dataNhieu">Data nhiều</option>
+              <option value="thoaiNhieu">Thoại nhiều</option>
+            </select>
+                    </div>
+                </div>
+                <div class="rowHalf">
+                    <div class="oneThird">Loại thuê bao</div>
+                    <div class="twoThird">
+                        <select class="ui search dropdown fluid">
+              <option value="">Tất cả</option>
+              <option value="traSau">Trả sau</option>
+              <option value="traTruoc">Trả trước</option>
+            </select>
+                    </div>
+                </div>
+            </div>
+            <div class="tableRow">
+                <button class="tableButton">
+          <img src="./assets/images/icon_search.svg" />
+          TÌM KIẾM NGAY
+        </button>
+            </div>
+        </div>
+        <div class=dataContent>
+            <table class="simTable">
+                <thead class="simTableHead">
+                    <tr>
+                        <th>Số thuê bao</th>
+                        <th>Giá/ Phí hòa mạng</th>
+                        <th>Loại thuê bao</th>
+                        <th>Loại TB/ Cước cam kết (tháng)</th>
+                        <th>Địa điểm hòa mạng</th>
+                        <th>Mua</th>
+                    </tr>
+                </thead>
+                <tbody class="simTableBody">
+                    <tr>
+                        <td>0938178000</td>
+                        <td>200.000</td>
+                        <td>tamhoacuoi</td>
+                        <td>Trả sau</td>
+                        <td>249 Minh Phụng, P.2, Q.11</td>
+                        <td>
+                            <div class="cart-cell">
+                                <div class="cart">
+                                    <img src="./assets/images/icon_cart.svg"> Mua
+                                </div>
+                                Chi tiết
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>0938178000</td>
+                        <td>200.000</td>
+                        <td>tamhoacuoi</td>
+                        <td>Trả sau</td>
+                        <td>249 Minh Phụng, P.2, Q.11</td>
+                        <td>
+                            <div class="cart-cell">
+                                <div class="cart">
+                                    <img src="./assets/images/icon_cart.svg"> Mua
+                                </div>
+                                Chi tiết
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div class="paginationDiv blank"></div>
+                <div class="paginationDiv paginationButtons">
+                    <button class="previous">
+            <img src="assets/images/arrow_left.svg">
+            Trang trước
+          </button>
+                    <button class="next">
+            Trang kế tiếp
+            <img src="assets/images/arrow_right.svg">
+          </button>
+                </div>
+                <div class="paginationDiv pageNumbers">
+                    Trang
+                    <input type="text"> của 25 trang
+                    <img src="./assets/images/arrow_left_button.svg">
+                    <img src="./assets/images/arrow_right_button.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerUpper">
+            <div class="footerLogo">
+                <img src="assets/images/logo.png">
+            </div>
+
+            <div class="footerInfo">
+                <div class="thongTinLienHe">Thông tin liên hệ:</div>
+                <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
+                <div class="footerAddress">
+                    <span> <img src="assets/images/icon_location.svg"> </span>
+                    <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
+                </div>
+                <div class="footerHotline">
+                    <span> <img src="assets/images/icon_phone.svg"></span>
+                    <span class="text"> 077 388 5678</span>
+                </div>
+            </div>
+            <div class="footerPlugin">
+                <div class="follow">Follow us:</div>
+                <div>
+                    <img class="pluginFacebook" src="assets/images/icon_facebook.svg">
+                    <img class="pluginInstagram" src="assets/images/icon_instagram.svg">
+                </div>
+            </div>
+        </div>
+        <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
+
+    <!-- Custom scripts -->
+    <script>
+        function toggleDropdownContainer() {
+            var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+            if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
+                dropdownContainer.style.display = "flex";
+            } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
+                dropdownContainer.style.display = "none";
+            }
+
+        }
+        // Init Semantic UI components
+        $('.ui.dropdown')
+            .dropdown();
+    </script>
+</body>
+
+</html>
