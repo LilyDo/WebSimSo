@@ -216,6 +216,19 @@ body {
 
 /* search */
 
+.tooltip {
+    opacity: 0.9;
+    background-color: #333;
+    color: white;
+    font-size: 11px;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+}
+
 .searchTable {
     color: #677897;
     display: flex;
@@ -234,6 +247,7 @@ body {
 
 .titleRow {
     margin-bottom: 10px;
+    position: relative;
 }
 
 .searchTable .title {
