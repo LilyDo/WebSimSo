@@ -217,14 +217,16 @@ body {
 /* search */
 
 .tooltip {
+    display: none;
     opacity: 0.9;
     background-color: #333;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     max-width: 500px;
     padding: 10px;
     border-radius: 5px;
     position: absolute;
+    left: 0;
     top: 50px;
     z-index: 1;
 }
@@ -256,6 +258,7 @@ body {
     border-radius: 5px;
     background-color: #0081B5;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .rowHalf {
@@ -299,6 +302,7 @@ body {
     -webkit-box-align: center;
     justify-content: center;
     -webkit-box-pack: center;
+    cursor: pointer;
 }
 
 .tableButton img {

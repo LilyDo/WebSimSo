@@ -59,7 +59,7 @@
         </div>
         <div class=searchTable>
             <div class="tableRow titleRow">
-                <div class="title">HƯỚNG DẪN</div>
+                <div class="title" onmouseover="showTooltip()" onmouseout="hideTooltip()">HƯỚNG DẪN</div>
 
                 <div class="tooltip">
                     <div class="tooltip-inner">
@@ -284,7 +284,20 @@
             } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
                 dropdownContainer.style.display = "none";
             }
+        }
 
+        function showTooltip() {
+            var tooltip = document.getElementsByClassName("tooltip")[0];
+            if (tooltip != undefined) {
+                tooltip.style.display = "block"
+            }
+        }
+
+        function hideTooltip() {
+            var tooltip = document.getElementsByClassName("tooltip")[0];
+            if (tooltip != undefined) {
+                tooltip.style.display = "none"
+            }
         }
         // Init Semantic UI components
         $('.ui.dropdown')
