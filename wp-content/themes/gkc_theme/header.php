@@ -54,7 +54,7 @@
         <button class="navigationButton">NẠP TIỀN</button>
         <button class="navigationButton">ĐĂNG KÝ 4G ONLINE</button>
         <button class="navigationButton">CHUYỂN SANG MOBI</button>
-        <button class="navigationButton" class="lienHe">LIÊN HỆ</button>
+        <button class="navigationButton lienHe">LIÊN HỆ</button>
       </div>
       <div class="hamburger">
         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
