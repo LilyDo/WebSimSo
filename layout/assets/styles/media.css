@@ -85,6 +85,9 @@
         background-color: #0081B5;
         color: white;
     }
+    .headerHotLine .text {
+        color: white;
+    }
     .footerPlugin {
         margin-left: 37px;
     }
@@ -234,11 +237,19 @@
         border: 1px solid #707070;
         border-right-style: dashed;
         border-bottom-left-radius: 5px;
+        padding-right: 40px;
+        padding-left: 10px;
+        color: black;
+    }
+    .headerHotLine .text {
+        color: black;
     }
     .HeaderAddress {
         border: 1px solid #707070;
         border-left: none;
         border-bottom-right-radius: 5px;
+        padding-right: 40px;
+        padding-left: 40px;
     }
     .headerLeft {
         margin-left: 20px;
@@ -258,17 +269,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-    }
-    .header {
         background-image: url("../images/header_pattern.png");
-    }
-    .headerHotLine {
-        padding-right: 40px;
-        padding-left: 10px;
-    }
-    .HeaderAddress {
-        padding-right: 40px;
-        padding-left: 40px;
     }
     /* table */
     .searchTable {
