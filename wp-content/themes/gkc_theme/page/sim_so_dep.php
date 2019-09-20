@@ -81,7 +81,7 @@
             <div class="anchorCurrent"><a href="<?=get_site_url('', 'sim-so-dep')?>">SIM SỐ ĐẸP</a></div>
         </div>
         <div class=searchTable>
-            <form action="<?= get_site_url() ?>" method="get">
+            <form action="<?= get_site_url('', 'sim-so-dep') ?>" method="get">
                 <div class="tableRow titleRow">
                     <div class="title">HƯỚNG DẪN</div>
                 </div>
@@ -90,7 +90,7 @@
                         <div class="oneThird">Tìm số</div>
                         <div class="oneThird">
                             <select class="ui search dropdown fluid" name="dauso">
-                                <option value="">Chọn đầu số</option>
+                                <option value="all">Chọn đầu số</option>
                                 <?php foreach ($dauso as $item) : ?>
                                     <option value="<?= $item->slug ?>" <?=isset($_GET['dauso'])? (($_GET['dauso'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
                                 <?php endforeach; ?>
@@ -106,7 +106,7 @@
                         <div class="oneThird">Loại số</div>
                         <div class="twoThird">
                             <select class="ui search dropdown fluid" name="loaiso">
-                                <option value="">Tất cả</option>
+                                <option value="all">Tất cả</option>
                                 <?php foreach ($loaiso as $item) : ?>
                                     <option value="<?= $item->slug ?>" <?=isset($_GET['loaiso'])? (($_GET['loaiso'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
                                 <?php endforeach; ?>
@@ -119,7 +119,7 @@
                         <div class="oneThird">Ưu đãi</div>
                         <div class="twoThird">
                             <select class="ui search dropdown fluid" name="uudai">
-                                <option value="">Tất cả</option>
+                                <option value="all">Tất cả</option>
                                 <?php foreach ($uudai as $item) : ?>
                                     <option value="<?= $item->slug ?>" <?=isset($_GET['uudai'])? (($_GET['uudai'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
                                 <?php endforeach; ?>
@@ -130,7 +130,7 @@
                         <div class="oneThird">Loại thuê bao</div>
                         <div class="twoThird">
                             <select class="ui search dropdown fluid" name="loaitb">
-                                <option value="">Tất cả</option>
+                                <option value="all">Tất cả</option>
                                 <?php foreach ($loaitb as $item) : ?>
                                     <option value="<?= $item->slug ?>" <?=isset($_GET['loaitb'])? (($_GET['loaitb'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
                                 <?php endforeach; ?>
@@ -163,8 +163,8 @@
                     <tr>
                         <td><?= $item->number ?></td>
                         <td><?= number_format($item->cost) ?></td>
-                        <td><?= strip_tags(get_the_term_list($item->ID, "tbtypes", "", ", ", "")) ?></td>
-                        <td><?= strip_tags(get_the_term_list($item->ID, "types", "", ", ", "")) ?></td>
+                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
+                        <td><?= processPostTerms('types', $item->ID) ?></td>
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
                             <a href="<?=get_permalink($item->ID)?>">

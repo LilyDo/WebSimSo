@@ -17,8 +17,8 @@ body {
 
 .header {
     width: 100%;
-    /* display: -webkit-box !important;
-    display: -ms-flexbox; */
+    display: -webkit-box !important;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -60,7 +60,6 @@ body {
     justify-content: center;
     -webkit-box-pack: center;
     background-color: #ffffff;
-    color: black;
 }
 
 .headerHotLine .text {
@@ -88,8 +87,7 @@ body {
     margin-right: 40px;
     justify-content: space-between;
     -webkit-box-pack: space-between;
-    align-items: stretch;
-    -webkit-box-align: stretch;
+    align-items: stretch -webkit-box-align: stretch
 }
 
 .navigationButton {
@@ -110,10 +108,6 @@ body {
     padding-bottom: 5px;
 }
 
-.navigationButton.lienHe {
-    margin-right: 0px;
-}
-
 .simSoDep {
     color: #ffffff;
     background-color: #0081B5;
@@ -132,8 +126,8 @@ body {
 /* footer */
 
 .footer {
-    /* display: -webkit-box !important;
-    display: -ms-flexbox; */
+    display: -webkit-box !important;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -176,6 +170,7 @@ body {
 
 .thongTinLienHe {
     font-family: "Montserrat-SemiBold";
+    width: 318.5px;
     height: 25px;
     color: #0081B5;
     margin-left: 37px;
@@ -205,8 +200,8 @@ body {
 }
 
 .follow {
-    display: inline-block;
     font-family: "Montserrat-SemiBold";
+    width: 318.5px;
     height: 25px;
     color: #0081B5;
     border-bottom: 1px solid #0081B5;
@@ -214,11 +209,26 @@ body {
 }
 
 .pluginFacebook {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 
 /* search */
+
+.tooltip {
+    display: none;
+    opacity: 0.9;
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+}
 
 .searchTable {
     color: #677897;
@@ -238,6 +248,7 @@ body {
 
 .titleRow {
     margin-bottom: 10px;
+    position: relative;
 }
 
 .searchTable .title {
@@ -246,6 +257,7 @@ body {
     border-radius: 5px;
     background-color: #0081B5;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .rowHalf {
@@ -289,6 +301,7 @@ body {
     -webkit-box-align: center;
     justify-content: center;
     -webkit-box-pack: center;
+    cursor: pointer;
 }
 
 .tableButton img {
@@ -300,12 +313,6 @@ body {
 
 .ui.input.fluid {
     width: 100%;
-}
-
-.ui.fluid.input>input,
-.ui.search.selection.dropdown>input.search {
-    padding: 5px 10px !important;
-    line-height: 20px !important;
 }
 
 .ui.input>input,

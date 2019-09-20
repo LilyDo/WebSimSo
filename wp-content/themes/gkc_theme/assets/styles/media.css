@@ -85,6 +85,12 @@
         background-color: #0081B5;
         color: white;
     }
+    .headerHotLine .text {
+        color: white;
+    }
+    .footerPlugin {
+        margin-left: 37px;
+    }
     /* search table */
     .searchTable {
         padding: 10px;
@@ -149,17 +155,6 @@
         -webkit-flex-direction: column;
         align-items: center;
         -webkit-box-align: center;
-    }
-    .footerInfo,
-    .footerLogo,
-    .footerPlugin {
-        width: 100%;
-    }
-    .footerLogo {
-        margin-left: 45px;
-    }
-    .footerPlugin {
-        margin-left: 85px;
     }
     .footerInfo {
         padding-top: 10px;
@@ -242,11 +237,19 @@
         border: 1px solid #707070;
         border-right-style: dashed;
         border-bottom-left-radius: 5px;
+        padding-right: 40px;
+        padding-left: 10px;
+        color: black;
+    }
+    .headerHotLine .text {
+        color: black;
     }
     .HeaderAddress {
         border: 1px solid #707070;
         border-left: none;
         border-bottom-right-radius: 5px;
+        padding-right: 40px;
+        padding-left: 40px;
     }
     .headerLeft {
         margin-left: 20px;
@@ -266,17 +269,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-    }
-    .header {
         background-image: url("../images/header_pattern.png");
-    }
-    .headerHotLine {
-        padding-right: 40px;
-        padding-left: 10px;
-    }
-    .HeaderAddress {
-        padding-right: 40px;
-        padding-left: 40px;
     }
     /* table */
     .searchTable {
@@ -337,20 +330,6 @@
     .thongTinLienHe,
     .follow {
         font-size: 17px;
-    }
-    .footerLogo,
-    .footerPlugin {
-        width: 25%;
-    }
-    .footerLogo img {
-        width: 100%;
-    }
-    .footerInfo {
-        width: 50%;
-    }
-    .footerPlugin {
-        text-align: right;
-        margin-left: 37px;
     }
     /* simSoDep page */
     .pageAnchor {

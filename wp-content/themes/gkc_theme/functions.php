@@ -84,6 +84,17 @@ function processPage($page, $dataGET = []){
     return $response;
 }
 
+function processPostTerms($term_name, $post_id)
+{
+  $terms = wp_get_post_terms($post_id, $term_name, ['orderby' => 'term_id', 'order' => 'ASC']);
+  $str = [];
+  foreach ($terms as $value) {
+    $str[] = $value->name;
+  }
+
+  return implode(', ', $str);
+}
+
 //Ajax demo
 add_action( 'wp_ajax_getDistrict', 'getDistrictWithProvince' );
 add_action( 'wp_ajax_nopriv_getDistrict', 'getDistrictWithProvince' );

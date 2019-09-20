@@ -39,7 +39,7 @@
 <!-- Custom scripts -->
 <script>
     function toggleDropdownContainer() {
-        let dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+        var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
 
         if (dropdownContainer && dropdownContainer.style.display == "none") {
             dropdownContainer.style.display = "flex";
@@ -48,6 +48,21 @@
         }
 
     }
+
+    function showTooltip() {
+        var tooltip = document.getElementsByClassName("tooltip")[0];
+        if (tooltip != undefined) {
+            tooltip.style.display = "block"
+        }
+    }
+
+    function hideTooltip() {
+        var tooltip = document.getElementsByClassName("tooltip")[0];
+        if (tooltip != undefined) {
+            tooltip.style.display = "none"
+        }
+    }
+
 
     $(document).ready(function () {
         // Init Semantic UI components
@@ -60,30 +75,12 @@
             },
             loop  : true,
             autoplay: true,
-            autoplayTimeout: 2500,
+            autoplayTimeout: 6500,
             nav    : true,
             smartSpeed :900,
             navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
         });
     })
-</script>
-<script>
-    function postPage(cur_page, next_page) {
-        let next_url = '';
-        let cur_url = location.href;
-        let index = cur_url.search('paged=' + cur_page);
-        if (index == -1){
-            if (location.search == '')
-                next_url = cur_url + '?paged=' + next_page;
-            else
-                next_url = cur_url + '&paged=' + next_page;
-        }
-        else
-            next_url = cur_url.replace('paged=' + cur_page, 'paged=' + next_page);
-
-        location.href = next_url;
-
-    }
 </script>
 </body>
 
