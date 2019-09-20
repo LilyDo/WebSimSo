@@ -17,8 +17,8 @@ body {
 
 .header {
     width: 100%;
-    display: -webkit-box !important;
-    display: -ms-flexbox;
+    /* display: -webkit-flexbox !important; */
+    /* display: -ms-flexbox; */
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -87,7 +87,8 @@ body {
     margin-right: 40px;
     justify-content: space-between;
     -webkit-box-pack: space-between;
-    align-items: stretch -webkit-box-align: stretch
+    align-items: stretch;
+    -webkit-box-align: stretch;
 }
 
 .navigationButton {
@@ -108,6 +109,10 @@ body {
     padding-bottom: 5px;
 }
 
+.navigationButton.lienHe {
+    margin-right: 0px;
+}
+
 .simSoDep {
     color: #ffffff;
     background-color: #0081B5;
@@ -126,8 +131,8 @@ body {
 /* footer */
 
 .footer {
-    display: -webkit-box !important;
-    display: -ms-flexbox;
+    /* display: -webkit-flexbox !important; */
+    /* display: -ms-flexbox; */
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -170,7 +175,6 @@ body {
 
 .thongTinLienHe {
     font-family: "Montserrat-SemiBold";
-    width: 318.5px;
     height: 25px;
     color: #0081B5;
     margin-left: 37px;
@@ -200,8 +204,8 @@ body {
 }
 
 .follow {
+    display: inline-block;
     font-family: "Montserrat-SemiBold";
-    width: 318.5px;
     height: 25px;
     color: #0081B5;
     border-bottom: 1px solid #0081B5;
@@ -209,7 +213,7 @@ body {
 }
 
 .pluginFacebook {
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 
@@ -313,6 +317,12 @@ body {
 
 .ui.input.fluid {
     width: 100%;
+}
+
+.ui.fluid.input>input,
+.ui.search.selection.dropdown>input.search {
+    padding: 5px 10px !important;
+    line-height: 20px !important;
 }
 
 .ui.input>input,

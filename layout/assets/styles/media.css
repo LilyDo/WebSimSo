@@ -156,6 +156,17 @@
         align-items: center;
         -webkit-box-align: center;
     }
+    .footerInfo,
+    .footerLogo,
+    .footerPlugin {
+        width: 100%;
+    }
+    .footerLogo {
+        margin-left: 45px;
+    }
+    .footerPlugin {
+        margin-left: 85px;
+    }
     .footerInfo {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -330,6 +341,20 @@
     .thongTinLienHe,
     .follow {
         font-size: 17px;
+    }
+    .footerLogo,
+    .footerPlugin {
+        width: 25%;
+    }
+    .footerLogo img {
+        width: 100%;
+    }
+    .footerInfo {
+        width: 50%;
+    }
+    .footerPlugin {
+        text-align: right;
+        margin-left: 37px;
     }
     /* simSoDep page */
     .pageAnchor {
