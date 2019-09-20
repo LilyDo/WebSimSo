@@ -84,9 +84,11 @@
         font-size: 12px;
         background-color: #0081B5;
         color: white;
+        font-family: "Montserrat-SemiBold";
     }
     .headerHotLine .text {
         color: white;
+        font-family: "Montserrat-SemiBold";
     }
     .footerPlugin {
         margin-left: 37px;
@@ -251,9 +253,11 @@
         padding-right: 40px;
         padding-left: 10px;
         color: black;
+        font-family: "Montserrat-SemiBold";
     }
     .headerHotLine .text {
         color: black;
+        font-family: "Montserrat-SemiBold";
     }
     .HeaderAddress {
         border: 1px solid #707070;
@@ -261,6 +265,8 @@
         border-bottom-right-radius: 5px;
         padding-right: 40px;
         padding-left: 40px;
+        font-family: "Montserrat-SemiBold";
+        color: black;
     }
     .headerLeft {
         margin-left: 20px;

@@ -193,7 +193,7 @@ body {
 .footerAddress {
     display: flex;
     display: -webkit-flex;
-    color: #B0B9CA;
+    color: #677897;
     align-items: center;
     -webkit-box-align: center;
 }
