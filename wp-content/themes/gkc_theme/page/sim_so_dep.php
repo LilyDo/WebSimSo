@@ -58,9 +58,9 @@
     if (isset($_GET['so']) && $_GET['so'] != ''){
         $args['meta_query'] = [
             [
-                'key'	 	=> 'number',
-                'value'	  	=> $_GET['so'],
-                'compare' 	=> 'LIKE',
+                'key'       => 'number',
+                'value'     => $_GET['so'],
+                'compare'   => 'LIKE',
             ]
         ];
     }
@@ -163,8 +163,8 @@
                     <tr>
                         <td><?= $item->number ?></td>
                         <td><?= number_format($item->cost) ?></td>
-                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
                         <td><?= processPostTerms('types', $item->ID) ?></td>
+                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
                             <a href="<?=get_permalink($item->ID)?>">

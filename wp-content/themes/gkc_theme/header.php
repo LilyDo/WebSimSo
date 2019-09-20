@@ -35,7 +35,7 @@
         <button class="hamburgerDropdown">NẠP TIỀN</button>
         <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
         <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
-        <button class="hamburgerDropdown">LIÊN HỆ</button>
+        <button class="hamburgerDropdown lienHe">LIÊN HỆ</button>
     </div>
     <div class=headerRight>
       <div class="headerUpper">

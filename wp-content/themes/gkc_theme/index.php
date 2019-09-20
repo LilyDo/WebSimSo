@@ -193,8 +193,8 @@
                     <tr>
                         <td><?= $item->number ?></td>
                         <td><?= number_format($item->cost) ?></td>
-                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
                         <td><?= processPostTerms('types', $item->ID) ?></td>
+                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
                             <a href="<?=get_permalink($item->ID)?>">
