@@ -89,7 +89,7 @@
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
                             <a href="<?=get_permalink($item->ID)?>">
-                                <div class="cart">
+                                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
                                     <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
                                     Mua
                                 </div>
@@ -110,7 +110,7 @@
                     </button>
                     <?php endif; ?>
                     <?php if ($paging < $maxPage) : ?>
-                    <button class="next" onclick="location.href = '<?=processPage(($paging == $maxPage)? $maxPage : $paging + 1, $_GET)?>'">
+                    <button class="next threeDimensionBlueButton threeDimensionShortBlueButton" onclick="location.href = '<?=processPage(($paging == $maxPage)? $maxPage : $paging + 1, $_GET)?>'">
                         Trang kế tiếp
                         <img src="<?= base_url() ?>/assets/images/arrow_right.svg">
                     </button>

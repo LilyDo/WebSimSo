@@ -22,7 +22,7 @@
 ?>
 <div class=searchTable>
     <div class="tableRow titleRow">
-        <div class="title" onmouseover="showTooltip()" onmouseout="hideTooltip()">HƯỚNG DẪN</div>
+        <div class="title threeDimensionBlueButton" onmouseover="showTooltip()" onmouseout="hideTooltip()">HƯỚNG DẪN</div>
         <div class="tooltip">
             <div class="tooltip-inner">
                 <div class="bg-intruction-search">
@@ -120,7 +120,7 @@
         </div>
     </div>
     <div class="tableRow">
-        <button class="tableButton" type="submit">
+        <button class="tableButton threeDimensionBlueButton" type="submit">
             <img src="<?= base_url() ?>/assets/images/icon_search.svg"/>
             TÌM KIẾM NGAY
         </button>

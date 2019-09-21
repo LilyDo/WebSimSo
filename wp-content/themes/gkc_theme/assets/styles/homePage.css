@@ -230,7 +230,7 @@ body {
     border-radius: 5px;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 70px;
     z-index: 1;
 }
 
@@ -255,13 +255,67 @@ body {
     position: relative;
 }
 
-.searchTable .title {
+.threeDimensionBlueButton {
+    display: flex;
+    align-items: center;
+    position: relative;
     font-family: "Montserrat-SemiBold";
     border: none;
-    border-radius: 5px;
-    background-color: #0081B5;
+    border-radius: 100px;
     color: #ffffff;
-    cursor: pointer;
+    background-color: #0081B5;
+    background-image: linear-gradient(#0081B5, #329ac3);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(7, 4, 4, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.threeDimensionShortBlueButton::before {
+    width: calc(100% - 30px) !important;
+    height: 10px !important;
+}
+
+.threeDimensionBlueButton::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    background: #fff;
+    border-radius: 100px;
+    opacity: 0.4;
+    background-image: linear-gradient(white, #0081B5);
+}
+
+.threeDimensionRedButton {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: "Montserrat-SemiBold";
+    border: none;
+    border-radius: 100px;
+    color: #ffffff;
+    background-color: #DA251D;
+    background-image: linear-gradient(#DA251D, #981914);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.threeDimensionRedButton::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    background: #fff;
+    border-radius: 100px;
+    opacity: 0.4;
+    background-image: linear-gradient(white, #DA251D);
 }
 
 .rowHalf {
@@ -292,20 +346,9 @@ body {
 }
 
 .tableButton {
-    font-family: "Montserrat-SemiBold";
-    color: white;
-    background-color: #0081B5;
-    border: none;
-    border-radius: 5px;
+    font-size: 14px;
     padding: 10px 15px;
     margin-top: 20px;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-box-align: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    cursor: pointer;
 }
 
 .tableButton img {
@@ -398,7 +441,6 @@ body {
     background-color: #0081B5;
     border-radius: 100px;
     padding: 10px 20px;
-    margin-right: 20px;
 }
 
 .simTable .cart img {

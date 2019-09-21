@@ -224,10 +224,7 @@ div.registerInfo {
 }
 
 .buttonContainer .orderButton {
-    font-family: "Montserrat"-Bold;
-    color: #ffffff;
-    background-color: #DA251D;
-    border-radius: 20px;
+    font-family: "Montserrat-Bold";
 }
 
 .mapContainer .title {
