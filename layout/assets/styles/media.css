@@ -153,6 +153,9 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .cart-cell {
+        flex-direction: column;
+    }
     /* footer */
     .footerUpper {
         flex-direction: column;
@@ -336,6 +339,12 @@
         padding-right: 30px;
         justify-content: flex-end;
         -webkit-box-pack: flex-end;
+    }
+    .cart-cell {
+        flex-direction: row;
+    }
+    .cart-cell .cart {
+        margin-right: 10px;
     }
     /* footer */
     .footerUpper {
