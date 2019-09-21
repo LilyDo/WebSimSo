@@ -256,8 +256,11 @@ body {
 }
 
 .threeDimensionBlueButton {
+    display: flex;
+    align-items: center;
     position: relative;
     font-family: "Montserrat-SemiBold";
+    border: none;
     border-radius: 100px;
     color: #ffffff;
     background-color: #0081B5;
@@ -265,6 +268,10 @@ body {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.threeDimensionShortBlueButton::before {
+    height: 10px !important;
 }
 
 .threeDimensionBlueButton::before {
@@ -310,20 +317,9 @@ body {
 }
 
 .tableButton {
-    font-family: "Montserrat-SemiBold";
-    color: white;
-    background-color: #0081B5;
-    border: none;
-    border-radius: 5px;
+    font-size: 14px;
     padding: 10px 15px;
     margin-top: 20px;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-box-align: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    cursor: pointer;
 }
 
 .tableButton img {

@@ -97,9 +97,9 @@
     .searchTable {
         padding: 10px;
     }
-    .threeDimensionBlueButton {
-        font-size: 15px;
+    .searchTable .title {
         padding: 20px;
+        font-size: 15px;
     }
     .searchTable .title {
         width: 100%;
@@ -294,9 +294,9 @@
     .searchTable {
         padding: 25px 40px;
     }
-    .threeDimensionBlueButton {
-        font-size: 20px;
+    .searchTable .title {
         padding: 15px 80px;
+        font-size: 20px;
     }
     .titleRow {
         justify-content: flex-start !important;
