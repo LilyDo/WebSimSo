@@ -84,9 +84,11 @@
         font-size: 12px;
         background-color: #0081B5;
         color: white;
+        font-family: "Montserrat-SemiBold";
     }
     .headerHotLine .text {
         color: white;
+        font-family: "Montserrat-SemiBold";
     }
     .footerPlugin {
         margin-left: 37px;
@@ -155,6 +157,17 @@
         -webkit-flex-direction: column;
         align-items: center;
         -webkit-box-align: center;
+    }
+    .footerInfo,
+    .footerLogo,
+    .footerPlugin {
+        width: 100%;
+    }
+    .footerLogo {
+        margin-left: 45px;
+    }
+    .footerPlugin {
+        margin-left: 85px;
     }
     .footerInfo {
         padding-top: 10px;
@@ -240,9 +253,11 @@
         padding-right: 40px;
         padding-left: 10px;
         color: black;
+        font-family: "Montserrat-SemiBold";
     }
     .headerHotLine .text {
         color: black;
+        font-family: "Montserrat-SemiBold";
     }
     .HeaderAddress {
         border: 1px solid #707070;
@@ -250,6 +265,8 @@
         border-bottom-right-radius: 5px;
         padding-right: 40px;
         padding-left: 40px;
+        font-family: "Montserrat-SemiBold";
+        color: black;
     }
     .headerLeft {
         margin-left: 20px;
@@ -330,6 +347,20 @@
     .thongTinLienHe,
     .follow {
         font-size: 17px;
+    }
+    .footerLogo,
+    .footerPlugin {
+        width: 25%;
+    }
+    .footerLogo img {
+        width: 100%;
+    }
+    .footerInfo {
+        width: 50%;
+    }
+    .footerPlugin {
+        text-align: right;
+        margin-left: 37px;
     }
     /* simSoDep page */
     .pageAnchor {

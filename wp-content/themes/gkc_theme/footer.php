@@ -63,6 +63,38 @@
         }
     }
 
+    function changePaging(element, e) {
+        if (e.keyCode == 13) {
+            let val = $(element).val();
+            let dataSearch = parseQueryString();
+            dataSearch.paging = val;
+            location.href = location.origin + '/?' + serialize(dataSearch);
+        }
+    }
+
+    function parseQueryString() {
+
+        var str = window.location.search;
+        var objURL = {};
+
+        str.replace(
+            new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
+            function( $0, $1, $2, $3 ){
+                objURL[ $1 ] = $3;
+            }
+        );
+        return objURL;
+    };
+
+    function serialize(obj) {
+      var str = [];
+        for (var p in obj)
+            if (obj.hasOwnProperty(p)) {
+              str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+            }
+      return str.join("&");
+    }
+
 
     $(document).ready(function () {
         // Init Semantic UI components
