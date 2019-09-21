@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=”format-detection” content=”telephone=no”>
     <title>homepage</title>
     <link href="./assets/styles/homePage.css" rel="stylesheet" type="text/css">
     <link href="./assets/styles/media.css" rel="stylesheet" type="text/css">
@@ -59,7 +60,7 @@
         </div>
         <div class=searchTable>
             <div class="tableRow titleRow">
-                <div class="title threeDimensionBlueButton" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+                <div class="title threeDimensionBlueButton" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">
                     HƯỚNG DẪN
                 </div>
                 <div class="tooltip">
@@ -284,7 +285,8 @@
             }
         }
 
-        function showTooltip() {
+        function showTooltip(event) {
+            event.preventDefault();
             if (screen.width < 800) {
                 return hideTooltip();
             }
