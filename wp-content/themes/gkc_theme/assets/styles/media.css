@@ -98,8 +98,10 @@
         padding: 10px;
     }
     .searchTable .title {
-        font-size: 15px;
         padding: 10px;
+        font-size: 15px;
+    }
+    .searchTable .title {
         width: 100%;
         align-content: center;
     }
@@ -150,6 +152,9 @@
         -webkit-box-pack: center;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .cart-cell {
+        flex-direction: column;
     }
     /* footer */
     .footerUpper {
@@ -235,6 +240,10 @@
     .numberRegister {
         padding: 10px;
     }
+    .threeDimensionBlueButton::before,
+    .threeDimensionRedButton::before {
+        height: 10px;
+    }
 }
 
 
@@ -293,8 +302,8 @@
         padding: 25px 40px;
     }
     .searchTable .title {
+        padding: 15px 80px;
         font-size: 20px;
-        padding: 10px 80px;
     }
     .titleRow {
         justify-content: flex-start !important;
@@ -330,6 +339,12 @@
         padding-right: 30px;
         justify-content: flex-end;
         -webkit-box-pack: flex-end;
+    }
+    .cart-cell {
+        flex-direction: row;
+    }
+    .cart-cell .cart {
+        margin-right: 10px;
     }
     /* footer */
     .footerUpper {
@@ -425,5 +440,9 @@
     .owl-carousel .owl-next i,
     .owl-carousel .owl-prev i {
         font-size: 30px;
+    }
+    .threeDimensionBlueButton::before,
+    .threeDimensionRedButton::before {
+        height: 15px;
     }
 }

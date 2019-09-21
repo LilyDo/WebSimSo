@@ -84,7 +84,7 @@
                         <td><?= $item->address ?></td>
                         <td class="cart-cell">
                             <a href="<?=get_permalink($item->ID)?>">
-                                <div class="cart">
+                                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
                                     <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
                                     Mua
                                 </div>
