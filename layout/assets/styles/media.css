@@ -98,7 +98,7 @@
         padding: 10px;
     }
     .searchTable .title {
-        padding: 20px;
+        padding: 10px;
         font-size: 15px;
     }
     .searchTable .title {
@@ -236,6 +236,10 @@
     .numberDetail td,
     .numberRegister {
         padding: 10px;
+    }
+    .threeDimensionBlueButton::before,
+    .threeDimensionRedButton::before {
+        height: 10px;
     }
 }
 
@@ -427,5 +431,9 @@
     .owl-carousel .owl-next i,
     .owl-carousel .owl-prev i {
         font-size: 30px;
+    }
+    .threeDimensionBlueButton::before,
+    .threeDimensionRedButton::before {
+        height: 15px;
     }
 }

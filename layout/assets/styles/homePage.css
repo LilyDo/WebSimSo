@@ -271,13 +271,13 @@ body {
 }
 
 .threeDimensionShortBlueButton::before {
+    width: calc(100% - 30px) !important;
     height: 10px !important;
 }
 
 .threeDimensionBlueButton::before {
     content: "";
     display: block;
-    height: 15px;
     position: absolute;
     top: 2px;
     left: 50%;
@@ -307,7 +307,6 @@ body {
 .threeDimensionRedButton::before {
     content: "";
     display: block;
-    height: 15px;
     position: absolute;
     top: 2px;
     left: 50%;
