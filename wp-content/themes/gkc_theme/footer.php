@@ -49,7 +49,8 @@
 
     }
 
-    function showTooltip() {
+    function showTooltip(event) {
+        event.preventDefault();
         var tooltip = document.getElementsByClassName("tooltip")[0];
         if (tooltip != undefined) {
             tooltip.style.display = "block"
