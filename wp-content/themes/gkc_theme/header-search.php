@@ -22,7 +22,7 @@
 ?>
 <div class=searchTable>
     <div class="tableRow titleRow">
-        <div class="title threeDimensionBlueButton" onmouseover="showTooltip()" onmouseout="hideTooltip()">HƯỚNG DẪN</div>
+        <div class="title threeDimensionBlueButton" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">HƯỚNG DẪN</div>
         <div class="tooltip">
             <div class="tooltip-inner">
                 <div class="bg-intruction-search">
