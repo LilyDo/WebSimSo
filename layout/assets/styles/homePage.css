@@ -431,38 +431,35 @@ a[href^=tel] {
     justify-content: center;
 }
 
-.simTableBody .freezedHeaderColumn,
-.freezedBodyColumn {
+
+/* header */
+
+.simTableBody .freezedHeaderColumn {
     background-color: #0081B5;
     color: white !important;
 }
 
 .freezedHeaderColumn {
-    position: absolute;
     padding: 0 !important;
     margin: 0 !important;
     height: 60px;
-    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+/* body */
+
 .freezedBodyColumn {
-    position: absolute;
     padding: 0 !important;
     margin: 0 !important;
-    height: 40px;
-    min-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .simTableBody tr div {
-    height: 38px;
-    min-width: 100px;
-    width: max-content;
     display: flex;
     align-items: center;
     justify-content: center;
