@@ -6,7 +6,7 @@
     justify-content: flex-start;
     -webkit-box-pack: flex-start;
     color: #0081B5;
-    font-family: "Montserrat"-Bold;
+    font-family: "Montserrat-Bold";
 }
 
 .anchorHome {
@@ -38,14 +38,14 @@
     border: 1px solid #FF0000;
     color: #707070;
     border-radius: 100px;
-    font-family: "Montserrat"-SemiBold;
+    font-family: "Montserrat-SemiBold";
 }
 
 .simNumber .title,
 .simOrder .title,
 .numberRegister .title,
 .mapContainer .title {
-    font-family: "Montserrat"-Bold;
+    font-family: "Montserrat-Bold";
     color: #677897;
 }
 
@@ -122,7 +122,7 @@ div.registerInfo {
 }
 
 .idUpload .text {
-    font-family: "Montserrat"-Italic;
+    font-family: "Montserrat-Italic";
     font-size: 8px;
     line-height: normal;
     padding-left: 10px;
@@ -168,7 +168,7 @@ div.registerInfo {
 }
 
 .orderForm .text {
-    font-family: "Montserrat"-SemiBold;
+    font-family: "Montserrat-SemiBold";
     padding: 0 0 15px 0;
 }
 
@@ -206,13 +206,13 @@ div.registerInfo {
 .address,
 .id,
 .deliveryAddress {
-    font-family: "Montserrat"-SemiBold;
+    font-family: "Montserrat-SemiBold";
     font-size: 17px;
 }
 
 .checkBox input::placeholder {
-    font-family: "Montserrat"-Italic;
-    font-size: 11px;
+    font-family: "Montserrat-Italic";
+    font-size: 9px;
     color: #677897;
 }
 
