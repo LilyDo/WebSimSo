@@ -91,7 +91,7 @@
         font-family: "Montserrat-SemiBold";
     }
     .footerPlugin {
-        margin-left: 37px;
+        padding-left: 37px;
     }
     /* search table */
     .searchTable .title {
@@ -135,11 +135,6 @@
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 12px;
-        padding: 5px 0;
-    }
-    .simTable tbody tr td {
-        padding-left: 5px;
-        padding-right: 5px;
     }
     .pagination {
         flex-direction: column;
@@ -153,9 +148,6 @@
         -webkit-box-pack: center;
         padding-top: 10px;
         padding-bottom: 10px;
-    }
-    .cart-cell {
-        flex-direction: column;
     }
     /* footer */
     .footerUpper {
@@ -342,18 +334,11 @@
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 15px;
-        padding: 15px 5px;
     }
     .paginationDiv.pageNumbers {
         padding-right: 30px;
         justify-content: flex-end;
         -webkit-box-pack: flex-end;
-    }
-    .cart-cell {
-        flex-direction: row;
-    }
-    .cart-cell .cart {
-        margin-right: 10px;
     }
     /* footer */
     .footerUpper {
@@ -384,7 +369,7 @@
     }
     .footerPlugin {
         text-align: right;
-        margin-left: 37px;
+        padding-left: 37px;
     }
     /* simSoDep page */
     .pageAnchor,
