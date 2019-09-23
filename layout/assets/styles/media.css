@@ -94,16 +94,14 @@
         margin-left: 37px;
     }
     /* search table */
-    .searchTable {
-        padding: 10px;
-    }
     .searchTable .title {
         padding: 10px;
         font-size: 15px;
-    }
-    .searchTable .title {
         width: 100%;
         align-content: center;
+    }
+    .searchTable {
+        padding: 0 10px 10px 10px;
     }
     .tableRow {
         flex-direction: column;
@@ -117,9 +115,6 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .searchTable {
-        font-size: 12px !important;
-    }
     .ui.fluid.input>input::placeholder {
         font-size: 12px !important;
     }
@@ -130,6 +125,12 @@
     .dataContent {
         padding: 0;
         margin-bottom: 50px;
+    }
+    .simTable .cart {
+        padding: 5px 10px;
+    }
+    .simTable .cart img {
+        padding-right: 5px;
     }
     .simTable thead tr th,
     .simTable tbody tr td {
@@ -168,11 +169,9 @@
     .footerPlugin {
         width: 100%;
     }
-    .footerLogo {
-        margin-left: 45px;
-    }
+    .footerLogo,
     .footerPlugin {
-        margin-left: 85px;
+        padding-left: 28px;
     }
     .footerInfo {
         padding-top: 10px;
@@ -302,7 +301,8 @@
     }
     /* table */
     .searchTable {
-        padding: 25px 40px;
+        padding: 10px 40px 25px 40px;
+        font-size: 12px !important;
     }
     .searchTable .title {
         padding: 15px 80px;
@@ -332,6 +332,12 @@
         margin-bottom: 100px;
         padding-left: 40px;
         padding-right: 40px;
+    }
+    .simTable .cart {
+        padding: 10px 20px;
+    }
+    .simTable .cart img {
+        padding-right: 10px;
     }
     .simTable thead tr th,
     .simTable tbody tr td {
@@ -381,9 +387,6 @@
         margin-left: 37px;
     }
     /* simSoDep page */
-    .pageAnchor {
-        margin: 30px 0px 40px 0px;
-    }
     .pageAnchor,
     .simNumber,
     .simDetail,

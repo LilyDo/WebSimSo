@@ -133,6 +133,13 @@ a[href^=tel] {
 }
 
 
+/* content */
+
+.pageAnchor {
+    margin: 10px 0px 20px 0;
+}
+
+
 /* footer */
 
 .footer {
@@ -162,7 +169,7 @@ a[href^=tel] {
     display: flex;
     display: -webkit-flex;
     flex-grow: 2;
-    margin-left: 10px;
+    padding-left: 10px;
     align-items: flex-start;
     -webkit-box-align: flex-start;
     justify-content: center;
@@ -206,6 +213,10 @@ a[href^=tel] {
 .footerHotline .text,
 .footerAddress .text {
     padding-left: 15px;
+}
+
+.footerHotline .text {
+    color: #0081B5;
 }
 
 .follow {
@@ -277,7 +288,7 @@ a[href^=tel] {
 
 .threeDimensionShortBlueButton::before {
     width: calc(100% - 30px) !important;
-    height: 10px !important;
+    height: 5px !important;
 }
 
 .threeDimensionBlueButton::before {
@@ -445,11 +456,6 @@ a[href^=tel] {
     color: white;
     background-color: #0081B5;
     border-radius: 100px;
-    padding: 10px 20px;
-}
-
-.simTable .cart img {
-    padding-right: 10px;
 }
 
 
