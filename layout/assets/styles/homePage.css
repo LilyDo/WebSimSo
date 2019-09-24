@@ -401,10 +401,6 @@ a[href^=tel] {
     opacity: 0.5;
 }
 
-.dataContent {
-    overflow: auto;
-}
-
 
 /* sim table */
 
@@ -424,7 +420,12 @@ a[href^=tel] {
 }
 
 
-/* header */
+/* body */
+
+.dataContent {
+    overflow-x: scroll;
+    overflow-y: visible;
+}
 
 .simTableBody .freezedHeaderColumn {
     background-color: #0081B5;
@@ -439,9 +440,6 @@ a[href^=tel] {
     align-items: center;
     justify-content: center;
 }
-
-
-/* body */
 
 .freezedBodyColumn {
     padding: 0 !important;
@@ -504,79 +502,27 @@ a[href^=tel] {
 /* pagination */
 
 .pagination {
-    padding-top: 50px;
+    padding: 50px 0;
     display: flex;
-    display: -webkit-flex;
-    font-size: 12px;
-    font-family: "Montserrat" !important;
-}
-
-.paginationDiv {
-    flex: 1;
-    -webkit-flex: 1;
-}
-
-.paginationButtons {
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-box-align: center;
+    flex-direction: row;
     justify-content: center;
-    -webkit-box-pack: center;
-}
-
-.paginationButtons button {
-    font-family: "Montserrat" !important;
-    display: flex;
-    display: -webkit-flex;
     align-items: center;
-    -webkit-box-align: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    margin: 0 5px;
-    border-radius: 2px;
-    padding: 5px;
+    font-family: "Montserrat";
 }
 
-.paginationButtons .previous {
-    color: #0081B5;
-    border: 1px solid #0081B5;
-}
-
-.paginationButtons .previous img {
-    padding-right: 5px;
-}
-
-.paginationButtons .next {
-    background-color: #0081B5;
-    color: white;
-    border: 1px solid #0081B5;
-}
-
-.paginationButtons .next img {
-    padding-left: 5px;
-}
-
-.pageNumbers {
+.numberContainer {
     display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-box-align: center;
+    flex-direction: row;
+    padding: 0 20px;
+    height: 100%;
 }
 
-.pageNumbers input[type=text] {
-    font-family: "Montserrat" !important;
-    width: 28px;
-    height: 28px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border: 1px solid #707070;
-    border-radius: 2px;
-    text-align: center;
+.pageNumber {
+    padding: 0 10px;
 }
 
-.pageNumbers img {
-    padding-left: 5px;
+.pageNumber.current {
+    border-bottom: 3px solid #DA251D;
 }
 
 .owl-carousel .owl-prev {

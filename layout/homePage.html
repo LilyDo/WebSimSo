@@ -245,96 +245,91 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="pagination">
-                <div class="paginationDiv blank"></div>
-                <div class="paginationDiv paginationButtons">
-                    <button class="previous">
-            <img src="assets/images/arrow_left.svg">
-            Trang trước
-          </button>
-                    <button class="next">
-            Trang kế tiếp
-            <img src="assets/images/arrow_right.svg">
-          </button>
-                </div>
-                <div class="paginationDiv pageNumbers">
-                    Trang
-                    <input type="text"> của 25 trang
-                    <img src="./assets/images/arrow_left_button.svg">
-                    <img src="./assets/images/arrow_right_button.svg">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">
-        <div class="footerUpper">
-            <div class="footerLogo">
-                <img src="assets/images/logo.png">
-            </div>
-
-            <div class="footerInfo">
-                <div class="thongTinLienHe">Thông tin liên hệ:</div>
-                <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
-                <div class="footerAddress">
-                    <span> <img src="assets/images/icon_location.svg"> </span>
-                    <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
-                </div>
-                <div class="footerHotline">
-                    <span> <img src="assets/images/icon_phone.svg"></span>
-                    <a href="tel:0773885678" class="text">077 388 5678</a>
-                </div>
-            </div>
-            <div class="footerPlugin">
-                <div class="follow">Follow us:</div>
-                <div>
-                    <img class="pluginFacebook" src="assets/images/icon_facebook.svg">
-                    <img class="pluginInstagram" src="assets/images/icon_instagram.svg">
-                </div>
-            </div>
-        </div>
-        <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
         </div>
 
-    </div>
+        <div class="pagination">
+            <div><img src="assets/images/icon_previous.svg"></div>
+            <div class="numberContainer">
+                <div class="pageNumber current">1</div>
+                <div class="pageNumber">2</div>
+                <div class="pageNumber">3</div>
+                <div class="pageNumber">4</div>
+                <div class="pageNumber">5</div>
+                <div class="pageNumber">...</div>
+                <div class="pageNumber">2500</div>
+            </div>
+            <div><img src="assets/images/icon_next.svg"></div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
+        <div class="footer">
+            <div class="footerUpper">
+                <div class="footerLogo">
+                    <img src="assets/images/logo.png">
+                </div>
 
-    <!-- Custom scripts -->
-    <script>
-        function toggleDropdownContainer() {
-            var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+                <div class="footerInfo">
+                    <div class="thongTinLienHe">Thông tin liên hệ:</div>
+                    <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
+                    <div class="footerAddress">
+                        <span> <img src="assets/images/icon_location.svg"> </span>
+                        <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
+                    </div>
+                    <div class="footerHotline">
+                        <span> <img src="assets/images/icon_phone.svg"></span>
+                        <a href="tel:0773885678" class="text">077 388 5678</a>
+                    </div>
+                </div>
+                <div class="footerPlugin">
+                    <div class="follow">Follow us:</div>
+                    <div>
+                        <img class="pluginFacebook" src="assets/images/icon_facebook.svg">
+                        <img class="pluginInstagram" src="assets/images/icon_instagram.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
+            </div>
 
-            if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
-                dropdownContainer.style.display = "flex";
-            } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
-                dropdownContainer.style.display = "none";
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
+
+        <!-- Custom scripts -->
+        <script>
+            function toggleDropdownContainer() {
+                var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+                if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
+                    dropdownContainer.style.display = "flex";
+                } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
+                    dropdownContainer.style.display = "none";
+                }
             }
-        }
 
-        function showTooltip(event) {
-            event.preventDefault();
-            if (screen.width < 800) {
-                return hideTooltip();
+            function showTooltip(event) {
+                event.preventDefault();
+                if (screen.width < 800) {
+                    return hideTooltip();
+                }
+                var tooltip = document.getElementsByClassName("tooltip")[0];
+                if (tooltip != undefined) {
+                    tooltip.style.display = "block"
+                }
             }
-            var tooltip = document.getElementsByClassName("tooltip")[0];
-            if (tooltip != undefined) {
-                tooltip.style.display = "block"
-            }
-        }
 
-        function hideTooltip() {
-            var tooltip = document.getElementsByClassName("tooltip")[0];
-            if (tooltip != undefined) {
-                tooltip.style.display = "none"
+            function hideTooltip() {
+                var tooltip = document.getElementsByClassName("tooltip")[0];
+                if (tooltip != undefined) {
+                    tooltip.style.display = "none"
+                }
             }
-        }
-        // Init Semantic UI components
-        $('.ui.dropdown')
-            .dropdown();
-    </script>
+            // Init Semantic UI components
+            $('.ui.dropdown')
+                .dropdown();
+        </script>
 </body>
 
 </html>
