@@ -90,9 +90,6 @@
         color: white;
         font-family: "Montserrat-SemiBold";
     }
-    .footerPlugin {
-        padding-left: 37px;
-    }
     /* search table */
     .searchTable .title {
         padding: 10px;
@@ -177,9 +174,11 @@
     .footerPlugin {
         width: 100%;
     }
-    .footerLogo,
-    .footerPlugin {
+    .footerLogo {
         padding-left: 28px;
+    }
+    .footerPlugin {
+        padding-left: 48px;
     }
     .footerInfo {
         padding-top: 10px;
@@ -398,7 +397,6 @@
     }
     .footerPlugin {
         text-align: right;
-        padding-left: 37px;
     }
     /* simSoDep page */
     .pageAnchor,
