@@ -112,7 +112,14 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .ui.fluid.input>input::placeholder {
+    .ui.fluid.input>input::placeholder,
+    .ui.search.dropdown>input.search,
+    .ui.selection.dropdown .menu>.item,
+    .ui.search.dropdown.active>input.search,
+    .ui.search.dropdown.visible>input.search,
+    .ui.search.dropdown>.text,
+    .oneThird {
+        color: #677897 !important;
         font-size: 12px !important;
     }
     .noPaddingLeft {
@@ -231,8 +238,8 @@
         padding: 10px 20px;
         margin-left: 20px;
     }
-    .orderForm .payment,
-    .orderForm .delivery {
+    div.payment,
+    div.delivery {
         padding: 10px;
     }
     .buttonContainer {
@@ -331,7 +338,15 @@
     .rowHalf {
         width: 50%;
     }
-    .ui.fluid.input>input::placeholder {
+    .ui.fluid.input>input::placeholder,
+    .ui.fluid.input>input::placeholder,
+    .ui.search.dropdown>input.search,
+    .ui.selection.dropdown .menu>.item,
+    .ui.search.dropdown.active>input.search,
+    .ui.search.dropdown.visible>input.search,
+    .ui.search.dropdown>.text,
+    .oneThird {
+        color: #677897 !important;
         font-size: 14px !important;
     }
     /* sim table */
@@ -432,8 +447,8 @@
         padding: 15px 50px;
         margin-left: 30px;
     }
-    .orderForm .payment,
-    .orderForm .delivery {
+    div.payment,
+    div.delivery {
         padding: 20px;
     }
     .buttonContainer {
