@@ -13,7 +13,7 @@
             </div>
             <div class="footerHotline">
                 <span> <img src="<?= base_url() ?>/assets/images/icon_phone.svg"></span>
-                <span class="text"> 077 388 5678</span>
+                <a href="tel:0773885678" class="text">077 388 5678</a>
             </div>
         </div>
         <div class="footerPlugin">
