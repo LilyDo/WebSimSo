@@ -41,7 +41,7 @@
       <div class="headerUpper">
         <div class="headerHotLine">
           <span> <img src="<?=base_url()?>/assets/images/phone.svg"> </span>
-          <a href="tel:0773885678" class="text">077 388 5678</a>
+          <a href="tel:0773885678" class="text">Hotline 077 388 5678</a>
         </div>
         <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>
       </div>
