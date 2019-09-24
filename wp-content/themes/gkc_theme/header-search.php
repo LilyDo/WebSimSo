@@ -39,11 +39,8 @@
                         <strong>2.</strong> Hoặc sử dụng dấu * đại diện cho một chuỗi số bất kỳ
                     </p>
                     <ul style="padding-left: 20px;">
-                        <li>a. Để tìm số bắt đầu bằng 88, nhập vào 88*</li>
-                        <li>b. Để tìm số kết thúc bằng 88, nhập vào *88 hoặc 88</li>
-                        <li>c. Để tìm số bắt đầu bằng 88 và kết thúc bằng 99, nhập vào 88*99</li>
-                        <li>d. Để tìm số chứa 88, nhập vào *88*</li>
-                        <li>e. Để tìm số chứa 88 và 99, nhập vào *88*99*</li>
+                        <li>a. Để tìm số chứa 88, nhập 88, hoặc *88 và 88* hoặc *88*</li>
+                        <li>b. Để tìm số chứa 88 và 99, nhập vào 88*99</li>
                     </ul>
                     <p></p>
                     <p>

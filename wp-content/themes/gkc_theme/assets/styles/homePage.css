@@ -133,6 +133,13 @@ a[href^=tel] {
 }
 
 
+/* content */
+
+.pageAnchor {
+    margin: 10px 0px 20px 0;
+}
+
+
 /* footer */
 
 .footer {
@@ -162,7 +169,7 @@ a[href^=tel] {
     display: flex;
     display: -webkit-flex;
     flex-grow: 2;
-    margin-left: 10px;
+    padding-left: 10px;
     align-items: flex-start;
     -webkit-box-align: flex-start;
     justify-content: center;
@@ -206,6 +213,10 @@ a[href^=tel] {
 .footerHotline .text,
 .footerAddress .text {
     padding-left: 15px;
+}
+
+.footerHotline .text {
+    color: #0081B5;
 }
 
 .follow {
@@ -264,6 +275,7 @@ a[href^=tel] {
     display: flex;
     align-items: center;
     position: relative;
+    height: auto !important;
     font-family: "Montserrat-SemiBold";
     border: none;
     border-radius: 100px;
@@ -277,7 +289,7 @@ a[href^=tel] {
 
 .threeDimensionShortBlueButton::before {
     width: calc(100% - 30px) !important;
-    height: 10px !important;
+    height: 5px !important;
 }
 
 .threeDimensionBlueButton::before {
@@ -410,16 +422,63 @@ a[href^=tel] {
     border-collapse: collapse;
 }
 
+.simTableHead th div {
+    height: 58px;
+    min-width: 100px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* header */
+
+.simTableBody .freezedHeaderColumn {
+    background-color: #0081B5;
+    color: white !important;
+}
+
+.freezedHeaderColumn {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* body */
+
+.freezedBodyColumn {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simTableBody tr div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invisibleTD {
+    width: 100px;
+    display: block;
+}
+
 .simTable thead tr th {
     background-color: #0081B5;
     color: white;
     font-family: "Montserrat-SemiBold";
 }
 
-.simTable tbody tr td {
+.simTable tbody tr td div {
     color: #677897;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 5px 10px;
 }
 
 .simTable tbody tr {
@@ -430,12 +489,14 @@ a[href^=tel] {
     display: flex;
     display: -webkit-flex;
     align-items: center;
+    flex-direction: row;
     -webkit-box-align: center;
     justify-content: flex-end;
     -webkit-box-pack: flex-end;
 }
 
 .simTable .cart {
+    margin-right: 10px;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -445,11 +506,6 @@ a[href^=tel] {
     color: white;
     background-color: #0081B5;
     border-radius: 100px;
-    padding: 10px 20px;
-}
-
-.simTable .cart img {
-    padding-right: 10px;
 }
 
 

@@ -5,7 +5,7 @@
  */
 get_header();
 ?>
-    <title>Chi tiết sim</title>
+    <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
 
         <div class="bannerCenter">
@@ -24,11 +24,11 @@ get_header();
 
                 <tr>
                     <td>Loại thuê bao</td>
-                    <td><?= strip_tags(get_the_term_list(get_the_ID(), "tbtypes", "", ", ", "")) ?></td>
+                    <td><?= processPostTerms('tbtypes', get_the_ID()) ?></td>
                 </tr>
                 <tr>
                     <td>Loại số</td>
-                    <td><?= strip_tags(get_the_term_list(get_the_ID(), "types", "", ", ", "")) ?></td>
+                    <td><?= processPostTerms('types', get_the_ID()) ?></td>
                 </tr>
                 <tr>
                     <td>Giá sim</td>
@@ -105,7 +105,7 @@ get_header();
                 <div class="payment">
                     <div class="text">HÌNH THỨC THANH TOÁN:</div>
                     <div class="checkBox">
-                        <input type="checkBox" class="COD">
+                        <input type="checkbox" class="COD">
                         <div>
                             Thanh toán khi nhận sim (COD) <br>
                             Phí ship từ 15 - 25k tùy địa điểm giao sim.

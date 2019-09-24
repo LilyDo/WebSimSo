@@ -71,30 +71,52 @@
             <table class="simTable">
                 <thead class="simTableHead">
                 <tr>
-                    <th>Số thuê bao</th>
-                    <th>Giá/ Phí hòa mạng</th>
-                    <th>Loại thuê bao</th>
-                    <th>Loại TB/ Cước cam kết (tháng)</th>
-                    <th>Địa điểm hòa mạng</th>
-                    <th>Mua</th>
+                    <th class="freezedHeaderColumn">Số thuê bao</th>
+                    <th class="invisibleTD"></th>
+                    <th>
+                        <div>Giá/ Phí hòa mạng</div>
+                    </th>
+                    <th>
+                        <div>Loại thuê bao</div>
+                    </th>
+                    <th>
+                        <div>Loại TB/ Cước cam kết (tháng)</div>
+                    </th>
+                    <th>
+                        <div>Địa điểm hòa mạng</div>
+                    </th>
+                    <th>
+                        <div>Mua</div>
+                    </th>
                 </tr>
                 </thead>
                 <tbody class="simTableBody">
                 <?php foreach ($data as $item) : ?>
                     <tr>
-                        <td><?= $item->number ?></td>
-                        <td><?= number_format($item->cost) ?></td>
-                        <td><?= processPostTerms('types', $item->ID) ?></td>
-                        <td><?= processPostTerms('tbtypes', $item->ID) ?></td>
-                        <td><?= $item->address ?></td>
-                        <td class="cart-cell">
-                            <a href="<?=get_permalink($item->ID)?>">
-                                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
-                                    <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
-                                    Mua
-                                </div>
-                            </a>
-                            <a href="<?=get_permalink($item->ID)?>">Chi tiết</a>
+                        <td class="freezedBodyColumn"><div><?= $item->number ?></div></td>
+                        <td>
+                            <div><?= number_format($item->cost) ?></div>
+                        </td>
+                        <td>
+                            <div><?= processPostTerms('types', $item->ID) ?></div>
+                        </td>
+                        <td>
+                            <div><?= processPostTerms('tbtypes', $item->ID) ?></div>
+                        </td>
+                        <td>
+                            <div><?= $item->address ?></div>
+                        </td>
+
+                        <td>
+                            <div class="cart-cell">
+                                <a href="<?=get_permalink($item->ID)?>">
+                                    <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
+                                        <img src="<?= base_url() ?>/assets/images/icon_cart.svg">
+                                        Mua
+                                    </div>
+                                </a>
+                                <a href="<?=get_permalink($item->ID)?>">Chi tiết</a>
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -110,7 +132,7 @@
                     </button>
                     <?php endif; ?>
                     <?php if ($paging < $maxPage) : ?>
-                    <button class="next threeDimensionBlueButton threeDimensionShortBlueButton" onclick="location.href = '<?=processPage(($paging == $maxPage)? $maxPage : $paging + 1, $_GET)?>'">
+                    <button class="next" onclick="location.href = '<?=processPage(($paging == $maxPage)? $maxPage : $paging + 1, $_GET)?>'">
                         Trang kế tiếp
                         <img src="<?= base_url() ?>/assets/images/arrow_right.svg">
                     </button>

@@ -42,7 +42,7 @@
         padding-bottom: 10px;
     }
     .hamburgerDropdown {
-        font-family: "Montserrat"-SemiBold;
+        font-family: "Montserrat-SemiBold";
         font-size: 15px;
         color: white;
         border-top: 1px solid white;
@@ -91,19 +91,17 @@
         font-family: "Montserrat-SemiBold";
     }
     .footerPlugin {
-        margin-left: 37px;
+        padding-left: 37px;
     }
     /* search table */
-    .searchTable {
-        padding: 10px;
-    }
     .searchTable .title {
         padding: 10px;
         font-size: 15px;
-    }
-    .searchTable .title {
         width: 100%;
         align-content: center;
+    }
+    .searchTable {
+        padding: 0 10px 10px 10px;
     }
     .tableRow {
         flex-direction: column;
@@ -117,9 +115,6 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .searchTable {
-        font-size: 12px !important;
-    }
     .ui.fluid.input>input::placeholder {
         font-size: 12px !important;
     }
@@ -131,14 +126,31 @@
         padding: 0;
         margin-bottom: 50px;
     }
+    .freezedHeaderColumn {
+        width: 100px;
+    }
+    .freezedHeaderColumn,
+    .freezedBodyColumn {
+        position: absolute;
+    }
+    .freezedBodyColumn div {
+        background-color: #0081B5;
+        color: white !important;
+    }
+    .simTableBody tr div {
+        height: 40px;
+        min-width: 100px;
+        width: max-content;
+    }
+    .simTable .cart {
+        padding: 5px 10px;
+    }
+    .simTable .cart img {
+        padding-right: 5px;
+    }
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 12px;
-        padding: 5px 0;
-    }
-    .simTable tbody tr td {
-        padding-left: 5px;
-        padding-right: 5px;
     }
     .pagination {
         flex-direction: column;
@@ -153,9 +165,6 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .cart-cell {
-        flex-direction: column;
-    }
     /* footer */
     .footerUpper {
         flex-direction: column;
@@ -168,11 +177,9 @@
     .footerPlugin {
         width: 100%;
     }
-    .footerLogo {
-        margin-left: 45px;
-    }
+    .footerLogo,
     .footerPlugin {
-        margin-left: 85px;
+        padding-left: 28px;
     }
     .footerInfo {
         padding-top: 10px;
@@ -302,7 +309,8 @@
     }
     /* table */
     .searchTable {
-        padding: 25px 40px;
+        padding: 10px 40px 25px 40px;
+        font-size: 12px !important;
     }
     .searchTable .title {
         padding: 15px 80px;
@@ -333,21 +341,33 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+    .invisibleTD {
+        display: none;
+    }
+    .freezedHeaderColumn {
+        width: auto;
+    }
+    .freezedHeaderColumn,
+    .freezedBodyColumn {
+        position: initial;
+        display: table-cell;
+    }
+    .simTable .cart {
+        padding: 10px 20px;
+    }
+    .simTable .cart img {
+        padding-right: 10px;
+    }
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 15px;
-        padding: 15px 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .paginationDiv.pageNumbers {
         padding-right: 30px;
         justify-content: flex-end;
         -webkit-box-pack: flex-end;
-    }
-    .cart-cell {
-        flex-direction: row;
-    }
-    .cart-cell .cart {
-        margin-right: 10px;
     }
     /* footer */
     .footerUpper {
@@ -378,12 +398,9 @@
     }
     .footerPlugin {
         text-align: right;
-        margin-left: 37px;
+        padding-left: 37px;
     }
     /* simSoDep page */
-    .pageAnchor {
-        margin: 30px 0px 40px 0px;
-    }
     .pageAnchor,
     .simNumber,
     .simDetail,
