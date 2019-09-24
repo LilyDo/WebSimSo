@@ -401,14 +401,6 @@ a[href^=tel] {
     opacity: 0.5;
 }
 
-.ui.search.dropdown>input.search,
-.ui.selection.dropdown .menu>.item,
-.ui.search.dropdown.active>input.search,
-.ui.search.dropdown.visible>input.search,
-.ui.search.dropdown>.text {
-    color: #677897 !important;
-}
-
 .dataContent {
     overflow: auto;
 }

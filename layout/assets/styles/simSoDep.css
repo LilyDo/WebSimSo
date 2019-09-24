@@ -24,8 +24,7 @@
     flex-direction: row;
     -webkit-flex-direction: row;
     align-items: center;
-    margin-bottom: 10px 0 15px 0;
-    ;
+    margin: 10px 0 15px 0;
 }
 
 .simNumber .number {
@@ -181,7 +180,15 @@ div.registerInfo {
 }
 
 .checkBox div {
-    padding: 10px;
+    padding: 5px;
+}
+
+input.COD,
+input.store,
+input.ibanking,
+input.delivery {
+    width: 16px !important;
+    height: 16px !important;
 }
 
 .deliveryContainer {
@@ -195,10 +202,6 @@ div.registerInfo {
     border: 1px solid #F5F3F3;
     border-radius: 5px;
     line-height: 200%;
-}
-
-.checkBox input[type=checkbox] {
-    width: auto;
 }
 
 .name,
