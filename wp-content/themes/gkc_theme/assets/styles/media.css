@@ -126,10 +126,6 @@
         padding-left: 0 !important;
     }
     /* sim table */
-    .dataContent {
-        padding: 0;
-        margin-bottom: 50px;
-    }
     .freezedHeaderColumn {
         width: 100px;
     }
@@ -155,19 +151,6 @@
     .simTable thead tr th,
     .simTable tbody tr td {
         font-size: 12px;
-    }
-    .pagination {
-        flex-direction: column;
-        -webkit-flex-direction: column;
-    }
-    .paginationDiv.blank {
-        display: none;
-    }
-    .paginationDiv.pageNumbers {
-        justify-content: center;
-        -webkit-box-pack: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
     /* footer */
     .footerUpper {
@@ -351,7 +334,6 @@
     }
     /* sim table */
     .dataContent {
-        margin-bottom: 100px;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -377,11 +359,6 @@
         font-size: 15px;
         padding-top: 15px;
         padding-bottom: 15px;
-    }
-    .paginationDiv.pageNumbers {
-        padding-right: 30px;
-        justify-content: flex-end;
-        -webkit-box-pack: flex-end;
     }
     /* footer */
     .footerUpper {

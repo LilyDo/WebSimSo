@@ -521,6 +521,10 @@ a[href^=tel] {
     padding: 0 10px;
 }
 
+.pageNumber:hover {
+    cursor: pointer;
+}
+
 .pageNumber.current {
     border-bottom: 3px solid #DA251D;
 }

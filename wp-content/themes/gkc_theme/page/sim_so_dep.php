@@ -118,26 +118,22 @@
                 </tbody>
             </table>
             <div class="pagination">
-                <div class="paginationDiv"></div>
-                <div class="paginationDiv paginationButtons">
-                    <?php if ($paging > 1) : ?>
-                        <button class="previous" onclick="location.href = '<?=processPage(($paging == 1)? 1 : $paging - 1, $_GET)?>'">
-                            <img src="<?= base_url() ?>/assets/images/arrow_left.svg">
-                            Trang trước
-                        </button>
+                <div><img src="<?=base_url()?>/assets/images/icon_previous.svg"></div>
+                <div class="numberContainer">
+                    <?php $start = ($paging == 1)? 2 : (($paging == $maxPage || $paging > $maxPage - 4)? $maxPage - 4 : $paging) ?>
+                    <div class="pageNumber <?=($paging == 1)? 'current' : ''?>" onclick="location.href = '<?=processPage(1, $_GET)?>'">1</div>
+                    <?php if($paging > 6) : ?>
+                        <div class="pageNumber" onclick="location.href = '<?=processPage($paging - 4, $_GET)?>'">...</div>
                     <?php endif; ?>
-                    <?php if ($paging < $maxPage) : ?>
-                        <button class="next" onclick="location.href = '<?=processPage(($paging == $maxPage)? $maxPage : $paging + 1, $_GET)?>'">
-                            Trang kế tiếp
-                            <img src="<?= base_url() ?>/assets/images/arrow_right.svg">
-                        </button>
+                    <?php for($i = $start; $i <= $start + 3; $i++ ) : ?>
+                        <div class="pageNumber <?=($paging == $i)? 'current' : ''?>" onclick="location.href = '<?=processPage($i, $_GET)?>'"><?=$i?></div>
+                    <?php endfor; ?>
+                    <?php if($paging < ($maxPage - 6)) : ?>
+                        <div class="pageNumber" onclick="location.href = '<?=processPage($paging + 4, $_GET)?>'">...</div>
                     <?php endif; ?>
+                    <div class="pageNumber <?=($paging == $maxPage)? 'current' : ''?>" onclick="location.href = '<?=processPage($maxPage, $_GET)?>'"><?=$maxPage?></div>
                 </div>
-                <div class="paginationDiv pageNumbers">
-                    Trang
-                    <input type="text" onkeyup="" value="<?=$paging?>">
-                    của <?=$maxPage?> trang
-                </div>
+                <div><img src="<?=base_url()?>/assets/images/icon_next.svg"></div>
             </div>
         </div>
     </div>
