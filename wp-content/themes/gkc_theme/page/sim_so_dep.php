@@ -49,6 +49,7 @@
     $maxPage = $myQuery->max_num_pages;
 
     $data = $myQuery->posts;
+    $all = $myQuery->found_posts;
 ?>
     <title>Sim Số Đẹp</title>
     <div class="content">
