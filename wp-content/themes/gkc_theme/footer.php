@@ -32,7 +32,6 @@
 
 </div>
 <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>/assets/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?= base_url() ?>/assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
 

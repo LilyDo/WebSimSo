@@ -17,6 +17,7 @@
   <link href="<?=base_url()?>/assets/styles/media.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/styles/semantic/semantic.min.css">
   <link href="<?=base_url()?>/assets/fonts/fonts.css" rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
