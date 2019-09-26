@@ -7,7 +7,7 @@ get_header();
 ?>
     <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
-
+        <form id="registerInfo">
         <div class="bannerCenter">
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
@@ -58,30 +58,41 @@ get_header();
 
                 <div class="registerInfo">
                     <label for="name">Họ tên</label> <br>
-                    <input type="text" class="name">
+                    <input type="text" class="name" name="name">
                 </div>
 
                 <div class="registerInfo">
                     <label for="phone">Số điện thoại liên hệ</label> <br>
-                    <input type="text" class="phone">
+                    <input type="text" class="phone" name="phone">
                 </div>
 
                 <div class="registerInfo">
                     <label for="addres">Địa chỉ thường trú (nơi ở hiện tại)</label> <br>
-                    <input type="text" class="address">
+                    <input type="text" class="address" name="address">
                 </div>
 
                 <div class="registerInfo">
                     <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
                         Minh.</label> <br>
                     <div class="idUpload">
-                        <input type="text" class="id">
+                        <input type="text" class="id"></input>
                         <div>
-                            <img src="<?= base_url() ?>/assets/images/icon_upload.png">
-                            <div class="text">
-                                Upload hình ảnh <br>
-                                CMND/ Thẻ căn cước
+                            <div class="idUploadRequest">
+                                <label for="file_upload">
+                                    <img src="<?= base_url() ?>/assets/images/icon_upload.png">
+                                    <input type="file" id="file_upload" style="display: none">
+                                </label>
+                                <div class="text">
+                                    Upload hình ảnh <br> CMND/ Thẻ căn cước
+                                </div>
                             </div>
+                            <div class="idUploadPhoto">
+                                <img src="" id="photo_1">
+                            </div>
+                            <div class="idUploadPhoto">
+                                <img src="" id="photo_2">
+                            </div>
+
                         </div>
                     </div>
 
@@ -101,7 +112,7 @@ get_header();
             <div class="title">HƯỚNG DẪN ĐẶT MUA SIM</div>
             <div>Vui lòng chọn hình thức mua sim phù hợp với bạn:</div>
 
-            <div class="orderForm">
+             <div class="orderForm">
                 <div class="payment">
                     <div class="text">HÌNH THỨC THANH TOÁN:</div>
                     <div class="checkBox">
@@ -151,7 +162,7 @@ get_header();
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1103.7294265885291!2d106.64268682893557!3d10.755253992458236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e8f24cb2c25%3A0xbbb439ace223acb9!2zMjQ5IE1pbmggUGjhu6VuZywgUGjGsOG7nW5nIDIsIFF14bqtbiAxMSwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2ssg!4v1568374428819!5m2!1sen!2ssg"
                     width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
-
+    </form>
     </div>
 
 <?php get_footer() ?>

@@ -96,6 +96,17 @@
       return str.join("&");
     }
 
+    function previewImage(element, previewElement) {
+        if (element.files && element.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                $(previewElement).attr('src', e.target.result);
+            };
+            reader.readAsDataURL(element.files[0]);
+        }
+        else
+            $(previewElement).attr('src', '{{generateLink("image/icon-add.png")}}');
+    }
 
     $(document).ready(function () {
         // Init Semantic UI components
