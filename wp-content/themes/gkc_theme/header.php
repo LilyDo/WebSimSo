@@ -20,6 +20,33 @@
 </head>
 
 <body>
+  <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v4.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="363173421096027"
+     theme_color="#0084ff"
+     logged_in_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?"
+     logged_out_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?">
+</div>
   <div class="header">
     <div class="headerLeft">
       <div class="headerLogo">
@@ -47,12 +74,12 @@
       </div>
 
       <div class="headerLower">
-        <button class="navigationButton <?=($cur_url == get_site_url())? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url()?>'">HOME</button>
-        <button class="navigationButton <?=($cur_url == get_site_url('', 'sim-so-dep'))? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url('', 'sim-so-dep')?>'">SIM SỐ ĐẸP</button>
-        <button class="navigationButton">NẠP TIỀN</button>
-        <button class="navigationButton">ĐĂNG KÝ 4G ONLINE</button>
-        <button class="navigationButton">CHUYỂN SANG MOBI</button>
-        <button class="navigationButton lienHe">LIÊN HỆ</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton <?=($cur_url == get_site_url())? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url()?>'">HOME</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton <?=($cur_url == get_site_url('', 'sim-so-dep'))? 'simSoDep' : ''?>" onclick="location.href = '<?=get_site_url('', 'sim-so-dep')?>'">SIM SỐ ĐẸP</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">NẠP TIỀN</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">ĐĂNG KÝ 4G ONLINE</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">CHUYỂN SANG MOBI</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">LIÊN HỆ</button>
       </div>
       <div class="hamburger">
         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
