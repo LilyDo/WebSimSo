@@ -144,6 +144,10 @@ div.registerInfo {
     margin-left: 5px;
 }
 
+.idUploadPhoto img{
+    width: 100%;
+}
+
 .simOrder {
     display: flex;
     display: -webkit-flex;

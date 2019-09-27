@@ -8,6 +8,7 @@ get_header();
     <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
         <form id="registerInfo">
+            <input type="hidden" name="sim_number" value="<?=get_field('number')?>">
         <div class="bannerCenter">
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
@@ -75,12 +76,13 @@ get_header();
                     <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
                         Minh.</label> <br>
                     <div class="idUpload">
-                        <input type="text" class="id"></input>
+                        <input type="text" class="id" name="cmnd"></input>
                         <div>
                             <div class="idUploadRequest">
+                                <img src="<?= base_url() ?>/assets/images/icon_upload.png" onclick="$('#file_upload').click()">
                                 <label for="file_upload">
-                                    <img src="<?= base_url() ?>/assets/images/icon_upload.png">
-                                    <input type="file" id="file_upload" style="display: none">
+                                    
+                                    <input type="file" id="file_upload" style="display: none" onchange="previewImage(this)"  accept="image/*">
                                 </label>
                                 <div class="text">
                                     Upload hình ảnh <br> CMND/ Thẻ căn cước
@@ -88,8 +90,6 @@ get_header();
                             </div>
                             <div class="idUploadPhoto">
                                 <img src="" id="photo_1">
-                            </div>
-                            <div class="idUploadPhoto">
                                 <img src="" id="photo_2">
                             </div>
 
@@ -145,7 +145,7 @@ get_header();
                         <div><input type="radio" name="giao_sim" value="delivery" class="delivery"></div>
                         <div class="deliveryContainer">
                             <span>Giao tận nơi</span>
-                            <input type="text" class="deliveryAddress" placeholder="Nhập địa chỉ nhận sim tại đây">
+                            <input type="text" class="deliveryAddress" name="address_delivery" placeholder="Nhập địa chỉ nhận sim tại đây">
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ get_header();
         </div>
 
         <div class="buttonContainer">
-            <button class="orderButton threeDimensionRedButton">MUA NGAY
+            <button class="orderButton threeDimensionRedButton" type="button" onclick="submitData()">MUA NGAY
             </button>
         </div>
 
