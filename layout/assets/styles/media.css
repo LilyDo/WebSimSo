@@ -214,7 +214,7 @@ font-size: 15px;
 .simOrder {
 font-size: 12px;
 }
-.buttonContainer .orderButton {
+.buttonContainer .orderButton, .topUpButton {
 font-size: 15px;
 padding: 10px 70px;
 }
@@ -244,6 +244,90 @@ padding: 10px;
 .threeDimensionRedButton::before {
 height: 10px;
 }
+
+/* napTien Page */
+
+.contentContainer {
+padding-left: 10px;
+padding-right: 10px;
+font-size: 12px;
+}
+.note {
+font-family: "Montserrat-Italic";
+padding-bottom:  10px;
+font-size: 10px;
+}
+
+.carrierContainer {
+padding: 5px 0;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+.carrierContainer label {
+padding: 5px 0px 10px 0;
+
+}
+
+
+.step1, .step2, .luuY {
+font-family: "Montserrat-SemiBold";
+padding-top: 10px;
+padding-bottom: 5px;
+}
+
+input[type=text]  {
+width: 60%;
+}
+
+
+
+.paymentPlan {
+padding: 5px 0 15px 0;
+}
+.paymentPlan label {
+  padding-right: 20px; 
+}
+
+
+
+.amountContainer {
+justify-content: flex-start;
+padding: 10px 0 ;
+}
+
+.amount{
+height: 53px;
+width: 86px;
+border-radius: 5px;
+margin-right: 15px;
+margin-bottom: 15px;
+line-height: 1em;
+}
+.bigNumber {
+font-size: 12px;
+}
+
+.smallNumber, .discountPercent {
+font-size: 9px;
+}
+
+
+
+
+.luuYText {
+font-size: 10px;
+}
+
+.topUpContainer {
+padding: 20px 0 40px 0;
+display: flex;
+justify-content: center;
+}
+
 }
 
 
@@ -417,7 +501,7 @@ font-size: 20px;
 .orderForm .text {
 font-size: 17px;
 }
-.buttonContainer .orderButton {
+.buttonContainer .orderButton, .topUpButton {
 font-size: 20px;
 padding: 15px 130px;
 }
@@ -455,5 +539,78 @@ font-size: 30px;
 .threeDimensionBlueButton::before,
 .threeDimensionRedButton::before {
 height: 12px;
+}
+
+/* napTien Page */
+
+.contentContainer {
+padding-left: 200px;
+padding-right: 200px;
+font-size: 14px;
+}
+
+.note {
+font-family: "Montserrat-Italic";
+padding-bottom:  20px;
+font-size: 14px;
+}
+
+
+.step1, .step2, .luuY {
+font-family: "Montserrat-SemiBold";
+padding-top: 20px;
+padding-bottom: 15px;
+}
+
+.carrierContainer {
+padding-bottom: 10px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: flex-start;
+}
+
+.carrierContainer label {
+  padding: 0px 100px 10px 0;
+
+}
+
+input[type=text]  {
+width: 400px;
+}
+
+
+
+.paymentPlan {
+padding: 5px 0 20px 0;
+
+}
+.paymentPlan label {
+padding-right: 70px;
+}
+
+
+.amountContainer {
+padding: 20px 0 0px 0;
+}
+
+.amount{
+height: 80px;
+width: 130px;
+border-radius: 5px;
+margin-right: 30px;
+margin-bottom: 25px;
+}
+
+.bigNumber {
+font-size: 17px;
+}
+
+.mallNumber {
+font-size: 12px;
+}
+
+.topUpContainer {
+padding: 40px 0 50px 0;
 }
 }

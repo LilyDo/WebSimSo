@@ -1,3 +1,6 @@
+body{
+  color: #677897 !important;
+}
 .pageAnchor {
     display: flex;
     display: -webkit-flex;
@@ -97,8 +100,8 @@
 }
 
 input[type=text] {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 17px;
+    font-family: "Montserrat-SemiBold" !important;
+    font-size: 15px;
 }
 
 div.registerInfo {

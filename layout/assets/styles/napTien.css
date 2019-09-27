@@ -1,0 +1,90 @@
+.contentContainer {
+color: #677897;
+}
+
+
+.carrierContainer label {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+input[type=checkbox] {
+margin-right: 5px !important;
+width: 16px !important;
+height: 16px !important;
+}
+
+
+input[type=text]  {
+background-color: #F5F3F3;
+margin: 5px 0px 20px 0;
+border: 1px solid #F5F3F3;
+border-radius: 5px;
+line-height: 200%;
+font-family: "Montserrat-SemiBold" !important;
+font-size: 15px;
+}
+
+.paymentPlan {
+display: flex; 
+flex-direction: row;
+}
+
+.paymentPlan label {
+display: flex;
+align-items: center;
+}
+
+
+.amountContainer {
+display: flex;
+flex-wrap: wrap;
+}
+
+.discountPercent {
+text-align: end;
+border: 1px solid #FEE6E5;
+background-color: #FEE6E5;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+color: #0081B5;
+padding: 2px 0;
+}
+
+.amountNumber {
+padding: 10px 0;
+border-left: 1px dashed #D3D3D3;
+border-right: 1px dashed #D3D3D3;
+border-bottom: 1px dashed #D3D3D3;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+text-align: center;
+}
+
+.bigNumber {
+font-family: "Montserrat-Bold";
+color: black;
+}
+
+.smallNumber {
+color:#C7C7C7;
+}
+
+.amount .selected {
+  background-color: #DA251D;
+
+} 
+.amount .selected .bigNumber {
+  color: white;
+
+}
+
+
+
+
+
+
+
+
+

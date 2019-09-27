@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name=”format-detection” content=”telephone=no”>
+  <title>naptien</title>
+  <link href="./assets/styles/homePage.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/media.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/napTien.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/SimSoDep.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/semantic/semantic.min.css">
+  <link href="./assets/fonts/fonts.css" rel='stylesheet'>
+</head>
+
+<body>
+  <div class="header">
+    <div class="headerLeft">
+      <div class="headerLogo">
+        <img src="assets/images/logo.png">
+      </div>
+      <div class="hamburger">
+        <img onClick="toggleDropdownContainer()" src="assets/images/nav_menu.png">
+      </div>
+    </div>
+
+    <div class=dropdownContainer>
+      <button class="hamburgerDropdown">HOME</button>
+      <button class="hamburgerDropdown">SIM SỐ ĐẸP</button>
+      <button class="hamburgerDropdown">NẠP TIỀN</button>
+      <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
+      <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
+      <button class="hamburgerDropdown">LIÊN HỆ</button>
+    </div>
+    <div class=headerRight>
+      <div class="headerUpper">
+        <div class="headerHotLine">
+          <span> <img src="assets/images/phone.svg"> </span>
+          <a href="tel:0773885678" class="text">Hotline 077 388 5678</a>
+        </div>
+        <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>
+      </div>
+
+      <div class="headerLower">
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton ">HOME</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortBlueButton simSoDep">SIM SỐ
+          ĐẸP</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">NẠP TIỀN</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">ĐĂNG KÝ 4G
+          ONLINE</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">CHUYỂN SANG
+          MOBI</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">LIÊN HỆ</button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="bannerCenter">
+      <img src="assets/images/banner_center.png">
+    </div>
+    <div class="pageAnchor">
+      <div class="anchorHome">TRANG CHỦ</div>
+      <div class="anchorCurrent">NẠP TIỀN</div>
+    </div>
+
+    <div class="contentContainer">
+      <div class="note">Lưu ý: Quý khách hàng vui lòng thực hiện giao dịch bằng đầu số mới theo thông báo từ nhà mạng.
+        Xin
+        chân thành cảm ơn!
+      </div>
+      <div class="step1">BƯỚC 1: </div>
+        <div class="text">Chọn nhà mạng </div>
+        <div class="carrierContainer">
+          <label>
+            <input class="checkmark" type="checkbox" value="mobifone">
+            <img src="assets/images/logo_mobifone.svg">
+          </label>
+          <label>
+            <input class="checkmark" type="checkbox"  value="vinaphone">
+            <img src="assets/images/logo_vinaphone.svg">
+          </label>
+          <label>
+            <input class="checkmark" type="checkbox" value="viettel">
+            <img src="assets/images/logo_viettel.svg">
+          </label>
+        </div>
+        <div class="text">Nhập số điện thoại của bạn:</div>
+        <div class="phoneNumber">
+          <input type="text">
+        </div>
+        <div class="text">Loại thuê bao</div>
+        <div class="paymentPlan">
+          <label>
+            <input type="checkbox" name="paymentPlan" value="pre">
+            Trả trước
+          </label>
+          <label>
+            <input type="checkbox" name="paymentPlan" value="post">
+            Trả sau
+          </label>
+        </div>
+
+      <div class="step2">BƯỚC 2:</div>
+      <div class="text">Chọn mệnh giá:</div>
+      <div class="amountContainer">
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">20,000 đ</div>
+            <div class="smallNumber">18,000 đ</div>
+          </div>
+        </div>
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">40,000 đ</div>
+            <div class="smallNumber">36,000 đ</div>
+          </div>
+        </div>
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">50,000 đ</div>
+            <div class="smallNumber">45,000 đ</div>
+          </div>
+        </div>
+
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber selected">
+            <div class="bigNumber">100,000 đ</div>
+            <div class="smallNumber">90,000 đ</div>
+          </div>
+        </div>
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">200,000 đ</div>
+            <div class="smallNumber">180,000 đ</div>
+          </div>
+        </div>
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">300,000 đ</div>
+            <div class="smallNumber">270,000 đ</div>
+          </div>
+        </div>
+
+        <div class="amount">
+          <div class="discountPercent">-10%</div>
+          <div class="amountNumber">
+            <div class="bigNumber">500,000 đ</div>
+            <div class="smallNumber">450,000 đ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="luuY">Lưu ý:</div>
+      <div class="luuYText">
+        Thuê bao Mobifone cần nhập thêm mã xác nhận OTP (gồm 6 chữ số gửi qua SMS) trong 2 trường hợp sau: <br>
+        + Là thuê bao trả sau<br>
+        + Thuê bao trả trước trong ngày khuyến mãi 20%<br>
+      </div>
+      <div class="topUpContainer">
+        <button class="topUpButton threeDimensionRedButton">NẠP NGAY
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="footer">
+    <div class="footerUpper">
+      <div class="footerLogo">
+        <img src="assets/images/logo.png">
+      </div>
+
+      <div class="footerInfo">
+        <div class="thongTinLienHe">Thông tin liên hệ:</div>
+        <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
+        <div class="footerAddress">
+          <span> <img src="assets/images/icon_location.svg"> </span>
+          <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
+        </div>
+        <div class="footerHotline">
+          <span> <img src="assets/images/icon_phone.svg"></span>
+          <a href="tel:0773885678" class="text">077 388 5678</a>
+        </div>
+      </div>
+      <div class="footerPlugin">
+        <div class="follow">Follow us:</div>
+        <div>
+          <img class="pluginFacebook" src="assets/images/icon_facebook.svg">
+          <img class="pluginInstagram" src="assets/images/icon_instagram.svg">
+        </div>
+      </div>
+    </div>
+    <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
+
+  <!-- Custom scripts -->
+  <script>
+    function toggleDropdownContainer() {
+      var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+      if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
+        dropdownContainer.style.display = "flex";
+      } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
+        dropdownContainer.style.display = "none";
+      }
+    }
+
+    function showTooltip(event) {
+      event.preventDefault();
+      if (screen.width < 800) {
+        return hideTooltip();
+      }
+      var tooltip = document.getElementsByClassName("tooltip")[0];
+      if (tooltip != undefined) {
+        tooltip.style.display = "block"
+      }
+    }
+
+    function hideTooltip() {
+      var tooltip = document.getElementsByClassName("tooltip")[0];
+      if (tooltip != undefined) {
+        tooltip.style.display = "none"
+      }
+    }
+    // Init Semantic UI components
+    $('.ui.dropdown')
+      .dropdown();
+  </script>
+</body>
+
+</html>
