@@ -289,7 +289,7 @@ width: 60%;
 padding: 5px 0 15px 0;
 }
 .paymentPlan label {
-  padding-right: 20px; 
+padding-right: 20px; 
 }
 
 
@@ -326,6 +326,56 @@ font-size: 10px;
 padding: 20px 0 40px 0;
 display: flex;
 justify-content: center;
+}
+
+/* dangKy4g */
+
+.textContainer {
+padding: 0 10px;
+display: flex;
+flex-direction: column;
+font-size: 12px;
+}
+
+.textContainer .text div {
+padding-bottom: 10px;
+width: 100%;
+}
+.textContainer .text {
+  font-size: 10px;
+width: 100%;
+line-height: 1.3em;
+}
+
+
+.textContainer .promo {
+width: 100%;
+min-height: 200px;
+}
+
+.promo {
+  padding: 30px 120px 25px 120px;
+}
+
+.promo div {
+  font-size: 10px;
+}
+
+.packageTable {
+padding: 20px 0px;
+}
+
+.packageTable thead th {
+  font-size: 12px;
+}
+.packageTable tbody td {
+  font-size: 10px;
+}
+.fourGButton button {
+  padding: 5px;
+}
+.packageTable table tr {
+  height: 55px;
 }
 
 }
@@ -571,7 +621,7 @@ justify-content: flex-start;
 }
 
 .carrierContainer label {
-  padding: 0px 100px 10px 0;
+padding: 0px 100px 10px 0;
 
 }
 
@@ -617,16 +667,48 @@ padding: 40px 0 50px 0;
 /* dangKy4g */
 
 .textContainer {
-  padding-left: 200px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-left: 200px;
 }
 
 .textContainer .text div {
-  padding-bottom: 20px;
+padding-bottom: 20px;
+}
+.textContainer .text {
+padding-top: 30PX;
+padding-bottom: 20px;
+width: 65%;
+line-height: 1.5em;
+
+}
+div.text.text2 {
+  padding-bottom: 40px !important;
+
+}
+
+.textContainer .promo {
+width: 35%;
 }
 
 .packageTable {
-  padding: 0 200px;
+padding: 10px 200px 50px 200px ;
 }
 
-
+.promo {
+  padding: 60px 120px 50px 120px;
+}
+.promo div {
+  font-size: 12px;
+}
+.promo .title {
+font-size: 15px;
+}
+.fourGButton button {
+  padding: 8px 20px;
+}
+.packageTable table tr {
+  height: 65px;
+}
 }
