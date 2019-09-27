@@ -19,8 +19,8 @@
         <div class="footerPlugin">
             <div class="follow">Follow us:</div>
             <div>
-                <a href="https://www.facebook.com/mobifonetongmiennam"><img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg"></a>
-                <a href="javascript:void(0)"><img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg"></a>
+                <a href="https://www.facebook.com/mobifonetongmiennam" target="_blank"><img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg"></a>
+                <a href="javascript:void(0)" target="_blank"><img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg"></a>
             </div>
 
         </div>
@@ -121,7 +121,10 @@
             type: 'POST',
             data: data
         }).done(function (result) {
-            alert(result.data);
+            if(result.data == "Message has been sent")
+                alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm liên hệ với bạn!');
+            else
+                alert('Có một số lỗi khi gửi thông tin đến hệ thống! Vui lòng thử lại!');
         })
     }
 

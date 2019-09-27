@@ -144,7 +144,7 @@ function buySim()
   $template_mail = mail_buy($data);
   // dlctoanphat@gmail.com
   //0: name; 1: address; 2: subject; 3: content (PHP File)
-  $result = sendMail('Admin', 'tainguyen@giakiemcoder.com', 'Customer Buying Sim', $template_mail);
+  $result = sendMail(['Mobifonesaigon Admin', 'dlctoanphat@gmail.com', 'Customer Buying Sim', $template_mail]);
   wp_send_json_success($result);
 
   die();
