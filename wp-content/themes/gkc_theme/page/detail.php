@@ -8,6 +8,7 @@ get_header();
     <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
         <form id="registerInfo">
+            <input type="hidden" name="sim_number" value="<?=get_field('number')?>">
         <div class="bannerCenter">
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
@@ -75,12 +76,13 @@ get_header();
                     <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
                         Minh.</label> <br>
                     <div class="idUpload">
-                        <input type="text" class="id"></input>
+                        <input type="text" class="id" name="cmnd"></input>
                         <div>
                             <div class="idUploadRequest">
+                                <img src="<?= base_url() ?>/assets/images/icon_upload.png" onclick="$('#file_upload').click()">
                                 <label for="file_upload">
-                                    <img src="<?= base_url() ?>/assets/images/icon_upload.png">
-                                    <input type="file" id="file_upload" style="display: none">
+                                    
+                                    <input type="file" id="file_upload" style="display: none" onchange="previewImage(this)"  accept="image/*">
                                 </label>
                                 <div class="text">
                                     Upload hình ảnh <br> CMND/ Thẻ căn cước
@@ -88,8 +90,6 @@ get_header();
                             </div>
                             <div class="idUploadPhoto">
                                 <img src="" id="photo_1">
-                            </div>
-                            <div class="idUploadPhoto">
                                 <img src="" id="photo_2">
                             </div>
 
@@ -145,7 +145,7 @@ get_header();
                         <div><input type="radio" name="giao_sim" value="delivery" class="delivery"></div>
                         <div class="deliveryContainer">
                             <span>Giao tận nơi</span>
-                            <input type="text" class="deliveryAddress" placeholder="Nhập địa chỉ nhận sim tại đây">
+                            <input type="text" class="deliveryAddress" name="address_delivery" placeholder="Nhập địa chỉ nhận sim tại đây">
                         </div>
                     </div>
                 </div>
@@ -153,14 +153,14 @@ get_header();
         </div>
 
         <div class="buttonContainer">
-            <button class="orderButton threeDimensionRedButton">MUA NGAY
+            <button class="orderButton threeDimensionRedButton" type="button" onclick="submitData()">MUA NGAY
             </button>
         </div>
 
         <div class="mapContainer">
             <div class="title">BẢN ĐỒ HƯỚNG DẪN</div>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1103.7294265885291!2d106.64268682893557!3d10.755253992458236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e8f24cb2c25%3A0xbbb439ace223acb9!2zMjQ5IE1pbmggUGjhu6VuZywgUGjGsOG7nW5nIDIsIFF14bqtbiAxMSwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2ssg!4v1568374428819!5m2!1sen!2ssg"
-                    width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1103.7294265885291!2d106.64268682893557!3d10.755253992458236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e8f24cb2c25%3A0xbbb439ace223acb9!2zMjQ5IE1pbmggUGjhu6VuZywgUGjGsOG7nW5nIDIsIFF14bqtbiAxMSwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2ssg!4v1568374428819!5m2!1sen!2ssg"
+                    width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </form>
     </div>

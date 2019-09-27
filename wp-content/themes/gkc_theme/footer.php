@@ -19,8 +19,8 @@
         <div class="footerPlugin">
             <div class="follow">Follow us:</div>
             <div>
-                <img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg">
-                <img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg">
+                <a href="https://www.facebook.com/mobifonetongmiennam" target="_blank"><img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg"></a>
+                <a href="javascript:void(0)" target="_blank"><img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg"></a>
             </div>
 
         </div>
@@ -95,16 +95,37 @@
       return str.join("&");
     }
 
-    function previewImage(element, previewElement) {
+    function previewImage(element) {
         if (element.files && element.files[0]) {
+            let previewElement = '#photo_1';
+            if ($(previewElement).attr('src') != '')
+                previewElement = '#photo_2';
             let reader = new FileReader();
             reader.onload = function (e) {
                 $(previewElement).attr('src', e.target.result);
             };
             reader.readAsDataURL(element.files[0]);
         }
-        else
-            $(previewElement).attr('src', '{{generateLink("image/icon-add.png")}}');
+        // else
+        //     $(previewElement).attr('src', '{{generateLink("image/icon-add.png")}}');
+    }
+
+    function submitData() {
+        let data = $('#registerInfo').serializeArray();
+        let photo_1 = $('#photo_1').attr('src');
+        let photo_2 = $('#photo_2').attr('src');
+        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2}, {name: 'sim_number', value: photo_2});
+        data.unshift({name: 'action', value: 'buySim'});
+        $.ajax({
+            url: "<?=admin_url('admin-ajax.php') ?>",
+            type: 'POST',
+            data: data
+        }).done(function (result) {
+            if(result.data == "Message has been sent")
+                alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm liên hệ với bạn!');
+            else
+                alert('Có một số lỗi khi gửi thông tin đến hệ thống! Vui lòng thử lại!');
+        })
     }
 
     $(document).ready(function () {
