@@ -1,0 +1,66 @@
+.packageTable, .textContainer {
+  color: black;
+  font-family: "Montserrat-Regular";
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.textContainer .text {
+  width: 65%;
+  line-height: 1.5em;
+}
+.textContainer .promo {
+  width: 35%;
+}
+
+.promo {
+background: url(../images/image_promo.svg);
+background-size: 80%;
+background-repeat: no-repeat;
+background-position: center;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 60px 120px 50px 120px;
+}
+
+.promo div {
+  text-align: center;
+  font-size: 12px;
+  color: white
+}
+.promo .title {
+  font-size: 15px;
+  font-family: "Montserrat-SemiBold";
+}
+
+
+
+
+
+
+
+
+
+
+.packageTable table {
+  width: 100%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.packageTable table tr {
+  height: 40px;
+
+}
+
+.packageTable thead tr th {
+font-family: "Montserrat-SemiBold";
+}
+
+.packageTable thead tbody tr {
+  border-bottom: 1px solid #0081B5;
+}

@@ -613,4 +613,20 @@ font-size: 12px;
 .topUpContainer {
 padding: 40px 0 50px 0;
 }
+
+/* dangKy4g */
+
+.textContainer {
+  padding-left: 200px;
+}
+
+.textContainer .text div {
+  padding-bottom: 20px;
+}
+
+.packageTable {
+  padding: 0 200px;
+}
+
+
 }
