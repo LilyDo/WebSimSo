@@ -134,8 +134,8 @@ width: 100px;
 position: absolute;
 }
 .freezedBodyColumn div {
-background-color: #0081B5;
-color: white !important;
+background-color: white;
+color: #0081b5 !important;
 }
 .simTableBody tr div {
 height: 40px;
