@@ -432,7 +432,14 @@ margin-top: 5px;
 border-spacing: 0;
 box-sizing: border-box;
 }
-
+.simTableHead {
+  border: none;
+  border-radius: 100px;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(7, 4, 4, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
 .simTableHead th div {
 height: 58px;
 min-width: 100px;
@@ -440,10 +447,16 @@ width: auto;
 display: flex;
 align-items: center;
 justify-content: center;
-/* background-color: #0081B5; */
 background-image: linear-gradient(#0081B5, #329ac3);
 }
-
+.simTableHead .threeDimensionBlueBorderLeft {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.simTableHead .threeDimensionBlueBorderRight {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
 
 
 /* body */

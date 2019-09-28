@@ -152,23 +152,6 @@ padding-right: 5px;
 .simTable tbody tr td {
 font-size: 12px;
 }
-.simTableHead .threeDimensionBlueBorderLeft {
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-.simTableHead .threeDimensionBlueBorderRight {
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
-.simTableHead {
-  border: none;
-  border-radius: 100px;
-  color: #ffffff;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(7, 4, 4, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  
-  }
 /* footer */
 .footerUpper {
 flex-direction: column;
@@ -505,14 +488,9 @@ padding: 10px 20px;
 .simTable .cart img {
 padding-right: 10px;
 }
-.simTable thead tr th {
-  background-color: #0081B5;
-}
 .simTable thead tr th,
 .simTable tbody tr td {
 font-size: 15px;
-padding-top: 15px;
-padding-bottom: 15px;
 }
 /* footer */
 .footerUpper {
