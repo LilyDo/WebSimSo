@@ -436,9 +436,10 @@ box-sizing: border-box;
   border: none;
   border-radius: 100px;
   color: #ffffff;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(7, 4, 4, 0.75);
+  /* In case .simTableHead .boxShadowTopBottomLeft ... is to ugly */
+  /* -webkit-box-shadow: 0px 0px 5px 0px rgba(7, 4, 4, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); */
 }
 .simTableHead th div {
 height: 58px;
@@ -449,6 +450,19 @@ align-items: center;
 justify-content: center;
 background-image: linear-gradient(#0081B5, #329ac3);
 }
+.simTableHead .boxShadowTopBottomLeft {
+  -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75), -5px 0 5px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75), -5px 0 5px -5px rgba(0, 0, 0, 0.75);
+}
+.simTableHead .boxShadowTopBottomRight {
+  -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75), 5px 0 5px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75), 5px 0 5px -5px rgba(0, 0, 0, 0.75);
+}
+.simTableHead .boxShadowTopBottom {
+  -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75), 0 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
 .simTableHead .threeDimensionBlueBorderLeft {
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
