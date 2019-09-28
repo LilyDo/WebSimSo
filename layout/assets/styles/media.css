@@ -372,6 +372,7 @@ padding: 20px 0px;
 }
 .fourGButton button {
   padding: 5px;
+  max-height: 21px;
 }
 .packageTable table tr {
   height: 55px;
