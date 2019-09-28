@@ -170,6 +170,9 @@ padding-left: 28px;
 .footerPlugin {
 padding-left: 48px;
 }
+.pluginFacebook {
+  margin-right: 5px;
+}
 .footerInfo {
 padding-top: 10px;
 padding-bottom: 10px;
@@ -522,6 +525,9 @@ width: 50%;
 }
 .footerPlugin {
 text-align: right;
+}
+.pluginFacebook {
+  margin-right: 15px;
 }
 /* simSoDep page */
 .pageAnchor,
