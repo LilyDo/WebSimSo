@@ -112,9 +112,10 @@
 
     function submitData() {
         let data = $('#registerInfo').serializeArray();
+        // console.log(data);return;
         let photo_1 = $('#photo_1').attr('src');
         let photo_2 = $('#photo_2').attr('src');
-        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2}, {name: 'sim_number', value: photo_2});
+        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2});
         data.unshift({name: 'action', value: 'buySim'});
         $.ajax({
             url: "<?=admin_url('admin-ajax.php') ?>",
@@ -128,6 +129,20 @@
         })
     }
 
+    function changeAmount(element){
+        $('.amountNumber').each(function (i, el) {
+            $(el).removeClass('selected');
+        });
+
+        $(element).addClass('selected');
+        let text = $(element).find('.bigNumber').text();
+        $('[name = amount]').val(text.replace('đ', '').replace(',', '').trim());
+    }
+
+    function recharge(){
+        let data = $('#recharge').serializeArray();
+        console.log(data);
+    }
     $(document).ready(function () {
         // Init Semantic UI components
         $('.ui.dropdown').dropdown();

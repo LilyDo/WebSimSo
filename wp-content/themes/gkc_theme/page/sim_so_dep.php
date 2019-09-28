@@ -17,7 +17,18 @@
     $args = [
         'post_type' => 'sims',
         'paged' => $paging,
-        'posts_per_page' => 10
+        'posts_per_page' => 10,
+        'meta_key' => 'cost',
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'types',
+                'field' => 'slug',
+                'terms' => array ('so-dep'),
+                'operator' => 'IN'
+            )
+        )
     ];
 
     if (isset($_GET['dauso']) && $_GET['dauso'] != '')
@@ -25,8 +36,6 @@
 
     if (isset($_GET['loaiso']) && $_GET['loaiso'] != '')
         $args['types'] = $_GET['loaiso'];
-    else
-        $args['types'] = 'so-dep';
 
     if (isset($_GET['loaitb']) && $_GET['loaitb'] != '')
         $args['tbtypes'] = $_GET['loaitb'];
@@ -35,13 +44,28 @@
         $args['promotes'] = $_GET['uudai'];
 
     if (isset($_GET['so']) && $_GET['so'] != ''){
-        $args['meta_query'] = [
-            [
-                'key'       => 'number',
-                'value'     => $_GET['so'],
-                'compare'   => 'LIKE',
-            ]
-        ];
+        $arr = explode('*', $_GET['so']);
+        $new = array_diff($arr, ['']);
+        if (count($new) == 1) {
+            $args['meta_query'] = [
+                [
+                    'key'       => 'number',
+                    'value'     => $new[0],
+                    'compare'   => 'LIKE',
+                ]
+            ];
+        }
+        if (count($new) == 2) {
+            $reg = implode('.*', $new);
+            $args['meta_query'] = [
+                [
+                    'key'       => 'number',
+                    'value'     => $reg,
+                    'compare'   => 'REGEXP',
+                ]
+            ];
+        }
+        
     }
 
     // Query
