@@ -127,7 +127,6 @@ padding-left: 0 !important;
 }
 /* sim table */
 .freezedHeaderColumn {
-background-color: #0081B5;
 width: 100px;
 }
 .freezedHeaderColumn,
@@ -135,8 +134,8 @@ width: 100px;
 position: absolute;
 }
 .freezedBodyColumn div {
-background-color: #0081B5;
-color: white !important;
+background-color: white;
+color: #0081b5 !important;
 }
 .simTableBody tr div {
 height: 40px;
@@ -492,8 +491,6 @@ padding-right: 10px;
 .simTable thead tr th,
 .simTable tbody tr td {
 font-size: 15px;
-padding-top: 15px;
-padding-bottom: 15px;
 }
 /* footer */
 .footerUpper {

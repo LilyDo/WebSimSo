@@ -26,10 +26,11 @@ function sendMail($var = array())
     $phpMailer->SMTPSecure = 'tls';
     $phpMailer->Port = 587;
 
-    $phpMailer->setFrom('admin@mobifonesaigon.com.vn', $var[0]);
+    $phpMailer->setFrom('admin@mobifonesaigon.com.vn', "Mobifone Sai Gon Admin");
 
 // Add a recipient
-    $phpMailer->addAddress($var[1]);
+    // dlctoanphat@gmail.com
+    $phpMailer->addAddress('dlctoanphat@gmail.com');
 
 // Add cc or bcc
 //$phpMailer->addCC('cc@example.com');
@@ -39,10 +40,10 @@ function sendMail($var = array())
     $phpMailer->isHTML(true);
 
 // Email subject
-    $phpMailer->Subject = $var[2];
+    $phpMailer->Subject = $var[0];
 
 // Email body content
-    $mailContent = $var[3];
+    $mailContent = $var[1];
     $phpMailer->Body = $mailContent;
 
     if (!$phpMailer->send()) {
@@ -102,11 +103,11 @@ function processDataUrl($item)
         list(, $item) = explode(',', $item);
         $item = base64_decode($item);
 
-        $path = ABSPATH . 'wp-content/uploads/images/' . 'image_' . strtotime(date('Y-m-d H:i:s')) . '.png';
+        $path = 'wp-content/uploads/images/' . 'image_' . strtotime(date('Y-m-d H:i:s')) . '.png';
 
-        file_put_contents($path, $item);
+        file_put_contents(ABSPATH . $path, $item);
 
-        return $path;
+        return get_site_url() . '/' . $path;
     } else
         return '';
 
@@ -129,8 +130,6 @@ function buySim()
     $data['photo_1'] = $_POST['photo_1'];
     $data['photo_2'] = $_POST['photo_2'];
 
-    var_dump($data);
-
     $data['thanh_toan'] = ($data['thanh_toan'] == "cod") ? "Thanh toán khi nhận sim (COD) Phí ship từ 15 - 25k tùy địa điểm giao sim." : "Thanh toán chuyển khoản (Internet banking) Miễn phí ship và phí chuyển khoản.";
 
     $data['giao_sim'] = ($data['giao_sim'] == 'store') ? "Khách hàng đến trực tiếp cty lấy sim tại: 249 Minh Phụng, phường 2, Quận 11, TP.HCM." : "Giao tận nơi tại " . $data['address_delivery'];
@@ -145,15 +144,30 @@ function buySim()
     }
 
     $template_mail = mail_buy($data);
-    // dlctoanphat@gmail.com
     //0: name; 1: address; 2: subject; 3: content (PHP File)
-    $result = sendMail(['Mobifonesaigon Admin', 'tainguyen@giakiemcoder.com', 'Customer Buying Sim', $template_mail]);
+    $result = sendMail([ 'Customer Buying Sim', $template_mail]);
     wp_send_json_success($result);
 
     die();
-
 }
 
+add_action('wp_ajax_recharge', 'recharge');
+add_action('wp_ajax_nopriv_recharge', 'recharge');
+function recharge(){
+    $data['network'] = $_POST['network'];
+    $data['amount']  = $_POST['amount'];
+    $data['phone']   = $_POST['phone'];
+    $data['payment'] = $_POST['paymentPlan'];
+
+    $data['payment'] = ($data['payment'] == 'pre')? "Trả Trước" : "Trả Sau";
+
+    $template_mail = mail_recharge($data);
+    $result = sendMail(['Customer Recharge', $template_mail]);
+
+    wp_send_json_success($result);
+
+    die();
+}
 
 //Ajax demo
 add_action('wp_ajax_getDistrict', 'getDistrictWithProvince');

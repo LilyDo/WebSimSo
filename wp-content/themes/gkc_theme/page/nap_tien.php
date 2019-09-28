@@ -26,15 +26,15 @@
             <div class="text">Chọn nhà mạng </div>
             <div class="carrierContainer">
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="mobifone" checked>
+                    <input class="checkmark" type="radio" name="network" value="Mobifone" checked>
                     <img src="<?= base_url() ?>/assets/images/logo_mobifone.svg">
                 </label>
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="vinaphone">
+                    <input class="checkmark" type="radio" name="network" value="Vinaphone">
                     <img src="<?= base_url() ?>/assets/images/logo_vinaphone.svg">
                 </label>
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="viettel">
+                    <input class="checkmark" type="radio" name="network" value="Viettel">
                     <img src="<?= base_url() ?>/assets/images/logo_viettel.svg">
                 </label>
             </div>

@@ -15,8 +15,8 @@ $cur_url = home_url($wp->request)
     <link href="<?= base_url() ?>/assets/styles/homePage.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/media.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/napTien.css" rel="stylesheet" type="text/css">
-    <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/styles/semantic/semantic.min.css">
     <link href="<?= base_url() ?>/assets/fonts/fonts.css" rel='stylesheet'>
     <script src="<?= base_url() ?>/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
