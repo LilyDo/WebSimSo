@@ -1,0 +1,95 @@
+
+.pageAnchor {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: flex-start;
+  -webkit-box-pack: flex-start;
+  color: #0081B5;
+  font-family: "Montserrat-Bold";
+  margin: 10px 0 20px 0 !important;
+}
+
+.anchorHome {
+  border-right: 2px solid #0081B5;
+  padding-right: 15px;
+}
+
+.anchorCurrent {
+  padding-left: 15px;
+}
+
+.packageTable, .textContainer {
+  color: black;
+  font-family: "Montserrat-Regular";
+}
+
+.promo {
+background: url(../images/image_promo.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.promo div {
+  text-align: center;
+  color: white
+}
+.promo .title {
+  font-family: "Montserrat-SemiBold";
+}
+
+
+
+
+
+
+
+
+
+
+.packageTable table {
+  width: 100%;
+  text-align: center;
+}
+
+.packageTable table thead tr {
+  height: 45px;
+}
+
+.packageTable thead tr {
+  vertical-align: baseline;
+}
+
+.packageTable td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.packageTable span, .textContainer span {
+  font-family: "Montserrat-SemiBold";
+  color: #DA251D;
+}
+
+table, th, td {
+border-bottom: 1px solid #0081B5;
+border-collapse: collapse;
+}
+
+table th div {
+font-family: "Montserrat-SemiBold";
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+
+.fourGButton {
+display:flex;
+justify-content: center;
+align-items: center;
+}

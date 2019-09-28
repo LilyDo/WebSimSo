@@ -5,10 +5,15 @@
  */
 get_header();
 ?>
+    <style>
+        .idUploadPhoto img{
+            width: 100%;
+        }
+    </style>
     <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
         <form id="registerInfo">
-            <input type="hidden" name="sim_number" value="<?=get_field('number')?>">
+        <input type="hidden" name="sim_number" value="<?=get_field('number')?>">
         <div class="bannerCenter">
             <img src="<?= base_url() ?>/assets/images/banner_center.png">
         </div>
@@ -90,6 +95,8 @@ get_header();
                             </div>
                             <div class="idUploadPhoto">
                                 <img src="" id="photo_1">
+                            </div>
+                            <div class="idUploadPhoto">
                                 <img src="" id="photo_2">
                             </div>
 

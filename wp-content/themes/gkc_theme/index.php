@@ -12,7 +12,15 @@
     $args = [
         'post_type' => 'sims',
         'paged' => $paging,
-        'posts_per_page' => 10
+        'posts_per_page' => 10,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'types',
+                'field' => 'slug',
+                'terms' => array ('so-dep'),
+                'operator' => 'NOT IN'
+            )
+        )
     ];
 
     if (isset($_GET['dauso']) && $_GET['dauso'] != 'all'){
@@ -55,6 +63,8 @@
 
     // Query
     $myQuery = new WP_Query($args);
+//    var_dump($wpdb->last_query);
+
     $maxPage = $myQuery->max_num_pages;
 
     $data = $myQuery->posts;
