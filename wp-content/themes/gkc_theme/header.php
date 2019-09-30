@@ -23,6 +23,11 @@ $cur_url = home_url($wp->request)
 </head>
 
 <body>
+    <style>
+        .idUploadPhoto img{
+            width: 100%;
+        }
+    </style>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -53,7 +58,7 @@ $cur_url = home_url($wp->request)
 <div class="header">
     <div class="headerLeft">
         <div class="headerLogo">
-            <img src="<?= base_url() ?>/assets/images/logo.png">
+            <a href=""><img src="<?= base_url() ?>/assets/images/logo.png"></a>
         </div>
         <div class="hamburger">
             <img onClick="toggleDropdownContainer()" src="<?= base_url() ?>/assets/images/nav_menu.png">

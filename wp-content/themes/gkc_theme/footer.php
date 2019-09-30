@@ -112,7 +112,9 @@
         //     $(previewElement).attr('src', '{{generateLink("image/icon-add.png")}}');
     }
 
-    function submitData() {
+    function submitData(element) {
+        $(element).prop('disabled', true);
+        $('.img_loading').css('display', 'block');
         let data = $('#registerInfo').serializeArray();
         // console.log(data);return;
         let photo_1 = $('#photo_1').attr('src');
@@ -124,6 +126,8 @@
             type: 'POST',
             data: data
         }).done(function (result) {
+            $(element).prop('disabled', false);
+            $('.img_loading').css('display', 'none');
             if (result.data == "Message has been sent")
                 alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm liên hệ với bạn!');
             else
@@ -141,7 +145,9 @@
         $('[name = amount]').val(text.replace('đ', '').replace(',', '').trim());
     }
 
-    function recharge() {
+    function recharge(element) {
+        $(element).prop('disabled', true);
+        $('.img_loading').css('display', 'block');
         let data = $('#recharge').serializeArray();
         data.unshift({name: 'action', value: 'recharge'});
         $.ajax({
@@ -149,7 +155,12 @@
             type: 'POST',
             data: data
         }).done(function (result) {
-            console.log(result)
+            $(element).prop('disabled', false);
+            $('.img_loading').css('display', 'none');
+            if (result.data == "Message has been sent")
+                alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm phản hồi lại với bạn!');
+            else
+                alert('Có một số lỗi khi gửi thông tin đến hệ thống! Vui lòng thử lại!');
         })
     }
 
