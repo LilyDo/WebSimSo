@@ -91,22 +91,24 @@
             <table class="simTable">
                 <thead class="simTableHead">
                 <tr>
-                    <th class="freezedHeaderColumn">Số thuê bao</th>
+                    <th class="freezedHeaderColumn">
+                        <div class="boxShadowTopBottomLeft threeDimensionBlueBorderLeft">Số thuê bao</div>
+                    </th>
                     <th class="invisibleTD"></th>
                     <th>
-                        <div>Giá/ Phí hòa mạng</div>
+                        <div class="boxShadowTopBottom">Giá/ Phí hòa mạng</div>
                     </th>
                     <th>
-                        <div>Loại thuê bao</div>
+                        <div class="boxShadowTopBottom">Loại thuê bao</div>
                     </th>
                     <th>
-                        <div>Loại TB/ Cước cam kết (tháng)</div>
+                        <div class="boxShadowTopBottom">Loại TB/ Cước cam kết (tháng)</div>
                     </th>
                     <th>
-                        <div>Địa điểm hòa mạng</div>
+                        <div class="boxShadowTopBottom">Địa điểm hòa mạng</div>
                     </th>
                     <th>
-                        <div>Mua</div>
+                        <div class="boxShadowTopBottomRight threeDimensionBlueBorderRight">Mua</div>
                     </th>
                 </tr>
                 </thead>
