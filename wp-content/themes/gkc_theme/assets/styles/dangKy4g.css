@@ -67,12 +67,12 @@ align-items: center;
   color: #DA251D;
 }
 
-table, th, td {
+.packageTable table, .packageTable th, .packageTable td {
 border-bottom: 1px solid #0081B5;
 border-collapse: collapse;
 }
 
-table th div {
+.packageTable table th div {
 font-family: "Montserrat-SemiBold";
 display: flex;
 align-items: flex-start;

@@ -32,6 +32,11 @@
 <!--            <div>Để hủy gói cước 3G MobiFone, bạn soạn: <span>HUY</span> [ Tên gói] gửi <span>999</span> (200đ/ SMS)-->
 <!--            </div>-->
 <!--        </div>-->
+<!--        <div class="promo">-->
+<!--            <div class="title">ƯU ĐÃI:</div>-->
+<!--            <div>Hoàn tiền 5.000đ cho mỗi thuê bao đăng ký thành công gói cước.-->
+<!--            </div>-->
+<!--        </div>-->
 <!--    </div>-->
 <!--    <div class="packageTable">-->
 <!--        <table>-->
@@ -132,16 +137,31 @@
 <!--            <div>Để hủy gói cước 3G MobiFone, bạn soạn: <span>HUY</span> [ Tên gói] gửi <span>999</span> (200đ/ SMS)-->
 <!--            </div>-->
 <!--        </div>-->
+<!--        <div class="promo">-->
+<!--            <div class="title">ƯU ĐÃI:</div>-->
+<!--            <div>Hoàn tiền 5.000đ cho mỗi thuê bao đăng ký thành công gói cước.-->
+<!--            </div>-->
+<!--        </div>-->
 <!--    </div>-->
 <!--    <div class="packageTable">-->
 <!--        <table>-->
 <!--            <thead>-->
 <!--            <tr>-->
-<!--                <th>TÊN DỊCH VỤ</th>-->
-<!--                <th>GIÁ CƯỚC<br>(vnd)</th>-->
-<!--                <th>Ưu đãi Data</th>-->
-<!--                <th>SMS đăng ký</th>-->
-<!--                <th>Đăng ký ngay</th>-->
+<!--                <th>-->
+<!--                    <div>TÊN DỊCH VỤ</div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div>GIÁ CƯỚC<br>(vnd)</div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div>Ưu đãi Data</div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div>SMS đăng ký</div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div>Đăng ký ngay</div>-->
+<!--                </th>-->
 <!--            </tr>-->
 <!--            </thead>-->
 <!--            <tbody>-->
