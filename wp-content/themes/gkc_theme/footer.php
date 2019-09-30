@@ -19,8 +19,10 @@
         <div class="footerPlugin">
             <div class="follow">Follow us:</div>
             <div>
-                <a href="https://www.facebook.com/mobifonetongmiennam" target="_blank"><img class="pluginFacebook" src="<?= base_url() ?>/assets/images/icon_facebook.svg"></a>
-                <a href="javascript:void(0)" target="_blank"><img class="pluginInstagram" src="<?= base_url() ?>/assets/images/icon_instagram.svg"></a>
+                <a href="https://www.facebook.com/mobifonetongmiennam" target="_blank"><img class="pluginFacebook"
+                                                                                            src="<?= base_url() ?>/assets/images/icon_facebook.png"></a>
+                <a href="javascript:void(0)" target="_blank"><img class="pluginInstagram"
+                                                                  src="<?= base_url() ?>/assets/images/icon_instagram.png"></a>
             </div>
 
         </div>
@@ -78,21 +80,21 @@
         var objURL = {};
 
         str.replace(
-            new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
-            function( $0, $1, $2, $3 ){
-                objURL[ $1 ] = $3;
+            new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+            function ($0, $1, $2, $3) {
+                objURL[$1] = $3;
             }
         );
         return objURL;
     };
 
     function serialize(obj) {
-      var str = [];
+        var str = [];
         for (var p in obj)
             if (obj.hasOwnProperty(p)) {
-              str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
             }
-      return str.join("&");
+        return str.join("&");
     }
 
     function previewImage(element) {
@@ -110,7 +112,9 @@
         //     $(previewElement).attr('src', '{{generateLink("image/icon-add.png")}}');
     }
 
-    function submitData() {
+    function submitData(element) {
+        $(element).prop('disabled', true);
+        $('.img_loading').css('display', 'block');
         let data = $('#registerInfo').serializeArray();
         // console.log(data);return;
         let photo_1 = $('#photo_1').attr('src');
@@ -122,14 +126,16 @@
             type: 'POST',
             data: data
         }).done(function (result) {
-            if(result.data == "Message has been sent")
+            $(element).prop('disabled', false);
+            $('.img_loading').css('display', 'none');
+            if (result.data == "Message has been sent")
                 alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm liên hệ với bạn!');
             else
                 alert('Có một số lỗi khi gửi thông tin đến hệ thống! Vui lòng thử lại!');
         })
     }
 
-    function changeAmount(element){
+    function changeAmount(element) {
         $('.amountNumber').each(function (i, el) {
             $(el).removeClass('selected');
         });
@@ -139,10 +145,25 @@
         $('[name = amount]').val(text.replace('đ', '').replace(',', '').trim());
     }
 
-    function recharge(){
+    function recharge(element) {
+        $(element).prop('disabled', true);
+        $('.img_loading').css('display', 'block');
         let data = $('#recharge').serializeArray();
-        console.log(data);
+        data.unshift({name: 'action', value: 'recharge'});
+        $.ajax({
+            url: "<?=admin_url('admin-ajax.php') ?>",
+            type: 'POST',
+            data: data
+        }).done(function (result) {
+            $(element).prop('disabled', false);
+            $('.img_loading').css('display', 'none');
+            if (result.data == "Message has been sent")
+                alert('Đã gửi thông tin đến hệ thống thành công! Hệ thống sẽ sớm phản hồi lại với bạn!');
+            else
+                alert('Có một số lỗi khi gửi thông tin đến hệ thống! Vui lòng thử lại!');
+        })
     }
+
     $(document).ready(function () {
         // Init Semantic UI components
         $('.ui.dropdown').dropdown();
@@ -152,12 +173,12 @@
                     items: 1
                 }
             },
-            loop  : true,
+            loop: true,
             autoplay: true,
             autoplayTimeout: 6500,
-            nav    : true,
-            smartSpeed :900,
-            navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+            nav: true,
+            smartSpeed: 900,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
         });
     })
 </script>

@@ -5,11 +5,6 @@
  */
 get_header();
 ?>
-    <style>
-        .idUploadPhoto img{
-            width: 100%;
-        }
-    </style>
     <title>Chi tiết sim <?=get_field('number')?></title>
     <div class="content">
         <form id="registerInfo">
@@ -160,8 +155,9 @@ get_header();
         </div>
 
         <div class="buttonContainer">
-            <button class="orderButton threeDimensionRedButton" type="button" onclick="submitData()">MUA NGAY
+            <button class="orderButton threeDimensionRedButton" type="button" onclick="submitData(this)">MUA NGAY
             </button>
+            <img class="img_loading" src="<?=base_url()?>/assets/images/loading.gif" width="150" alt="" style="display: none">
         </div>
 
         <div class="mapContainer">

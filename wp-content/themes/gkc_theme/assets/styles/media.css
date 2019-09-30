@@ -127,7 +127,6 @@ padding-left: 0 !important;
 }
 /* sim table */
 .freezedHeaderColumn {
-background-color: #0081B5;
 width: 100px;
 }
 .freezedHeaderColumn,
@@ -135,8 +134,8 @@ width: 100px;
 position: absolute;
 }
 .freezedBodyColumn div {
-background-color: #0081B5;
-color: white !important;
+background-color: white;
+color: #0081b5 !important;
 }
 .simTableBody tr div {
 height: 40px;
@@ -170,6 +169,9 @@ padding-left: 28px;
 }
 .footerPlugin {
 padding-left: 48px;
+}
+.pluginFacebook {
+  margin-right: 5px;
 }
 .footerInfo {
 padding-top: 10px;
@@ -373,6 +375,7 @@ padding: 20px 0px;
 }
 .fourGButton button {
   padding: 5px;
+  max-height: 21px;
 }
 .packageTable table tr {
   height: 55px;
@@ -492,8 +495,6 @@ padding-right: 10px;
 .simTable thead tr th,
 .simTable tbody tr td {
 font-size: 15px;
-padding-top: 15px;
-padding-bottom: 15px;
 }
 /* footer */
 .footerUpper {
@@ -524,6 +525,9 @@ width: 50%;
 }
 .footerPlugin {
 text-align: right;
+}
+.pluginFacebook {
+  margin-right: 15px;
 }
 /* simSoDep page */
 .pageAnchor,

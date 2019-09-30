@@ -26,15 +26,15 @@
             <div class="text">Chọn nhà mạng </div>
             <div class="carrierContainer">
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="mobifone" checked>
+                    <input class="checkmark" type="radio" name="network" value="Mobifone" checked>
                     <img src="<?= base_url() ?>/assets/images/logo_mobifone.svg">
                 </label>
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="vinaphone">
+                    <input class="checkmark" type="radio" name="network" value="Vinaphone">
                     <img src="<?= base_url() ?>/assets/images/logo_vinaphone.svg">
                 </label>
                 <label>
-                    <input class="checkmark" type="radio" name="network" value="viettel">
+                    <input class="checkmark" type="radio" name="network" value="Viettel">
                     <img src="<?= base_url() ?>/assets/images/logo_viettel.svg">
                 </label>
             </div>
@@ -122,8 +122,9 @@
                 + Thuê bao trả trước trong ngày khuyến mãi 20%<br>
             </div>
             <div class="topUpContainer">
-                <button class="topUpButton threeDimensionRedButton" type="button" onclick="recharge()">NẠP NGAY
+                <button class="topUpButton threeDimensionRedButton" type="button" onclick="recharge(this)">NẠP NGAY
                 </button>
+                <img class="img_loading" src="<?=base_url()?>/assets/images/loading.gif" width="150" alt="" style="display: none">
             </div>
         </form>
     </div>

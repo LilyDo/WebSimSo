@@ -15,14 +15,19 @@ $cur_url = home_url($wp->request)
     <link href="<?= base_url() ?>/assets/styles/homePage.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/media.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/napTien.css" rel="stylesheet" type="text/css">
-    <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/styles/semantic/semantic.min.css">
     <link href="<?= base_url() ?>/assets/fonts/fonts.css" rel='stylesheet'>
     <script src="<?= base_url() ?>/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
+    <style>
+        .idUploadPhoto img{
+            width: 100%;
+        }
+    </style>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -47,13 +52,13 @@ $cur_url = home_url($wp->request)
      attribution=setup_tool
      page_id="363173421096027"
      theme_color="#0084ff"
-     logged_in_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?"
-     logged_out_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?">
+     logged_in_greeting="Bạn cần gặp nhân viên tư vấn?"
+     logged_out_greeting="Bạn cần gặp nhân viên tư vấn?">
 </div>
 <div class="header">
     <div class="headerLeft">
         <div class="headerLogo">
-            <img src="<?= base_url() ?>/assets/images/logo.png">
+            <a href=""><img src="<?= base_url() ?>/assets/images/logo.png"></a>
         </div>
         <div class="hamburger">
             <img onClick="toggleDropdownContainer()" src="<?= base_url() ?>/assets/images/nav_menu.png">
