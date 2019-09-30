@@ -52,8 +52,8 @@ $cur_url = home_url($wp->request)
      attribution=setup_tool
      page_id="363173421096027"
      theme_color="#0084ff"
-     logged_in_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?"
-     logged_out_greeting="Chào bạn! Bạn cần tư vấn gì ạ ?">
+     logged_in_greeting="Bạn cần gặp nhân viên tư vấn?"
+     logged_out_greeting="Bạn cần gặp nhân viên tư vấn?">
 </div>
 <div class="header">
     <div class="headerLeft">
