@@ -53,10 +53,9 @@ function sendMail($var = array())
     }
 }
 
-function serializeData($value = [])
+function serializeData($value = '')
 {
     $data = explode(',', $value);
-    $response = '';
     if (is_array($data)) {
         $response = serialize($data);
     } else
@@ -110,7 +109,145 @@ function processDataUrl($item)
         return get_site_url() . '/' . $path;
     } else
         return '';
+}
+function testingNumberWithType($number, $op = 'NOT IN'){
+    // IN: Số đẹp, NOT IN: ''
+    $arrMatch = [];
+    if ($op == 'IN')
+        $arrMatch[] = 'Số đẹp';
 
+    $reg1 = '/^.*39$/';
+    $reg2 = '/^.*79$/';
+    if (preg_match($reg1, $number) || preg_match($reg2, $number))
+        $arrMatch[] = 'Thần tài';
+
+    $reg1 = '/^.*38$/';
+    $reg2 = '/^.*78$/';
+    if (preg_match($reg1, $number) || preg_match($reg2, $number))
+        $arrMatch[] = 'Ông địa';
+
+    $reg1 = '/^.*68$/';
+    $reg2 = '/^.*86$/';
+    if (preg_match($reg1, $number) || preg_match($reg2, $number))
+        $arrMatch[] = 'Lộc phát';
+
+    for ($i = 0; $i <= 999; $i += 111){
+        if ($i == 0)
+            $reg = '/^.*000$/';
+        else
+            $reg = '/^.*' . $i . '$/';
+
+        if (preg_match($reg, $number)){
+            $arrMatch[] = 'Tam hoa cuối';
+            break;
+        }
+    }
+
+    for ($i = 123; $i <= 6789; $i += 1111){
+        if ($i == 123)
+            $reg = '/^.*0123.*$/';
+        else
+            $reg = '/^.*' . $i . '.*$/';
+
+        if (preg_match($reg, $number)){
+            $arrMatch[] = 'Tiến 4 giữa';
+            break;
+        }
+    }
+
+    return implode(', ', $arrMatch);
+}
+
+function makeDataQueryType($type){
+    $args['relation'] = 'OR';
+    $data = [];
+    switch ($type){
+        case 'thantai': $data = ['*39', '*79'];break;
+        case 'ongdia': $data = ['*38', '*78'];break;
+        case 'locphat': $data = ['*68', '*86'];break;
+        case 'tamhoacuoi': {
+            for($i = 0; $i <= 999; $i += 111){
+                if ($i == 0)
+                    $data[] = '*000' ;
+                else
+                    $data[] = '*' . $i;
+            }
+        };break;
+        case 'tien4giua': {
+            for ($i = 123; $i < 6789; $i += 1111){
+                if ($i == 123)
+                    $data[] = '*0123*';
+                else
+                    $data[] = '*' . $i . '*';
+            }
+        };break;
+    }
+
+    foreach ($data as $item){
+        $item = '^' . str_replace('*', '.*', $item) . '$';
+        $args[] = [
+            'key' => 'number',
+            'value' => $item,
+            'compare' => 'REGEXP'
+        ];
+    }
+
+    return $args;
+}
+
+function makeDataQueryCost($cost){
+    $data = explode('_', $cost);
+    if (count($data) == 1){
+        $args = [
+            'key' => 'cost',
+            'value' => $data[0] * 1000000,
+            'type'		=> 'NUMERIC',
+            'compare' => '>='
+        ];
+    }
+    else{
+        $args[] = [
+            'key' => 'cost',
+            'value' => $data[0] * 1000000,
+            'type'		=> 'NUMERIC',
+            'compare' => '>='
+        ];
+        $args[] = [
+            'key' => 'cost',
+            'value' => $data[1] * 1000000,
+            'type'		=> 'NUMERIC',
+            'compare' => '<='
+        ];
+    }
+
+    return $args;
+}
+
+
+function getList($type = 'loaiso'){
+    $arr = [];
+    switch ($type){
+        case 'loaiso': {
+            $arr = [
+                'thantai' => 'Thần tài',
+                'ongdia' => 'Ông địa',
+                'locphat' => 'Lộc phát',
+                'tamhoacuoi' => 'Tam hoa cuối',
+                'tien4giua' => 'Tiến 4 giữa'
+            ];
+        } break;
+        case 'gia': {
+            $arr = [
+                '0_5' => 'Dưới 5 triệu',
+                '5_20' => 'Từ 5 đến 20 triệu',
+                '20_100' => 'Từ 20 đến 100 triệu',
+                '100' => 'Trên 100 triệu',
+            ];
+        }
+    }
+
+
+    return $arr;
 }
 
 require_once 'init/mail.php';

@@ -5,10 +5,10 @@
         'hide_empty' => false
     ]);
 
-    $loaiso = get_terms([
-        'taxonomy' => 'types',
-        'hide_empty' => false
-    ]);
+//    $loaiso = get_terms([
+//        'taxonomy' => 'types',
+//        'hide_empty' => false
+//    ]);
 
     $loaitb = get_terms([
         'taxonomy' => 'tbtypes',
@@ -39,8 +39,11 @@
                         <strong>2.</strong> Hoặc sử dụng dấu * đại diện cho một chuỗi số bất kỳ
                     </p>
                     <ul style="padding-left: 20px;">
-                        <li>a. Để tìm số chứa 88, nhập 88, hoặc *88 và 88* hoặc *88*</li>
-                        <li>b. Để tìm số chứa 88 và 99, nhập vào 88*99</li>
+                        <li>a. Để tìm số bắt đầu bằng 88, nhập vào 88*</li>
+                        <li>b. Để tìm số kết thúc bằng 88, nhập vào *88 hoặc 88</li>
+                        <li>c. Để tìm số bắt đầu bằng 88 và kết thúc bằng 99, nhập vào 88*99</li>
+                        <li>d. Để tìm số chứa 88, nhập vào *88*</li>
+                        <li>e. Để tìm số chứa 88 và 99, nhập vào *88*99*</li>
                     </ul>
                     <p></p>
                     <p>
@@ -85,8 +88,9 @@
             <div class="twoThird">
                 <select class="ui search dropdown fluid" name="loaiso">
                     <option value="all">Tất cả</option>
-                    <?php foreach ($loaiso as $item) : ?>
-                        <option value="<?= $item->slug ?>" <?=isset($_GET['loaiso'])? (($_GET['loaiso'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
+                    <?php $arrLoaiSo = getList() ?>
+                    <?php foreach ($arrLoaiSo as $key => $item) : ?>
+                        <option value="<?=$key?>" <?=($_GET['loaiso'] == $key)? 'selected' : '' ?>><?=$item?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -94,12 +98,13 @@
     </div>
     <div class="tableRow">
         <div class="rowHalf">
-            <div class="oneThird">Ưu đãi</div>
+            <div class="oneThird">Lọc theo giá</div>
             <div class="twoThird">
-                <select class="ui search dropdown fluid" name="uudai">
+                <select class="ui search dropdown fluid" name="gia">
                     <option value="all">Tất cả</option>
-                    <?php foreach ($uudai as $item) : ?>
-                        <option value="<?= $item->slug ?>" <?=isset($_GET['uudai'])? (($_GET['uudai'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
+                    <?php $arrGia = getList('gia') ?>
+                    <?php foreach ($arrGia as $key => $item) : ?>
+                        <option value="<?=$key?>" <?=($_GET['gia'] == $key)? 'selected' : '' ?>><?=$item?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
