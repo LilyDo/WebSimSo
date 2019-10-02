@@ -155,6 +155,9 @@ function testingNumberWithType($number, $op = 'NOT IN'){
         }
     }
 
+    if (count($arrMatch) == 0)
+        $arrMatch[] = 'Số thường';
+
     return implode(', ', $arrMatch);
 }
 

@@ -36,10 +36,17 @@
     if (isset($_GET['gia']) && $_GET['gia'] != 'all')
         $meta_query[] = makeDataQueryCost($_GET['gia']);
 
+    $dauso = '';
+    if (isset($_GET['dauso']) && $_GET['dauso'] != 'all'){
+        $dauso = sprintf("%'03d", $_GET['dauso']);
+        $reg = '^' . $dauso . '.*$';
+        $meta_query[] = [
+            'key' => 'number',
+            'value' => $reg,
+            'compare' => 'REGEXP'
+        ];
+    }
     if (isset($_GET['so']) && $_GET['so'] != ''){
-        $dauso = '';
-        if (isset($_GET['dauso']) && $_GET['dauso'] != 'all')
-            $dauso = $_GET['dauso'];
         $str = '^' . $dauso . str_replace('*', '.*', $_GET['so']) . "$";
         $meta_query[] = [
             'key' => 'number',
