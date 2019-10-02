@@ -73,7 +73,7 @@
                 <select class="ui search dropdown fluid" name="dauso">
                     <option value="all">Chọn đầu số</option>
                     <?php foreach ($dauso as $item) : ?>
-                        <option value="<?= $item->slug ?>" <?=(isset($_GET) && $_GET['dauso'] == $item->slug)? 'selected' : '' ?> ><?= $item->name ?></option>
+                        <option value="<?= $item->slug ?>" <?=(isset($_GET['dauso']) && $_GET['dauso'] == $item->slug)? 'selected' : '' ?> ><?= $item->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
