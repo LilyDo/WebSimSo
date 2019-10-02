@@ -73,7 +73,7 @@
                 <select class="ui search dropdown fluid" name="dauso">
                     <option value="all">Chọn đầu số</option>
                     <?php foreach ($dauso as $item) : ?>
-                        <option value="<?= $item->slug ?>" <?=isset($_GET['dauso'])? (($_GET['dauso'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
+                        <option value="<?= $item->slug ?>" <?=(isset($_GET) && $_GET['dauso'] == $item->slug)? 'selected' : '' ?> ><?= $item->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -90,7 +90,7 @@
                     <option value="all">Tất cả</option>
                     <?php $arrLoaiSo = getList() ?>
                     <?php foreach ($arrLoaiSo as $key => $item) : ?>
-                        <option value="<?=$key?>" <?=($_GET['loaiso'] == $key)? 'selected' : '' ?>><?=$item?></option>
+                        <option value="<?=$key?>" <?=(isset($_GET['loaiso']) && $_GET['loaiso'] == $key)? 'selected' : '' ?> ><?=$item?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -104,7 +104,7 @@
                     <option value="all">Tất cả</option>
                     <?php $arrGia = getList('gia') ?>
                     <?php foreach ($arrGia as $key => $item) : ?>
-                        <option value="<?=$key?>" <?=($_GET['gia'] == $key)? 'selected' : '' ?>><?=$item?></option>
+                        <option value="<?=$key?>" <?=(isset($_GET['gia']) && $_GET['gia'] == $key)? 'selected' : '' ?>><?=$item?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -115,7 +115,7 @@
                 <select class="ui search dropdown fluid" name="loaitb">
                     <option value="all">Tất cả</option>
                     <?php foreach ($loaitb as $item) : ?>
-                        <option value="<?= $item->slug ?>" <?=isset($_GET['loaitb'])? (($_GET['loaitb'] == $item->slug)? 'selected' : '') : ''?> ><?= $item->name ?></option>
+                        <option value="<?= $item->slug ?>" <?=(isset($_GET['loaitb']) && $_GET['loaitb'] == $item->slug)? 'selected' : ''?> ><?= $item->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
