@@ -225,6 +225,29 @@
           tooltip.style.display = "none"
         }
       }
+
+      function togglePromoBackground() {
+        // find all elements having className "promo"
+        var promos = document.getElementsByClassName("promo");
+        if (promos != undefined && promos.length > 0) {
+          var redBackground = "image_promo.svg";
+          var blueBackground = "image_promo_blue.png";
+
+          // loop through all promo elements
+          for (var i = 0; i < promos.length; i++) {
+            var promo = promos[i]
+            
+            // toggle backgroundImage style based on current backgroundImage
+            if (promo.style.backgroundImage.indexOf(blueBackground) > -1|| promo.style.backgroundImage == "") {
+              promo.style.backgroundImage = "url(./assets/images/" + redBackground + ")";
+            } else {
+              promo.style.backgroundImage = "url(./assets/images/" + blueBackground + ")";
+            }
+          }
+        }
+      }
+
+      setInterval(togglePromoBackground, 500);
       // Init Semantic UI components
       $('.ui.dropdown')
         .dropdown();
