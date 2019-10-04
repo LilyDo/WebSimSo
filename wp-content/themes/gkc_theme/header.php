@@ -58,7 +58,7 @@ $cur_url = home_url($wp->request)
 <div class="header">
     <div class="headerLeft">
         <div class="headerLogo">
-            <a href=""><img src="<?= base_url() ?>/assets/images/logo.png"></a>
+            <a href="<?=get_site_url()?>"><img src="<?= base_url() ?>/assets/images/logo.png"></a>
         </div>
         <div class="hamburger">
             <img onClick="toggleDropdownContainer()" src="<?= base_url() ?>/assets/images/nav_menu.png">

@@ -164,8 +164,39 @@
         })
     }
 
+    function togglePromoBackground() {
+        // find all elements having className "promo"
+        var promos = document.getElementsByClassName("promo");
+        if (promos != undefined && promos.length > 0) {
+            var redBackground = "image_promo.svg";
+            var blueBackground = "image_promo_blue.png";
+
+            // loop through all promo elements
+            for (var i = 0; i < promos.length; i++) {
+                var promo = promos[i]
+
+                // toggle backgroundImage style based on current backgroundImage
+                if (promo.style.backgroundImage.indexOf(blueBackground) > -1 || promo.style.backgroundImage == "") {
+                    promo.style.backgroundImage = "url(<?=base_url()?>/assets/images/"  + redBackground + ")";
+                } else {
+                    promo.style.backgroundImage = "url(<?=base_url()?>/assets/images/" + blueBackground + ")";
+                }
+            }
+        }
+    }
+
+    function locationRegister4G(str){
+        // Safari 3.0+ "[object HTMLElementConstructor]"
+        var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+        if (isSafari == true)
+            location.href = 'sms:9084&' + str;
+        else
+            location.href = 'sms:9084?' + str;
+    }
+
     $(document).ready(function () {
         // Init Semantic UI components
+        setInterval(togglePromoBackground, 500);
         $('.ui.dropdown').dropdown();
         $(".owl-carousel").owlCarousel({
             responsive: {
