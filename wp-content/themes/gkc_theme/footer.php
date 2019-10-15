@@ -33,6 +33,16 @@
     </div>
 
 </div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150089083-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150089083-1');
+</script>
+
 <!-- Scripts -->
 <script src="<?= base_url() ?>/assets/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?= base_url() ?>/assets/styles/semantic/semantic.min.js" type="text/javascript"></script>

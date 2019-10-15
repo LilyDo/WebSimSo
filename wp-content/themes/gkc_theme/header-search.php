@@ -36,15 +36,8 @@
                         <strong>1.</strong> Nhập chính xác số cần tìm. Ví dụ: 4896999
                     </p>
                     <p>
-                        <strong>2.</strong> Hoặc sử dụng dấu * đại diện cho một chuỗi số bất kỳ
+                        <strong>2.</strong> Hoặc sử dụng dấu * để tìm kiếm nhiều dãy số một lúc. Ví dụ: 888*999
                     </p>
-                    <ul style="padding-left: 20px;">
-                        <li>a. Để tìm số bắt đầu bằng 88, nhập vào 88*</li>
-                        <li>b. Để tìm số kết thúc bằng 88, nhập vào *88 hoặc 88</li>
-                        <li>c. Để tìm số bắt đầu bằng 88 và kết thúc bằng 99, nhập vào 88*99</li>
-                        <li>d. Để tìm số chứa 88, nhập vào *88*</li>
-                        <li>e. Để tìm số chứa 88 và 99, nhập vào *88*99*</li>
-                    </ul>
                     <p></p>
                     <p>
                         <strong>Bước 3 :</strong> Chọn Loại số: Chọn một loại số đẹp cụ thể cho Số cần tìm hoặc để “Không chọn” khi bạn muốn tìm số trong tất cả các Loại số.

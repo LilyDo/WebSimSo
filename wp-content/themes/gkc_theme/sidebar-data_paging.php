@@ -47,12 +47,16 @@
         ];
     }
     if (isset($_GET['so']) && $_GET['so'] != ''){
-        $str = '^' . $dauso . str_replace('*', '.*', $_GET['so']) . "$";
-        $meta_query[] = [
-            'key' => 'number',
-            'value' => $str,
-            'compare' => 'REGEXP'
-        ];
+        $arr = explode('*', $_GET['so']);
+        $arrQuery = ['relation' => 'OR'];
+        foreach ($arr as $value) {
+            $arrQuery[] = [
+                'key' => 'number',
+                'value' => $value,
+                'compare' => 'LIKE'
+            ];
+        }
+        $meta_query[] = $arrQuery;
     }
 
     $args['meta_query'] = $meta_query;
