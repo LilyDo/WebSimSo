@@ -14,16 +14,18 @@
     $args = [
         'post_type' => 'sims',
         'paged' => $paging,
-        'posts_per_page' => 20,
-        'tax_query' => array(
+        'posts_per_page' => 20
+    ];
+
+    if ($operation == 'IN')
+        $args['tax_query'] = array(
             array(
                 'taxonomy' => 'types',
                 'field' => 'slug',
                 'terms' => array ('so-dep'),
                 'operator' => $operation
             )
-        )
-    ];
+        );
 
     $meta_query = ['relation' => 'AND'];
 

@@ -122,7 +122,7 @@
                 + Thuê bao trả trước trong ngày khuyến mãi 20%<br>
             </div>
             <div class="topUpContainer">
-                <button class="topUpButton threeDimensionRedButton" type="button" onclick="recharge(this)">NẠP NGAY
+                <button class="topUpButton threeDimensionRedButton" type="button" onclick="" disabled="">NẠP NGAY
                 </button>
                 <img class="img_loading" src="<?=base_url()?>/assets/images/loading.gif" width="150" alt="" style="display: none">
             </div>

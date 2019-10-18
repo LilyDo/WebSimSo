@@ -17,7 +17,7 @@
         <div class="anchorCurrent">ĐĂNG KÝ 4G</div>
     </div>
 
-    <!-- <div class="textContainer">
+    <div class="textContainer">
         <div class="text text1">
             <div>
                 1. Đăng ký 4G Mobi dễ dàng, đơn giản, Miễn phí tin nhắn đăng ký. <br>
@@ -226,6 +226,5 @@
             </tr>
             </tbody>
         </table>
-    </div> -->
-    <?php the_content() ?>
+    </div>
 <?php get_footer() ?>
