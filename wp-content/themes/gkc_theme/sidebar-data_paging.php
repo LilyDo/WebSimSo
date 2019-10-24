@@ -14,7 +14,7 @@
     $args = [
         'post_type' => 'sims',
         'paged' => $paging,
-        'posts_per_page' => 20
+        'posts_per_page' => 50
     ];
 
     if ($operation == 'IN')
@@ -50,15 +50,12 @@
     }
     if (isset($_GET['so']) && $_GET['so'] != ''){
         $arr = explode('*', $_GET['so']);
-        $arrQuery = ['relation' => 'OR'];
-        foreach ($arr as $value) {
-            $arrQuery[] = [
-                'key' => 'number',
-                'value' => $value,
-                'compare' => 'LIKE'
-            ];
-        }
-        $meta_query[] = $arrQuery;
+        $str = '^' . $dauso . str_replace('*', '.*', $_GET['so']) . "$";
+        $meta_query[] = [
+            'key' => 'number',
+            'value' => $str,
+            'compare' => 'REGEXP'
+        ];
     }
 
     $args['meta_query'] = $meta_query;
@@ -108,7 +105,7 @@
                     <div><?= number_format($item->cost) ?> VNĐ</div>
                 </td>
                 <td>
-                    <div><?= testingNumberWithType($item->number, $operation) ?></div>
+                    <div><?= testingNumberWithType($item->number, $item->ID) ?></div>
                 </td>
                 <td>
                     <div><?= processPostTerms('tbtypes', $item->ID) ?></div>
@@ -134,12 +131,12 @@
     </table>
 </div>
 <div class="pagination">
-    <?php if ($all <= 100) : ?>
+    <?php if ($all <= 250) : ?>
 
         <div class="numberContainer">
             <div class="pageNumber <?=($paging == 1)? 'current' : ''?>" onclick="location.href = '<?=processPage(1, $_GET)?>'">1</div>
             <?php for($i = 1; $i <= 4; $i++ ) : ?>
-                <?php if($all > $i * 20) : $index = $i + 1; ?>
+                <?php if($all > $i * 50) : $index = $i + 1; ?>
                     <div class="pageNumber <?=($paging == $index)? 'current' : ''?>" onclick="location.href = '<?=processPage($index, $_GET)?>'"><?=$index?></div>
                 <?php endif; ?>
             <?php endfor; ?>

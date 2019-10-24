@@ -241,15 +241,13 @@ function register_sim_post_type($value='')
                 'key' => 'field_5d75ba4beceqw',
                 'label' => 'Gói cước khác',
                 'name' => 'cuoc_khac',
-                'type' => 'wysiwyg',
-                'instructions' => 'Gói cước khác',
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'html',
-                'maxlength' => '',
-            )
+                'type' => 'radio',
+                'choices' => getList('goicuoc'),
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'default_value' => 'CK150',
+                'layout' => 'vertical',
+            ),
         ),
         'location' => array (
             array (

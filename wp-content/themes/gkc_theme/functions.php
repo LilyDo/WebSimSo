@@ -110,11 +110,15 @@ function processDataUrl($item)
     } else
         return '';
 }
-function testingNumberWithType($number, $op = 'NOT IN'){
-    // IN: Số đẹp, NOT IN: ''
+function testingNumberWithType($number, $id){
     $arrMatch = [];
-    if ($op == 'IN')
-        $arrMatch[] = 'Số đẹp';
+
+    $terms = get_the_terms($id, 'types');
+    if (!empty($terms)){
+        foreach ($terms as $item){
+            $arrMatch[] = $item->name;
+        }
+    }
 
     $reg1 = '/^.*39$/';
     $reg2 = '/^.*79$/';
@@ -246,7 +250,19 @@ function getList($type = 'loaiso'){
                 '20_100' => 'Từ 20 đến 100 triệu',
                 '100' => 'Trên 100 triệu',
             ];
-        }
+        } break;
+        case 'goicuoc': {
+            $arr = [
+                'CK150' => 'CK150: 150,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc.',
+                'CK250' => 'CK250: 250,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc. Được miễn phí 1 gói M50(450MB tốc độ cao/chu kỳ), vượt dung lượng sẽ tính cước phát sinh 25đ/50kB.',
+                'M69' => 'M69: (69.000đ/tháng – 1000 phút nội mạng)',
+                'MF99' => 'MF99: (99.000đ/tháng – miễn cước thuê bao tháng; 1000 phút nội mạng; 40 phút ngoại mạng, 5GB tốc độ cao)',
+                'MF149' => 'MF149: (149.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 80 phút ngoại mạng, 8GB tốc độ cao)',
+                'MF199' => 'MF199: (199.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 160 phút ngoại mạng, 9GB tốc độ cao)',
+                'MF299' => 'MF299: (299.000đ/tháng – miễn cước thuê bao tháng; 2000 phút nội mạng; 300 phút ngoại mạng, 12GB tốc độ cao)',
+                'MF399' => 'MF399: (399.000đ/tháng – miễn cước thuê bao tháng; 3000 phút nội mạng; 400 phút ngoại mạng, 17GB tốc độ cao)',
+            ];
+        } break;
     }
 
 

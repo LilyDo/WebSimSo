@@ -19,6 +19,7 @@ $cur_url = home_url($wp->request)
     <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/styles/semantic/semantic.min.css">
     <link href="<?= base_url() ?>/assets/fonts/fonts.css" rel='stylesheet'>
+    <link rel="shortcut icon" href="<?=base_url()?>/assets/images/icon.png">
     <script src="<?= base_url() ?>/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 

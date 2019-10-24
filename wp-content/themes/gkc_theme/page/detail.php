@@ -49,7 +49,14 @@ get_header();
                 </tr>
                 <tr>
                     <td>Gói cước khác (không bắt buộc)</td>
-                    <td><?= htmlspecialchars_decode(get_field('cuoc_khac')) ?></td>
+                    <td>
+                        <?php foreach (getList('goicuoc') as $key => $value) : ?>
+                            <label for="<?=$key?>">
+                                <input type="radio" value="<?=$key?>" id="<?=$key?>" name="package" <?=(get_field('cuoc_khac') == $key)? 'checked' : '' ?>>
+                                <?= $value?>
+                            </label><br>
+                        <?php endforeach; ?>
+                    </td>
                 </tr>
             </table>
 

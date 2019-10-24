@@ -126,11 +126,20 @@
         $(element).prop('disabled', true);
         $('.img_loading').css('display', 'block');
         let data = $('#registerInfo').serializeArray();
+        let denied = 0;
+        for (let i = 0; i < data.length; i++){
+            if (data[i].value == '')
+                denied = 1;
+        }
         // console.log(data);return;
         let photo_1 = $('#photo_1').attr('src');
         let photo_2 = $('#photo_2').attr('src');
         data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2});
         data.unshift({name: 'action', value: 'buySim'});
+        if (denied){
+            alert('Vui lòng nhập đầy đủ thông tin!');
+            return;
+        }
         $.ajax({
             url: "<?=admin_url('admin-ajax.php') ?>",
             type: 'POST',
