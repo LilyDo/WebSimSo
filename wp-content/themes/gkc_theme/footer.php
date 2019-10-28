@@ -123,23 +123,34 @@
     }
 
     function submitData(element) {
-        $(element).prop('disabled', true);
-        $('.img_loading').css('display', 'block');
         let data = $('#registerInfo').serializeArray();
-        let denied = 0;
         for (let i = 0; i < data.length; i++){
-            if (data[i].value == '')
-                denied = 1;
+            if (data[i].name !== 'address_delivery'){
+                if (data[i].value === ''){
+                    alert('Thiếu mục '+ getTextRequired(data[i].name) +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
+                    return;
+                } 
+            }
         }
-        // console.log(data);return;
-        let photo_1 = $('#photo_1').attr('src');
-        let photo_2 = $('#photo_2').attr('src');
-        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2});
-        data.unshift({name: 'action', value: 'buySim'});
-        if (denied){
-            alert('Vui lòng nhập đầy đủ thông tin!');
+        // check delivery
+        if ($('[name = giao_sim]').val() === 'delivery' && $('[name = address_delivery]').val() === ''){
+            alert('Thiếu mục '+ getTextRequired('address_delivery') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
             return;
         }
+        let photo_1 = $('#photo_1').attr('src');
+        let photo_2 = $('#photo_2').attr('src');
+        if (!photo_1){
+            alert('Thiếu mục '+ getTextRequired('photo_1') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
+            return;
+        }
+        if (!photo_2){
+            alert('Thiếu mục '+ getTextRequired('photo_2') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
+            return;
+        }
+        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2});
+        data.unshift({name: 'action', value: 'buySim'});
+        $(element).prop('disabled', true);
+        $('.img_loading').css('display', 'block');
         $.ajax({
             url: "<?=admin_url('admin-ajax.php') ?>",
             type: 'POST',
@@ -211,6 +222,21 @@
             location.href = 'sms:909&' + str;
         else
             location.href = 'iMessage://909?' + str;
+    }
+
+    function getTextRequired(text){
+        let response = text;
+        switch (text) {
+            case 'name': response = 'tên'; break;
+            case 'phone': response = 'số điện thoại'; break;
+            case 'address': response = 'địa chỉ'; break;
+            case 'cmnd': response = 'CMND'; break;
+            case 'photo_1': response = 'hình mặt trước CMND'; break;
+            case 'photo_2': response = 'hình mặt sau CMND'; break;
+            case 'address_delivery': response = 'địa chỉ giao hàng'; break;
+        }
+
+        return response;
     }
 
     $(document).ready(function () {

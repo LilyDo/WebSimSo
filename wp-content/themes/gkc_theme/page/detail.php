@@ -52,7 +52,7 @@ get_header();
                     <td>
                         <?php foreach (getList('goicuoc') as $key => $value) : ?>
                             <label for="<?=$key?>">
-                                <input type="radio" value="<?=$key?>" id="<?=$key?>" name="package" <?=(get_field('cuoc_khac') == $key)? 'checked' : '' ?>>
+                                <input type="radio" value="<?=$key?>" id="<?=$key?>" name="package" <?=('CK150' == $key)? 'checked' : '' ?>>
                                 <?= $value?>
                             </label><br>
                         <?php endforeach; ?>
@@ -83,7 +83,7 @@ get_header();
                     <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
                         Minh.</label> <br>
                     <div class="idUpload">
-                        <input type="text" class="id" name="cmnd"></input>
+                        <input type="text" class="id" name="cmnd">
                         <div>
                             <div class="idUploadRequest">
                                 <img src="<?= base_url() ?>/assets/images/icon_upload.png" onclick="$('#file_upload').click()">

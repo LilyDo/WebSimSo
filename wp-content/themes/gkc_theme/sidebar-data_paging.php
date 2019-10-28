@@ -100,7 +100,7 @@
         <tbody class="simTableBody">
         <?php foreach ($data as $item) : ?>
             <tr>
-                <td class="freezedBodyColumn"><div><?= $item->number ?></div></td>
+                <td class="freezedBodyColumn"><div><?= $item->show_on ?></div></td>
                 <td>
                     <div><?= number_format($item->cost) ?> VNĐ</div>
                 </td>

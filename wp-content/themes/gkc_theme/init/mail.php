@@ -13,6 +13,7 @@ function mail_buy($data)
 	<p><b>Số Chứng minh thư / Thẻ căn cước</b>: ' . $data["cmnd"] . '</p>
 	<p><b>Hình thức thanh toán</b>: ' . $data["thanh_toan"] . '</p>
 	<p><b>Hình thức giao sim</b>: ' . $data["giao_sim"] . '</p>
+	<p><b>Gói cước đăng ký</b>: ' . $data["package"] . '</p>
 	<p><b>Hình ảnh 1</b>: <a href="' . $data["path_1"] . '" target="_blank">Open</a></p>
 	<a><b>Hình ảnh 2</b>: <a href="' . $data["path_2"] . '" target="_blank">Open</a></p>';
 

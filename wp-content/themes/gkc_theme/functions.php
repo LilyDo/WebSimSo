@@ -95,14 +95,14 @@ function processPostTerms($term_name, $post_id)
     return implode(', ', $str);
 }
 
-function processDataUrl($item)
+function processDataUrl($item, $name)
 {
     if ($item) {
         list($type, $item) = explode(';', $item);
         list(, $item) = explode(',', $item);
         $item = base64_decode($item);
 
-        $path = 'wp-content/uploads/images/' . 'image_' . strtotime(date('Y-m-d H:i:s')) . '.png';
+        $path = 'wp-content/uploads/images/' . 'image_' . $name . '_' . strtotime(date('Y-m-d H:i:s')) . '.png';
 
         file_put_contents(ABSPATH . $path, $item);
 
@@ -285,6 +285,7 @@ function buySim()
     $data['address_delivery'] = $_POST['address_delivery'];
     $data['photo_1'] = $_POST['photo_1'];
     $data['photo_2'] = $_POST['photo_2'];
+    $data['package'] = $_POST['package'];
 
     $data['thanh_toan'] = ($data['thanh_toan'] == "cod") ? "Thanh toán khi nhận sim (COD) Phí ship từ 15 - 25k tùy địa điểm giao sim." : "Thanh toán chuyển khoản (Internet banking) Miễn phí ship và phí chuyển khoản.";
 
@@ -293,10 +294,10 @@ function buySim()
     $data['path_1'] = '';
     $data['path_2'] = '';
     if ($data['photo_1']) {
-        $data['path_1'] = processDataUrl($data['photo_1']);
+        $data['path_1'] = processDataUrl($data['photo_1'], 'photo_1');
     }
     if ($data['photo_2']) {
-        $data['path_2'] = processDataUrl($data['photo_2']);
+        $data['path_2'] = processDataUrl($data['photo_2'], 'photo_2');
     }
 
     $template_mail = mail_buy($data);
