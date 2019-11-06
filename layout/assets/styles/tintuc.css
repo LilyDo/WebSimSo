@@ -1,6 +1,29 @@
+/* tintuc */
+
 .newsList {
   color: black !important;
 }
+
+.newsCard.news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #677897;
+}
+
+.newsImage {
+  margin-left: 0;
+  width: 30%;
+}
+
+.newscontentContainer {
+  width: 66%;
+}
+
+/* tintuc-detail */
+
+/* .newscontentContainer .newsTitle  */
 
 .news {
   color: black !important;

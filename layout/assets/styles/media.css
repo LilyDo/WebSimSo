@@ -365,7 +365,7 @@
     font-size: 12px;
   }
   .packageTable tbody td {
-    font-size: 10px;
+    sfont-size: 10px;
   }
   .fourGButton button {
     padding: 5px;
@@ -376,16 +376,33 @@
   }
 
   /* tintuc */
-  .newsList {
-    padding: 10px 10px 40px 10px;
+
+  .newsCard .newsTitle {
+    font-size: 10px;
+  }
+  .newsCard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .news.newsCard .newsTitle {
+    padding-bottom: 5px;
+  }
+
+  .newscontentContainer {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  .newsImage {
+    height: 90px;
   }
 
   /* tintuc-detail */
 
   .news {
-    padding: 10px 10px 40px 10px;
+    margin: 10px;
     font-size: 12px;
-    line-height: 1.8;
+    line-height: 1.5;
   }
 
   .newsTitle {
@@ -399,6 +416,7 @@
   }
   .otherNews {
     padding-top: 20px;
+    padding-bottom: 40px;
     margin-top: 20px;
   }
   .otherNews .title {
@@ -410,6 +428,28 @@
   ol,
   li {
     padding-bottom: 5px;
+  }
+
+  /* pagination */
+  .pagination {
+    padding: 20px 0;
+  }
+
+  .numberContainer {
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .pageNumber {
+    padding: 0 5px;
+  }
+
+  .pageNumber.current {
+    border-bottom: 3px solid #da251d;
+  }
+
+  .pagination > img {
+    width: 50%;
   }
 }
 
@@ -742,14 +782,25 @@
 
   /* tintuc */
 
-  .newsList {
-    padding: 25px 200px;
+  .newsCard {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .news.newsCard .newsTitle {
+    padding-bottom: 20px;
+  }
+  .newscontentContainer {
+    line-height: 1.8;
   }
 
   /* tintuc-detail */
 
   .news {
-    padding: 25px 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     line-height: 2;
   }
 
@@ -757,7 +808,9 @@
     font-size: 20px;
     padding-bottom: 40px;
   }
-
+  .newsImage {
+    height: 190px;
+  }
   .global_saving_1313 {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -772,5 +825,10 @@
   ol,
   li {
     padding-bottom: 10px;
+  }
+
+  /* pagination */
+  .pagination {
+    padding: 50px 0;
   }
 }
