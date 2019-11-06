@@ -365,7 +365,7 @@
     font-size: 12px;
   }
   .packageTable tbody td {
-    sfont-size: 10px;
+    font-size: 10px;
   }
   .fourGButton button {
     padding: 5px;
@@ -428,6 +428,12 @@
   ol,
   li {
     padding-bottom: 5px;
+  }
+
+  /* chuyenSangMobi */
+
+  .switchSimMobi {
+    padding: 20px 10px;
   }
 
   /* pagination */
@@ -646,7 +652,7 @@
   }
   .numberDetail td,
   .numberRegister {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
   .owl-carousel .owl-prev {
     top: 40%;
@@ -825,6 +831,35 @@
   ol,
   li {
     padding-bottom: 10px;
+  }
+
+  /* chuyenSangMobi */
+
+  .switchSimMobi {
+    padding: 25px 200px 70px 200px;
+  }
+  .switchSimMobi .title {
+    font-family: "Montserrat-SemiBold";
+    font-size: 17px;
+    padding-bottom: 20px;
+  }
+
+  .switchSimInfo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .personalInfoContainer {
+    padding-top: 10px;
+  }
+
+  table.switchSimFee {
+    padding: 25px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  table.prePaid {
+    padding-bottom: 70px;
   }
 
   /* pagination */

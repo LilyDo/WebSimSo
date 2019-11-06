@@ -1,0 +1,56 @@
+.switchSimInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.personalInfoContainer,
+.numberRegister {
+  width: 49%;
+}
+
+.personalInfo {
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table.switchSimFee {
+  border: 1px solid #707070;
+}
+
+tr.bluerow {
+  background-color: #198fef;
+  color: white;
+  font-family: "Montserrat-SemiBold";
+}
+
+td.PackageContent {
+  white-space: pre-line;
+  width: 40%;
+  text-align: left;
+}
+tr td.postPaid,
+tr td.prePaid {
+  width: 15%;
+  border-bottom: 1px solid #0081b5;
+  padding: 20px;
+}
+
+tr td {
+  border-bottom: 1px solid #0081b5;
+}
+
+.buttonContainer .submitButton {
+  font-size: 20px;
+  padding: 15px 130px;
+}
+
+.switchSimNote {
+  white-space: pre-line;
+  line-height: 2;
+}
