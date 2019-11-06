@@ -2,113 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name=”format-detection” content=”telephone=no”>
-    <title>homepage</title>
-    <link href="./assets/styles/homePage.css" rel="stylesheet" type="text/css">
-    <link href="./assets/styles/media.css" rel="stylesheet" type="text/css">
-    <link href="./assets/styles/napTien.css" rel="stylesheet" type="text/css">
-    <link href="./assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
-    <link href="./assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/semantic/semantic.min.css">
-    <link href="./assets/fonts/fonts.css" rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name=”format-detection” content=”telephone=no”>
+  <title>homepage</title>
+  <link href="./assets/styles/homePage.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/media.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/napTien.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
+  <link href="./assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/semantic/semantic.min.css">
+  <link href="./assets/fonts/fonts.css" rel='stylesheet'>
 </head>
 
 <body>
-    <div class="header">
-        <div class="headerLeft">
-            <div class="headerLogo">
-                <img src="assets/images/logo.png">
-            </div>
-            <div class="hamburger">
-                <img onClick="toggleDropdownContainer()" src="assets/images/nav_menu.png">
-            </div>
-        </div>
-
-        <div class=dropdownContainer>
-            <button class="hamburgerDropdown">HOME</button>
-            <button class="hamburgerDropdown">SIM SỐ ĐẸP</button>
-            <button class="hamburgerDropdown">NẠP TIỀN</button>
-            <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
-            <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
-            <button class="hamburgerDropdown">LIÊN HỆ</button>
-        </div>
-        <div class=headerRight>
-            <div class="headerUpper">
-                <div class="headerHotLine">
-                    <span> <img src="assets/images/phone.svg"> </span>
-                    <a href="tel:0773885678" class="text">Hotline 077 388 5678</a>
-                </div>
-                <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>
-            </div>
-
-            <div class="headerLower">
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton ">HOME</button>
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortBlueButton simSoDep">SIM SỐ ĐẸP</button>
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">NẠP TIỀN</button>
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">ĐĂNG KÝ 4G ONLINE</button>
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">CHUYỂN SANG MOBI</button>
-                <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">LIÊN HỆ</button>
-            </div>
-        </div>
+  <div class="header">
+    <div class="headerLeft">
+      <div class="headerLogo">
+        <img src="assets/images/logo.png">
+      </div>
+      <div class="hamburger">
+        <img onClick="toggleDropdownContainer()" src="assets/images/nav_menu.png">
+      </div>
     </div>
 
-    <div class="content">
-        <div class="bannerCenter">
-            <img src="assets/images/banner_center.png">
+    <div class=dropdownContainer>
+      <button class="hamburgerDropdown">HOME</button>
+      <button class="hamburgerDropdown">SIM SỐ ĐẸP</button>
+      <button class="hamburgerDropdown">NẠP TIỀN</button>
+      <button class="hamburgerDropdown">ĐĂNG KÝ 4G ONLINE</button>
+      <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
+      <button class="hamburgerDropdown">TIN TỨC</button>
+    </div>
+    <div class=headerRight>
+      <div class="headerUpper">
+        <div class="headerHotLine">
+          <span> <img src="assets/images/phone.svg"> </span>
+          <a href="tel:0773885678" class="text">Hotline 077 388 5678</a>
         </div>
-        <div class=searchTable>
-            <div class="tableRow titleRow">
-                <div class="title threeDimensionBlueButton" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">
-                    HƯỚNG DẪN
-                </div>
-                <div class="tooltip">
-                    <p>
-                        <strong>Bước 1 :</strong> Chọn đầu số cần tìm. Ví dụ: chọn 090.
-                    </p>
-                    <p>
-                        <strong>Bước 2 :</strong> Nhập số cần tìm (không bao gồm đầu số): Có thể để trống khi bạn chưa có sẵn một số ưng ý. Hoặc bạn đã có một số ưng ý thì nhập theo quy tắc sau:
-                    </p>
-                    <p>
-                        <strong>1.</strong> Nhập chính xác số cần tìm. Ví dụ: 4896999
-                    </p>
-                    <p>
-                        <strong>2.</strong> Hoặc sử dụng dấu * đại diện cho một chuỗi số bất kỳ
-                    </p>
-                    <ul style="padding-left: 20px;">
-                        <li>a. Để tìm số bắt đầu bằng 88, nhập vào 88*</li>
-                        <li>b. Để tìm số kết thúc bằng 88, nhập vào *88 hoặc 88</li>
-                        <li>c. Để tìm số bắt đầu bằng 88 và kết thúc bằng 99, nhập vào 88*99</li>
-                        <li>d. Để tìm số chứa 88, nhập vào *88*</li>
-                        <li>e. Để tìm số chứa 88 và 99, nhập vào *88*99*</li>
-                    </ul>
-                    <p></p>
-                    <p>
-                        <strong>Bước 3 :</strong> Chọn Loại số: Chọn một loại số đẹp cụ thể cho Số cần tìm hoặc để “Không chọn” khi bạn muốn tìm số trong tất cả các Loại số.
-                    </p>
-                    <p>
-                        <strong>Bước 4 :</strong> Lựa chọn thêm các tiêu chí tìm kiếm:
+        <div class="HeaderAddress">Điểm giao dịch:</br>249 Minh Phụng, P.2, Q11</div>
+      </div>
 
-                    </p>
-                    <ul style="padding-left: 20px;">
-                        <li>a. Ví dụ, muốn tìm Loại thuê bao là “Trả sau”, bạn tích vào hộp chọn của Loại thuê bao và chọn giá trị là “Trả sau”.
-                        </li>
-                        <li>b. Có thể tìm theo cước cam kết và thời gian cam kết của thuê bao.</li>
-                    </ul>
-                    <p></p>
-                    <p>
-                        <strong>Bước 5 :</strong> Click chọn “TÌM KIẾM” khi bạn đã thiết lập xong các điều kiện tìm kiếm.
-                    </p>
-                </div>
-            </div>
+      <div class="headerLower">
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton ">HOME</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortBlueButton simSoDep">SIM SỐ
+          ĐẸP</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">NẠP TIỀN</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">ĐĂNG KÝ 4G
+          ONLINE</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">CHUYỂN SANG
+          MOBI</button>
+        <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">TIN TỨC</button>
+      </div>
+    </div>
+  </div>
 
-            <div class="tableRow">
-                <div class="rowHalf">
-                    <div class="oneThird">Tìm số</div>
-                    <div class="oneThird">
-                        <select class="ui search dropdown fluid">
+  <div class="content">
+    <div class="bannerCenter">
+      <img src="assets/images/banner_center.png">
+    </div>
+    <div class=searchTable>
+      <div class="tableRow titleRow">
+        <div class="title threeDimensionBlueButton" onmouseover="showTooltip(event)" onmouseout="hideTooltip()">
+          HƯỚNG DẪN
+        </div>
+        <div class="tooltip">
+          <p>
+            <strong>Bước 1 :</strong> Chọn đầu số cần tìm. Ví dụ: chọn 090.
+          </p>
+          <p>
+            <strong>Bước 2 :</strong> Nhập số cần tìm (không bao gồm đầu số): Có thể để trống khi bạn chưa có sẵn một số
+            ưng ý. Hoặc bạn đã có một số ưng ý thì nhập theo quy tắc sau:
+          </p>
+          <p>
+            <strong>1.</strong> Nhập chính xác số cần tìm. Ví dụ: 4896999
+          </p>
+          <p>
+            <strong>2.</strong> Hoặc sử dụng dấu * đại diện cho một chuỗi số bất kỳ
+          </p>
+          <ul style="padding-left: 20px;">
+            <li>a. Để tìm số bắt đầu bằng 88, nhập vào 88*</li>
+            <li>b. Để tìm số kết thúc bằng 88, nhập vào *88 hoặc 88</li>
+            <li>c. Để tìm số bắt đầu bằng 88 và kết thúc bằng 99, nhập vào 88*99</li>
+            <li>d. Để tìm số chứa 88, nhập vào *88*</li>
+            <li>e. Để tìm số chứa 88 và 99, nhập vào *88*99*</li>
+          </ul>
+          <p></p>
+          <p>
+            <strong>Bước 3 :</strong> Chọn Loại số: Chọn một loại số đẹp cụ thể cho Số cần tìm hoặc để “Không chọn” khi
+            bạn muốn tìm số trong tất cả các Loại số.
+          </p>
+          <p>
+            <strong>Bước 4 :</strong> Lựa chọn thêm các tiêu chí tìm kiếm:
+
+          </p>
+          <ul style="padding-left: 20px;">
+            <li>a. Ví dụ, muốn tìm Loại thuê bao là “Trả sau”, bạn tích vào hộp chọn của Loại thuê bao và chọn giá trị
+              là “Trả sau”.
+            </li>
+            <li>b. Có thể tìm theo cước cam kết và thời gian cam kết của thuê bao.</li>
+          </ul>
+          <p></p>
+          <p>
+            <strong>Bước 5 :</strong> Click chọn “TÌM KIẾM” khi bạn đã thiết lập xong các điều kiện tìm kiếm.
+          </p>
+        </div>
+      </div>
+
+      <div class="tableRow">
+        <div class="rowHalf">
+          <div class="oneThird">Tìm số</div>
+          <div class="oneThird">
+            <select class="ui search dropdown fluid">
               <option value="tatCa">Đầu số</option>
               <option value="089">089</option>
               <option value="090">090</option>
@@ -119,17 +125,17 @@
               <option value="076">078</option>
               <option value="076">079</option>
             </select>
-                    </div>
-                    <div class="oneThird noPaddingLeft">
-                        <div class="ui input fluid">
-                            <input type="text" placeholder="Nhập số cần tìm">
-                        </div>
-                    </div>
-                </div>
-                <div class="rowHalf">
-                    <div class="oneThird">Loại số</div>
-                    <div class="twoThird">
-                        <select class="ui search dropdown fluid">
+          </div>
+          <div class="oneThird noPaddingLeft">
+            <div class="ui input fluid">
+              <input type="text" placeholder="Nhập số cần tìm">
+            </div>
+          </div>
+        </div>
+        <div class="rowHalf">
+          <div class="oneThird">Loại số</div>
+          <div class="twoThird">
+            <select class="ui search dropdown fluid">
               <option value="tatCa">Tất cả</option>
               <option value="soThuong">Số thường</option>
               <option value="soDep">Số đẹp</option>
@@ -139,203 +145,203 @@
               <option value="tamHoa">Tam hoa</option>
               <option value="tienLen">Sim tiến lên</option>
             </select>
-                    </div>
-                </div>
-            </div>
-            <div class="tableRow">
-                <div class="rowHalf">
-                    <div class="oneThird">Ưu đãi</div>
-                    <div class="twoThird">
-                        <select class="ui search dropdown fluid">
+          </div>
+        </div>
+      </div>
+      <div class="tableRow">
+        <div class="rowHalf">
+          <div class="oneThird">Ưu đãi</div>
+          <div class="twoThird">
+            <select class="ui search dropdown fluid">
               <option value="tatCa">Tất cả</option>
               <option value="dataNhieu">Data nhiều</option>
               <option value="thoaiNhieu">Thoại nhiều</option>
             </select>
-                    </div>
-                </div>
-                <div class="rowHalf">
-                    <div class="oneThird">Loại thuê bao</div>
-                    <div class="twoThird">
-                        <select class="ui search dropdown fluid">
+          </div>
+        </div>
+        <div class="rowHalf">
+          <div class="oneThird">Loại thuê bao</div>
+          <div class="twoThird">
+            <select class="ui search dropdown fluid">
               <option value="tatCa">Tất cả</option>
               <option value="mienCuoc">Trả sau, miễn phí cước thuê bao</option>
               <option value="traSau">Trả sau</option>
               <option value="traTruoc">Trả trước</option>
             </select>
-                    </div>
-                </div>
-            </div>
-            <div class="tableRow">
-                <button class="tableButton threeDimensionBlueButton">
+          </div>
+        </div>
+      </div>
+      <div class="tableRow">
+        <button class="tableButton threeDimensionBlueButton">
           <img src="./assets/images/icon_search.svg" />
           TÌM KIẾM NGAY
         </button>
-            </div>
-        </div>
-        <div class=dataContent>
-            <table class="simTable">
-                <thead class="simTableHead">
-                    <tr>
-                        <th class="freezedHeaderColumn">
-                          <div class="boxShadowTopBottomLeft threeDimensionBlueBorderLeft">Số thuê bao</div>
-                        </th>
-                        <th class="invisibleTD"></th>
-                        <th>
-                            <div class="boxShadowTopBottom">Giá/ Phí hòa mạng</div>
-                        </th>
-                        <th>
-                            <div class="boxShadowTopBottom">Loại thuê bao</div>
-                        </th>
-                        <th>
-                            <div class="boxShadowTopBottom">Loại TB/ Cước cam kết (tháng)</div>
-                        </th>
-                        <th>
-                            <div class="boxShadowTopBottom">Địa điểm hòa mạng</div>
-                        </th>
-                        <th>
-                            <div class="boxShadowTopBottomRight threeDimensionBlueBorderRight">Mua</div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="simTableBody">
-                    <tr>
-                        <td class="freezedBodyColumn">
-                            <div>0777635881</div>
-                        </td>
-                        <td>
-                            <div>299,000</div>
-                        </td>
-                        <td>
-                            <div>Tam hoa 777</div>
-                        </td>
-                        <td>
-                            <div>Trả sau, miễn phí cước thuê bao</div>
-                        </td>
-                        <td>
-                            <div>249 Minh Phụng, P.2, Q.11</div>
-                        </td>
-                        <td>
-                            <div class="cart-cell">
-                                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
-                                    <img src="./assets/images/icon_cart.svg"> Mua
-                                </div>
-                                Chi tiết
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="freezedBodyColumn">
-                            <div>0777635881</div>
-                        </td>
-                        <td>
-                            <div>299,000</div>
-                        </td>
-                        <td>
-                            <div>Tam hoa 777</div>
-                        </td>
-                        <td>
-                            <div>Trả sau, miễn phí cước thuê bao</div>
-                        </td>
-                        <td>
-                            <div>249 Minh Phụng, P.2, Q.11</div>
-                        </td>
-                        <td>
-                            <div class="cart-cell">
-                                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
-                                    <img src="./assets/images/icon_cart.svg"> Mua
-                                </div>
-                                Chi tiết
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-
-        <div class="pagination">
-            <div><img src="assets/images/icon_previous.svg"></div>
-            <div class="numberContainer">
-                <div class="pageNumber current">1</div>
-                <div class="pageNumber">2</div>
-                <div class="pageNumber">3</div>
-                <div class="pageNumber">4</div>
-                <div class="pageNumber">5</div>
-                <div class="pageNumber">...</div>
-                <div class="pageNumber">2500</div>
-            </div>
-            <div><img src="assets/images/icon_next.svg"></div>
-        </div>
-
-        <div class="footer">
-            <div class="footerUpper">
-                <div class="footerLogo">
-                    <img src="assets/images/logo.png">
+      </div>
+    </div>
+    <div class=dataContent>
+      <table class="simTable">
+        <thead class="simTableHead">
+          <tr>
+            <th class="freezedHeaderColumn">
+              <div class="boxShadowTopBottomLeft threeDimensionBlueBorderLeft">Số thuê bao</div>
+            </th>
+            <th class="invisibleTD"></th>
+            <th>
+              <div class="boxShadowTopBottom">Giá/ Phí hòa mạng</div>
+            </th>
+            <th>
+              <div class="boxShadowTopBottom">Loại thuê bao</div>
+            </th>
+            <th>
+              <div class="boxShadowTopBottom">Loại TB/ Cước cam kết (tháng)</div>
+            </th>
+            <th>
+              <div class="boxShadowTopBottom">Địa điểm hòa mạng</div>
+            </th>
+            <th>
+              <div class="boxShadowTopBottomRight threeDimensionBlueBorderRight">Mua</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="simTableBody">
+          <tr>
+            <td class="freezedBodyColumn">
+              <div>0777635881</div>
+            </td>
+            <td>
+              <div>299,000</div>
+            </td>
+            <td>
+              <div>Tam hoa 777</div>
+            </td>
+            <td>
+              <div>Trả sau, miễn phí cước thuê bao</div>
+            </td>
+            <td>
+              <div>249 Minh Phụng, P.2, Q.11</div>
+            </td>
+            <td>
+              <div class="cart-cell">
+                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
+                  <img src="./assets/images/icon_cart.svg"> Mua
                 </div>
-
-                <div class="footerInfo">
-                    <div class="thongTinLienHe">Thông tin liên hệ:</div>
-                    <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
-                    <div class="footerAddress">
-                        <span> <img src="assets/images/icon_location.svg"> </span>
-                        <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
-                    </div>
-                    <div class="footerHotline">
-                        <span> <img src="assets/images/icon_phone.svg"></span>
-                        <a href="tel:0773885678" class="text">077 388 5678</a>
-                    </div>
+                Chi tiết
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="freezedBodyColumn">
+              <div>0777635881</div>
+            </td>
+            <td>
+              <div>299,000</div>
+            </td>
+            <td>
+              <div>Tam hoa 777</div>
+            </td>
+            <td>
+              <div>Trả sau, miễn phí cước thuê bao</div>
+            </td>
+            <td>
+              <div>249 Minh Phụng, P.2, Q.11</div>
+            </td>
+            <td>
+              <div class="cart-cell">
+                <div class="cart threeDimensionBlueButton threeDimensionShortBlueButton">
+                  <img src="./assets/images/icon_cart.svg"> Mua
                 </div>
-                <div class="footerPlugin">
-                    <div class="follow">Follow us:</div>
-                    <div>
-                        <img class="pluginFacebook" src="assets/images/icon_facebook.png">
-                        <img class="pluginInstagram" src="assets/images/icon_instagram.png">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
-            </div>
+                Chi tiết
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
+    </div>
+
+    <div class="pagination">
+      <div><img src="assets/images/icon_previous.svg"></div>
+      <div class="numberContainer">
+        <div class="pageNumber current">1</div>
+        <div class="pageNumber">2</div>
+        <div class="pageNumber">3</div>
+        <div class="pageNumber">4</div>
+        <div class="pageNumber">5</div>
+        <div class="pageNumber">...</div>
+        <div class="pageNumber">2500</div>
+      </div>
+      <div><img src="assets/images/icon_next.svg"></div>
+    </div>
+
+    <div class="footer">
+      <div class="footerUpper">
+        <div class="footerLogo">
+          <img src="assets/images/logo.png">
         </div>
 
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-        <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
+        <div class="footerInfo">
+          <div class="thongTinLienHe">Thông tin liên hệ:</div>
+          <div class="congTy">CÔNG TY TNHH TM & DV TÂN TOÀN PHÁT</div>
+          <div class="footerAddress">
+            <span> <img src="assets/images/icon_location.svg"> </span>
+            <span class="text"> 249 Minh Phụng, phường 2, Quận 11, Hồ Chí Minh.</span>
+          </div>
+          <div class="footerHotline">
+            <span> <img src="assets/images/icon_phone.svg"></span>
+            <a href="tel:0773885678" class="text">077 388 5678</a>
+          </div>
+        </div>
+        <div class="footerPlugin">
+          <div class="follow">Follow us:</div>
+          <div>
+            <img class="pluginFacebook" src="assets/images/icon_facebook.png">
+            <img class="pluginInstagram" src="assets/images/icon_instagram.png">
 
-        <!-- Custom scripts -->
-        <script>
-            function toggleDropdownContainer() {
-                var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+          </div>
+        </div>
+      </div>
+      <div class="footerLower">&copy; 2019 Copyright MOBIFONE SAI GON. All right reserved. Site by NATA Media Agency.
+      </div>
 
-                if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
-                    dropdownContainer.style.display = "flex";
-                } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
-                    dropdownContainer.style.display = "none";
-                }
-            }
+    </div>
 
-            function showTooltip(event) {
-                event.preventDefault();
-                if (screen.width < 800) {
-                    return hideTooltip();
-                }
-                var tooltip = document.getElementsByClassName("tooltip")[0];
-                if (tooltip != undefined) {
-                    tooltip.style.display = "block"
-                }
-            }
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="./assets/styles/semantic/semantic.min.js" type="text/javascript"></script>
 
-            function hideTooltip() {
-                var tooltip = document.getElementsByClassName("tooltip")[0];
-                if (tooltip != undefined) {
-                    tooltip.style.display = "none"
-                }
-            }
-            // Init Semantic UI components
-            $('.ui.dropdown')
-                .dropdown();
-        </script>
+    <!-- Custom scripts -->
+    <script>
+      function toggleDropdownContainer() {
+        var dropdownContainer = document.getElementsByClassName("dropdownContainer")[0];
+
+        if (dropdownContainer && dropdownContainer.style.display == "" || dropdownContainer.style.display == "none") {
+          dropdownContainer.style.display = "flex";
+        } else if (dropdownContainer && dropdownContainer.style.display == "flex") {
+          dropdownContainer.style.display = "none";
+        }
+      }
+
+      function showTooltip(event) {
+        event.preventDefault();
+        if (screen.width < 800) {
+          return hideTooltip();
+        }
+        var tooltip = document.getElementsByClassName("tooltip")[0];
+        if (tooltip != undefined) {
+          tooltip.style.display = "block"
+        }
+      }
+
+      function hideTooltip() {
+        var tooltip = document.getElementsByClassName("tooltip")[0];
+        if (tooltip != undefined) {
+          tooltip.style.display = "none"
+        }
+      }
+      // Init Semantic UI components
+      $('.ui.dropdown')
+        .dropdown();
+    </script>
 </body>
 
 </html>

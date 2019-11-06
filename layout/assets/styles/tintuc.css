@@ -1,0 +1,36 @@
+.newsList {
+  color: black !important;
+}
+
+.news {
+  color: black !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsTitle,
+.newsSubTitle {
+  font-family: "Montserrat-SemiBold";
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.promotionNote {
+  white-space: pre-line;
+}
+
+.otherNews {
+  border-top: 1px solid #677897;
+}
+
+.otherNews .title {
+  font-family: "Montserrat-SemiBold";
+}
+
+ol,
+li {
+  color: #0081b5 !important;
+}
