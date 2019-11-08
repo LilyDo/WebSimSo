@@ -1,26 +1,48 @@
-.switchSimInfo {
+.currentPlan {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.personalInfoContainer,
-.numberRegister {
-  width: 49%;
-}
-
-.personalInfo {
-  padding-bottom: 10px;
+  align-items: center;
 }
 
 table {
   width: 100%;
   text-align: center;
+  border-collapse: collapse;
 }
 
-table.switchSimFee {
+table.switchSimFee tr th,
+table.switchSimFee tr td {
   border: 1px solid #707070;
+  text-align: left;
+}
+table.switchSimFee tr th {
+  width: 40%;
+}
+
+.switchSimFee span {
+  font-family: "Montserrat-SemiBold";
+}
+
+table.prePaidPlan,
+table.postPaidPlan {
+  color: black;
+}
+
+table.choosePlanResult tr th {
+  color: black;
+}
+
+table tr.planchosen {
+  color: black;
+}
+
+.switchText,
+.totalText {
+  text-align: right;
+}
+
+table th {
+  font-family: "Montserrat-SemiBold";
 }
 
 tr.bluerow {
@@ -34,23 +56,22 @@ td.PackageContent {
   width: 40%;
   text-align: left;
 }
-tr td.postPaid,
-tr td.prePaid {
+table thead tbody th tr td,
+table thead tbody th tr td {
   width: 15%;
   border-bottom: 1px solid #0081b5;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 tr td {
   border-bottom: 1px solid #0081b5;
-}
-
-.buttonContainer .submitButton {
-  font-size: 20px;
-  padding: 15px 130px;
+  border-top: 1px solid #0081b5;
 }
 
 .switchSimNote {
   white-space: pre-line;
-  line-height: 2;
+}
+
+.switchSimNote span {
+  font-family: "Montserrat-SemiBold";
 }

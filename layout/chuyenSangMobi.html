@@ -101,11 +101,14 @@
               <div class="infoTitle">Loại thuê bao hiện tại của bạn
               </div>
               <div class="currentPlan">
-                <input type="radio" value="prePaid" name="currentPlan" class="prepaid">
-                <label style="cursor:pointer" for="prepaid">Trả trước</label>
+                <div>
+                  <input type="radio" value="prePaid" name="currentPlan" id="prePaid">
+                  <label style="cursor:pointer" for="prePaid">Trả trước</label>
+                </div>
 
-                <input type="radio" value="postPaid" name="currentPlan" class="postpaid">
-                <label style="cursor:pointer" for="postpaid">Trả sau</label>
+                <div><input type="radio" value="postPaid" name="currentPlan" id="postPaid">
+                  <label style="cursor:pointer" for="postPaid">Trả sau</label>
+                </div>
 
               </div>
             </div>
@@ -115,39 +118,96 @@
             <div class="title">THÔNG TIN ĐĂNG KÝ KHI MUA SIM</div>
 
             <div class="registerInfo">
-              <label for="name">Họ tên</label> <br>
-              <input type="text" class="name">
-              </input>
+              <div>Địa chỉ thường trú (nơi ở hiện tại)</div>
+              <input type="text" class="address" name="address">
             </div>
 
-            <div class="registerInfo">
-              <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
-                Minh.</label> <br>
-              <div class="idUpload">
-                <input type="text" class="id"></input>
-                <div>
-                  <div class="idUploadRequest">
-                    <img src="./assets/images/icon_upload.png">
-                    <label for="file_upload">
-                      <input type="file" id="file_upload" style="display: none">
-                    </label>
-                    <div class="text">
-                      Upload hình ảnh <br> CMND/ Thẻ căn cước
+            <div class="special">
+              <div>Số Chứng minh thư / Thẻ căn cước của bạn</div>
+              <div class="uploadContainer">
+                <input type="number" class="id"></input>
+                <div class="uploadContainer">
+                  <div>
+                    <div class="uploadRequest">
+                      <img src="./assets/images/icon_upload.png">
+                      <div>
+                        <input type="file" id="file_upload" style="display: none">
+                      </div>
+                      <div class="text">
+                        Upload hình ảnh <br> CMND/ Thẻ căn cước
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="idUploadPhoto">
-                  <img src="" id="photo_1">
-                </div>
-                <div class="idUploadPhoto">
-                  <img src="" id="photo_2">
+                  <div class="uploadPhoto">mặt trước
+                    <img src="" id="photo_1">
+                  </div>
+                  <div class="uploadPhoto">
+                    <img src="" id="photo_2">mặt sau
+                  </div>
                 </div>
               </div>
 
             </div>
-            Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm: <br> 1. Hộ khẩu/ tạm trú.<br> 2.
-            Chụp mặt trước, sau của CMND/ Thẻ căn cước.<br> 3. Chụp lại chữ ký.<br>
+
+            <div class="document uploadContainer">
+              <div class="requestText">Chụp ảnh chân dung của bạn</div>
+              <div class="uploadRequest">
+                <div>
+                  <img src="./assets/images/icon_upload.png">
+                  <div class="text">Upload hình ảnh <br>
+                    chân dung của bạn
+                  </div>
+                </div>
+                <div class="uploadPhoto">
+                  <img src="" id="photo_1">
+                </div>
+              </div>
+            </div>
+
+            <div class="document uploadContainer">
+              <div class="requestText">Chụp chữ ký của bạn</div>
+              <div class="uploadRequest">
+                <div>
+                  <img src="./assets/images/icon_upload.png">
+                  <div class="text">Upload hình ảnh <br>
+                    chữ ký của bạn
+                  </div>
+                </div>
+                <div class="uploadPhoto">
+                  <img src="" id="photo_1">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="noteText">Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm thông tin sau:
+              </div>
+              <div>Hộ khẩu/ tạm trú của bạn</div>
+              <div class="uploadContainer">
+                <div class="flexLeft">
+                  <img src="./assets/images/icon_upload.png">
+                  <div class="text">Upload hình ảnh hộ khẩu/<br> tạm trú
+                  </div>
+                </div>
+
+                <div class="flexRight">
+                  <div class="uploadPhoto">mặt bìa trước
+                    <img src="" id="photo_1">
+                  </div>
+                  <div class="uploadPhoto">
+                    <img src="" id="photo_1">mặt 1
+                  </div>
+                  <div class="uploadPhoto">
+                    <img src="" id="photo_1">mặt 2
+                  </div>
+                  <div class="uploadPhoto">
+                    <img src="" id="photo_1">mặt có tên của bạn
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+
 
         </div>
 
@@ -155,24 +215,32 @@
           <table class="switchSimFee">
             <tr>
               <th rowspan="2">
-                CƯỚC PHÍ CHUYỂN MẠNG
+                CƯỚC PHÍ CHUYỂN MẠNG <br>
                 (đã bao gồm tất cả các chi phí liên quan):
               </th>
-              <th><input type="radio" name="choosePlan" value="prePaid">Thuê bao trả trước</th>
-              <td>Phí chuyển mạng: 50.000đ</td>
+              <td>
+                <input type="radio" name="switchPlanFee" value="prePaidFee" id="prePaidFee">
+                <label style="cursor:pointer" for="prePaidFee">Thuê bao trả trước</label>
+              </td>
+              <td>Phí chuyển mạng: <span>50.000đ</span></td>
             </tr>
             <tr>
 
-              <th><input type="radio" name="choosePlan" value="postPaid">Thuê bao trả sau</th>
-              <td>Phí chuyển mạng: 60.000đ</td>
+              <td>
+                <input type="radio" name="switchPlanFee" value="postPaidFee" id="postPaidFee">
+                <label style="cursor:pointer" for="postPaidFee">Thuê bao trả sau</label>
+
+              </td>
+              <td>Phí chuyển mạng: <span>60.000đ</span></td>
             </tr>
           </table>
         </div>
       </div>
-      <div class=" choosePlan">
+          
+      <div class="choosePlan">
         <div class="title">VUI LÒNG CHỌN MỘT GÓI CƯỚC ĐĂNG KÝ</div>
         <div>
-          <table class="prePaid">
+          <table class="prePaidPlan">
             <thead>
               <tr class="bluerow">
                 <th colspan="5">THUÊ BAO TRẢ TRƯỚC</th>
@@ -187,67 +255,99 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="radio" name="prepaid" value="M79"></td>
-                <td>Trả trước</td>
-                <td>M79</td>
-                <td>79.000đ</td>
-                <td class="PackageContent">
-                  - Chu kỳ đầu: 60 ngày
-                  - Chu kỳ sau: 30 ngày
-                  - 1.000ph nội mạng
-                  - 20 ph trong nước
-                  - 4GB (hơn 4GB hạ băng thông)
+                <td><input type="radio" name="prePaidPlan" value="M79" id="M79"></td>
+                <td>
+                  <label style="cursor:pointer" for="M79">Trả trước</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="M79">M79</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="M79">79.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="M79">
+                    - Chu kỳ đầu: 60 ngày
+                    - Chu kỳ sau: 30 ngày
+                    - 1.000ph nội mạng
+                    - 20 ph trong nước
+                    - 4GB (hơn 4GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="prepaid" value="MC90"></td>
-                <td>Trả trước</td>
-                <td>MC90</td>
-                <td>90.000đ</td>
-                <td class="PackageContent">
-                  - Chu kỳ đầu: 60 ngày
-                  - Chu kỳ sau: 30 ngày
-                  - 1.000ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - 20 ph trong nước
-                  - 5GB (hơn 5GB hạ băng thông)
+                <td>
+                  <input type="radio" name="prePaid" value="MC90" id="MC90">
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC90">Trả trước</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC90">MC90</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC90">90.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MC90">
+                    - Chu kỳ đầu: 60 ngày
+                    - Chu kỳ sau: 30 ngày
+                    - 1.000ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - 20 ph trong nước
+                    - 5GB (hơn 5GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="prepaid" value="MC149"></td>
-                <td>Trả trước</td>
-                <td>MC149</td>
-                <td>149.000đ</td>
-                <td class="PackageContent">
-                  - Chu kỳ đầu: 60 ngày
-                  - Chu kỳ sau: 30 ngày
-                  - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - 80 ph trong nước
-                  - 8GB (hơn 8GB hạ băng thông)
+                <td><input type="radio" name="prePaid" value="MC149" id="MC149"></td>
+                <td>
+                  <label style="cursor:pointer" for="MC149">Trả trước</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC149">MC149</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC149">149.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MC149">
+                    - Chu kỳ đầu: 60 ngày
+                    - Chu kỳ sau: 30 ngày
+                    - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - 80 ph trong nước
+                    - 8GB (hơn 8GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="prepaid" value="MC299"></td>
-                <td>Trả trước</td>
-                <td>MC299</td>
-                <td>299.000đ</td>
-                <td class="PackageContent">
-                  - Chu kỳ đầu: 60 ngày
-                  - Chu kỳ sau: 30 ngày
-                  - 3.000ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - 300 ph trong nước
-                  - 12GB (hơn 12GB hạ băng thông)
+                <td><input type="radio" name="prePaid" value="MC299" id="MC299"></td>
+                <td>
+                  <label style="cursor:pointer" for="MC299">Trả trước</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC299">MC299</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MC299">299.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MC299">
+                    - Chu kỳ đầu: 60 ngày
+                    - Chu kỳ sau: 30 ngày
+                    - 3.000ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - 300 ph trong nước
+                    - 12GB (hơn 12GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="prepaid" value="none"></td>
-                <td colspan="4">Không dùng gói cước</td>
+                <td><input type="radio" name="prePaid" value="noUseData" id="noUseData"></td>
+                <td colspan="4">
+                  <label style="cursor:pointer" for="noUseData">Không dùng gói cước</label>
+                </td>
               </tr>
 
             </tbody>
           </table>
         </div>
         <div>
-          <table class="postPaid">
+          <table class="postPaidPlan">
             <thead>
               <tr class="bluerow">
                 <th colspan="5">THUÊ BAO TRẢ SAU</th>
@@ -263,56 +363,91 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="radio" name="postpaid" value="MF69"></td>
-                <td>Trả sau MobiF</td>
-                <td>MF69</td>
-                <td>69.000đ</td>
-                <td class="PackageContent">
-                  - 1.000ph nội mạng
+                <td><input type="radio" name="postPaid" value="MF69" id="MF69"></td>
+                <td>
+                  <label style="cursor:pointer" for="MF69">Trả sau MobiF</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF69">MF69</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF69">69.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MF69">
+                    - 1.000ph nội mạng
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="postpaid" value="MF99"></td>
-                <td>Trả sau MobiF</td>
-                <td>MF99</td>
-                <td>99.000đ</td>
-                <td class="PackageContent">
-                  - 1.000ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - Thoại trong nước: 40ph
-                  - 5GB data (hết 5GB hạ băng thông)
+                <td><input type="radio" name="postPaid" value="MF99" id="MF99"></td>
+                <td>
+                  <label style="cursor:pointer" for="MF99">Trả sau MobiF</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF99">MF99</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF99">99.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MF99">
+                    - 1.000ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - Thoại trong nước: 40ph
+                    - 5GB data (hết 5GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="postpaid" value="MF149"></td>
-                <td>Trả sau MobiF</td>
-                <td>MF149</td>
-                <td>149.000đ</td>
-                <td class="PackageContent">
-                  - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - Thoại trong nước: 80ph
-                  - 8GB data (hết 8GB hạ băng thông)
+                <td><input type="radio" name="postPaid" value="MF149" id="MF149"></td>
+                <td>
+                  <label style="cursor:pointer" for="MF149">Trả sau MobiF</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF149">MF149</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF149">149.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MF149">
+                    - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - Thoại trong nước: 80ph
+                    - 8GB data (hết 8GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="postpaid" value="MF199"></td>
-                <td>Trả sau MobiF</td>
-                <td>MF199</td>
-                <td>199.000đ</td>
-                <td class="PackageContent">
-                  - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - Thoại trong nước: 160ph
-                  - 9GB data (hết 9GB hạ băng thông)
+                <td><input type="radio" name="postPaid" value="MF199" id="MF199"></td>
+                <td>
+                  <label style="cursor:pointer" for="MF199">Trả sau MobiF</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF199">MF199</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF199">199.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MF199">
+                    - 1.500ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - Thoại trong nước: 160ph
+                    - 9GB data (hết 9GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
               <tr>
-                <td><input type="radio" name="postpaid" value="MF299"></td>
-                <td>Trả sau MobiF</td>
-                <td>MF299</td>
-                <td>299.000đ</td>
-                <td class="PackageContent">
-                  - 2.000ph nội mạng (cho các cuộc gọi dưới 10ph)
-                  - Thoại trong nước: 300ph
-                  - 12GB data (hết 12GB hạ băng thông)
+                <td><input type="radio" name="postPaid" value="MF299" id="MF299"></td>
+                <td>
+                  <label style="cursor:pointer" for="MF299">Trả sau MobiF</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF299">MF299</label>
+                </td>
+                <td>
+                  <label style="cursor:pointer" for="MF299">299.000đ</label>
+                </td>
+                <td class="PackageContent"><label style="cursor:pointer" for="MF299">
+                    - 2.000ph nội mạng (cho các cuộc gọi dưới 10ph)
+                    - Thoại trong nước: 300ph
+                    - 12GB data (hết 12GB hạ băng thông)
+                  </label>
                 </td>
               </tr>
 
@@ -324,8 +459,68 @@
           <button class="submitButton threeDimensionRedButton">ĐĂNG KÝ NGAY</button>
         </div>
       </div>
-      <div class="switchSimNote">
-        <strong>Lưu ý:</strong>
+
+      <div class="result">
+          <div class="title">BẠN ĐÃ CHỌN GÓI CƯỚC ĐĂNG KÝ</div>
+          <div>
+            <table class="choosePlanResult">
+              <thead>
+                <tr>
+                  <th>Chọn</th>
+                  <th>Loại thuê bao</th>
+                  <th>Mã gói</th>
+                  <th>Giá gói/ Chu kỳ</th>
+                  <th>Nội dung gói</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="planchosen">
+                  <td><input type="radio" name="prePaidPlan" value="M79" id="M79"></td>
+                  <td>
+                    <label style="cursor:pointer" for="M79">Trả trước</label>
+                  </td>
+                  <td>
+                    <label style="cursor:pointer" for="M79">M79</label>
+                  </td>
+                  <td>
+                    <label style="cursor:pointer" for="M79">79.000đ</label>
+                  </td>
+                  <td class="PackageContent"><label style="cursor:pointer" for="M79">
+                      - Chu kỳ đầu: 60 ngày
+                      - Chu kỳ sau: 30 ngày
+                      - 1.000ph nội mạng
+                      - 20 ph trong nước
+                      - 4GB (hơn 4GB hạ băng thông)
+                    </label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="switchText" colspan="3">Cước phí chuyển mạng
+                  </td>
+                  <td>50,000đ
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="totalText"  colspan="3">Tổng chi phí
+                  </td>
+                  <td>129.000đ
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        
+
+          <div class="buttonContainer">
+            <button class="submitButton threeDimensionRedButton">THANH TOÁN NGAY</button>
+          </div>
+        </div>
+
+
+      <div class="switchSimNote"><span>Lưu ý:</span>
         - Tổng thời gian chuyển mạng kéo dài khoảng 01-05 ngày, tùy vào việc xét duyệt hồ sơ của nhà mạng khác. Thời gian khách hàng gián đoạn sử dụng dịch vụ từ 05-10 phút(khi thuê bao tại nhà mạng cũ bị ngắt, mở lại liên lạc tại MobiFone).
         - Khách hàng sẽ bị hủy các dịch vụ đang đăng ký tại các nhà mạng cũ khi chuyển mạng thành công.
         - Trong trường hợp đăng ký chuyển mạng 3 lần vẫn thất bại, chúng tôi sẽ hoàn trả lại cho bạn 70% cước phí chuyển mạng.

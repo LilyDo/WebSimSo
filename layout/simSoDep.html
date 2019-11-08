@@ -122,49 +122,106 @@
         <div class="title">THÔNG TIN ĐĂNG KÝ KHI MUA SIM</div>
 
         <div class="registerInfo">
-          <label for="name">Họ tên</label> <br>
+          <div>Họ tên</div>
           <input type="text" class="name">
           </input>
         </div>
 
         <div class="registerInfo">
-          <label for="phone">Số điện thoại liên hệ</label> <br>
+          <div>Số điện thoại liên hệ</div>
           <input type="number" class="phone">
           </input>
         </div>
 
         <div class="registerInfo">
-          <label for="address">Địa chỉ thường trú (nơi ở hiện tại)</label> <br>
+          <div>Địa chỉ thường trú (nơi ở hiện tại)</div>
           <input type="text" class="address" name="address">
         </div>
 
-        <div class="registerInfo">
-          <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
-            Minh.</label> <br>
-          <div class="idUpload">
-            <input type="text" class="id"></input>
-            <div>
-              <div class="idUploadRequest">
-                <img src="./assets/images/icon_upload.png">
-                <label for="file_upload">
-                  <input type="file" id="file_upload" style="display: none">
-                </label>
-                <div class="text">
-                  Upload hình ảnh <br> CMND/ Thẻ căn cước
+        <div class="special">
+          <div>Số Chứng minh thư / Thẻ căn cước của bạn</div>
+          <div class="uploadContainer">
+            <input type="number" class="id"></input>
+            <div class="uploadContainer">
+              <div>
+                <div class="uploadRequest">
+                  <img src="./assets/images/icon_upload.png">
+                  <div>
+                    <input type="file" id="file_upload" style="display: none">
+                  </div>
+                  <div class="text">
+                    Upload hình ảnh <br> CMND/ Thẻ căn cước
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="idUploadPhoto">
-              <img src="" id="photo_1">
-            </div>
-            <div class="idUploadPhoto">
-              <img src="" id="photo_2">
+              <div class="uploadPhoto">mặt trước
+                <img src="" id="photo_1">
+              </div>
+              <div class="uploadPhoto">
+                <img src="" id="photo_2">mặt sau
+              </div>
             </div>
           </div>
 
         </div>
-        Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm: <br> 1. Hộ khẩu/ tạm trú.<br> 2.
-        Chụp mặt trước, sau của CMND/ Thẻ căn cước.<br> 3. Chụp lại chữ ký.<br>
+
+        <div class="document uploadContainer">
+          <div class="requestText">Chụp ảnh chân dung của bạn</div>
+          <div class="uploadRequest">
+            <div>
+              <img src="./assets/images/icon_upload.png">
+              <div class="text">Upload hình ảnh <br>
+                chân dung của bạn
+              </div>
+            </div>
+            <div class="uploadPhoto">
+              <img src="" id="photo_1">
+            </div>
+          </div>
+        </div>
+
+        <div class="document uploadContainer">
+          <div class="requestText">Chụp chữ ký của bạn</div>
+          <div class="uploadRequest">
+            <div>
+              <img src="./assets/images/icon_upload.png">
+              <div class="text">Upload hình ảnh <br>
+                chữ ký của bạn
+              </div>
+            </div>
+            <div class="uploadPhoto">
+              <img src="" id="photo_1">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="noteText">Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm thông tin sau:
+          </div>
+          <div>Hộ khẩu/ tạm trú của bạn</div>
+          <div class="uploadContainer">
+            <div class="flexLeft">
+              <img src="./assets/images/icon_upload.png">
+              <div class="text">Upload hình ảnh hộ khẩu/<br> tạm trú
+              </div>
+            </div>
+
+            <div class="flexRight">
+              <div class="uploadPhoto">mặt bìa trước
+                <img src="" id="photo_1">
+              </div>
+              <div class="uploadPhoto">
+                <img src="" id="photo_1">mặt 1
+              </div>
+              <div class="uploadPhoto">
+                <img src="" id="photo_1">mặt 2
+              </div>
+              <div class="uploadPhoto">
+                <img src="" id="photo_1">mặt có tên của bạn
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

@@ -203,8 +203,41 @@
   }
   .numberDetail {
     margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  table.numberDetail td {
+    padding: 5px;
+  }
+
+  div.registerInfo {
     margin-bottom: 10px;
   }
+
+  .document {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .noteText {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  div.uploadPhoto {
+    padding: 5px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .uploadContainer img {
+    width: 20px;
+  }
+
+  .flexLeft,
+  .flexRight {
+    padding-top: 5px;
+  }
+
   .simNumber .title,
   .simOrder .title,
   .numberRegister .title,
@@ -227,8 +260,14 @@
   }
   div.payment,
   div.delivery {
-    padding: 10px;
+    padding: 10px 5px;
   }
+
+  .checkBox div {
+    padding-right: 5px;
+    padding-bottom: 10px;
+  }
+
   .buttonContainer {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -239,7 +278,7 @@
   .mapContainer {
     padding: 0 0 20px 0;
   }
-  .numberDetail td,
+
   .numberRegister {
     padding: 10px;
   }
@@ -433,7 +472,70 @@
   /* chuyenSangMobi */
 
   .switchSimMobi {
-    padding: 20px 10px;
+    padding: 10px 10px 50px 10px;
+    font-size: 12px;
+  }
+
+  .switchSimMobi .title {
+    font-family: "Montserrat-SemiBold";
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .switchSimInfo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personalInfoContainer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .personalInfo {
+    padding-bottom: 10px;
+  }
+
+  .currentPlan div {
+    padding-right: 40px;
+    padding-top: 5px;
+  }
+
+  table.switchSimFee {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  table.switchSimFee tr th,
+  table.switchSimFee tr td {
+    border: 1px solid #707070;
+    text-align: left;
+    padding: 10px 5px;
+  }
+
+  table.prePaidPlan {
+    margin-bottom: 40px;
+  }
+
+  .result {
+    margin-top: 40px;
+  }
+
+  table.prePaidPlan tr td,
+  table.postPaidPlan tr td,
+  table.prePaidPlan tr th,
+  table.postPaidPlan tr th,
+  table.choosePlanResult tr td,
+  table.choosePlanResult tr th {
+    padding: 5px;
+  }
+
+  .buttonContainer .submitButton {
+    font-size: 15px;
+    padding: 10px 40px;
   }
 
   /* pagination */
@@ -615,9 +717,43 @@
     flex-direction: row;
     -webkit-flex-direction: row;
   }
+
   .numberDetail {
     margin-right: 20px;
+    height: 100%;
   }
+  table.numberDetail td {
+    padding: 15px 20px;
+    line-height: 2;
+  }
+
+  div.registerInfo {
+    margin-bottom: 12px;
+  }
+
+  .document {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .noteText {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .uploadContainer img {
+    width: 22px;
+  }
+
+  div.uploadPhoto {
+    padding: 10px 5px;
+    width: 42px;
+    height: 40px;
+  }
+
+  .uploadContainer img {
+    width: 22px;
+  }
+
   .simNumber .title,
   .simOrder .title,
   .numberRegister .title,
@@ -630,6 +766,7 @@
   .orderForm .text {
     font-size: 17px;
   }
+
   .buttonContainer .orderButton,
   .topUpButton {
     font-size: 20px;
@@ -643,6 +780,11 @@
   div.delivery {
     padding: 20px;
   }
+
+  .checkBox div {
+    padding: 10px;
+  }
+
   .buttonContainer {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -652,7 +794,7 @@
   }
   .numberDetail td,
   .numberRegister {
-    padding: 10px 20px;
+    padding: 15px 20px;
   }
   .owl-carousel .owl-prev {
     top: 40%;
@@ -838,6 +980,7 @@
   .switchSimMobi {
     padding: 25px 200px 70px 200px;
   }
+
   .switchSimMobi .title {
     font-family: "Montserrat-SemiBold";
     font-size: 17px;
@@ -845,21 +988,66 @@
   }
 
   .switchSimInfo {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .personalInfoContainer,
+  .numberRegister {
+    width: 47%;
   }
   .personalInfoContainer {
+    padding-top: 15px;
+  }
+
+  .personalInfo {
+    padding-bottom: 12px;
+  }
+
+  .currentPlan div {
+    padding-right: 40px;
     padding-top: 10px;
   }
 
   table.switchSimFee {
-    padding: 25px;
     margin-top: 70px;
     margin-bottom: 70px;
   }
 
-  table.prePaid {
-    padding-bottom: 70px;
+  table.switchSimFee tr th,
+  table.switchSimFee tr td {
+    border: 1px solid #707070;
+    text-align: left;
+    padding: 30px 25px;
+  }
+
+  table.prePaidPlan {
+    margin-bottom: 70px;
+  }
+
+  .result {
+    margin-top: 70px;
+  }
+
+  table.prePaidPlan tr td,
+  table.postPaidPlan tr td,
+  table.prePaidPlan tr th,
+  table.postPaidPlan tr th,
+  table.choosePlanResult tr td,
+  table.choosePlanResult tr th {
+    padding: 20px 15px;
+  }
+
+  .buttonContainer .submitButton {
+    font-size: 20px;
+    padding: 15px 130px;
+  }
+
+  .switchSimNote {
+    line-height: 2;
   }
 
   /* pagination */
