@@ -17,6 +17,7 @@ $cur_url = home_url($wp->request)
     <link href="<?= base_url() ?>/assets/styles/napTien.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/simSoDep.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/styles/dangKy4g.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url() ?>/assets/styles/tintuc.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/styles/semantic/semantic.min.css">
     <link href="<?= base_url() ?>/assets/fonts/fonts.css" rel='stylesheet'>
     <link rel="shortcut icon" href="<?=base_url()?>/assets/images/icon.png">
@@ -77,7 +78,7 @@ $cur_url = home_url($wp->request)
         <button class="hamburgerDropdown <?= ($cur_url == get_site_url('', 'dang-ky-4g')) ? 'simSoDep' : '' ?>"
                 onclick="location.href = '<?= get_site_url('', 'dang-ky-4g') ?>'">ĐĂNG KÝ 4G ONLINE</button>
         <button class="hamburgerDropdown">CHUYỂN SANG MOBI</button>
-        <button class="hamburgerDropdown lienHe">LIÊN HỆ</button>
+        <button class="hamburgerDropdown">TIN TỨC</button>
     </div>
     <div class=headerRight>
         <div class="headerUpper">
@@ -102,7 +103,7 @@ $cur_url = home_url($wp->request)
             </button>
             <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton">CHUYỂN SANG MOBI
             </button>
-            <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">LIÊN HỆ
+            <button class="navigationButton threeDimensionBlueButton threeDimensionShortWhiteButton lienHe">TIN TỨC
             </button>
         </div>
         <div class="hamburger">

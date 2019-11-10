@@ -231,7 +231,7 @@ function makeDataQueryCost($cost){
 }
 
 
-function getList($type = 'loaiso'){
+function getList($type = 'loaiso', $id = 0){
     $arr = [];
     switch ($type){
         case 'loaiso': {
@@ -252,16 +252,29 @@ function getList($type = 'loaiso'){
             ];
         } break;
         case 'goicuoc': {
-            $arr = [
-                'CK150' => 'CK150: 150,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc.',
-                'CK250' => 'CK250: 250,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc. Được miễn phí 1 gói M50(450MB tốc độ cao/chu kỳ), vượt dung lượng sẽ tính cước phát sinh 25đ/50kB.',
-                'M69' => 'M69: (69.000đ/tháng – 1000 phút nội mạng)',
-                'MF99' => 'MF99: (99.000đ/tháng – miễn cước thuê bao tháng; 1000 phút nội mạng; 40 phút ngoại mạng, 5GB tốc độ cao)',
-                'MF149' => 'MF149: (149.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 80 phút ngoại mạng, 8GB tốc độ cao)',
-                'MF199' => 'MF199: (199.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 160 phút ngoại mạng, 9GB tốc độ cao)',
-                'MF299' => 'MF299: (299.000đ/tháng – miễn cước thuê bao tháng; 2000 phút nội mạng; 300 phút ngoại mạng, 12GB tốc độ cao)',
-                'MF399' => 'MF399: (399.000đ/tháng – miễn cước thuê bao tháng; 3000 phút nội mạng; 400 phút ngoại mạng, 17GB tốc độ cao)',
-            ];
+            $terms = wp_get_post_terms($id, 'types');
+            $a = 0;
+            foreach ($terms as $term){
+                if (strpos($term->slug, 'cam-ket') !== false)
+                    $a = 1;
+            }
+            if ($a == 1){
+                $arr = [
+                    'CK150' => 'CK150: 150,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc.',
+                    'CK250' => 'CK250: 250,000 Vnđ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: 700 phút nội mạng Mobifone, cố định VNPT toàn quốc. Được miễn phí 1 gói M50(450MB tốc độ cao/chu kỳ), vượt dung lượng sẽ tính cước phát sinh 25đ/50kB.',
+                ];
+            }
+            else{
+                $arr = [
+                    'M69' => 'M69: (69.000đ/tháng – 1000 phút nội mạng)',
+                    'MF99' => 'MF99: (99.000đ/tháng – miễn cước thuê bao tháng; 1000 phút nội mạng; 40 phút ngoại mạng, 5GB tốc độ cao)',
+                    'MF149' => 'MF149: (149.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 80 phút ngoại mạng, 8GB tốc độ cao)',
+                    'MF199' => 'MF199: (199.000đ/tháng – miễn cước thuê bao tháng; 1500 phút nội mạng; 160 phút ngoại mạng, 9GB tốc độ cao)',
+                    'MF299' => 'MF299: (299.000đ/tháng – miễn cước thuê bao tháng; 2000 phút nội mạng; 300 phút ngoại mạng, 12GB tốc độ cao)',
+                    'MF399' => 'MF399: (399.000đ/tháng – miễn cước thuê bao tháng; 3000 phút nội mạng; 400 phút ngoại mạng, 17GB tốc độ cao)',
+                ];
+            }
+
         } break;
     }
 
@@ -285,19 +298,22 @@ function buySim()
     $data['address_delivery'] = $_POST['address_delivery'];
     $data['photo_1'] = $_POST['photo_1'];
     $data['photo_2'] = $_POST['photo_2'];
+    $data['photo_3'] = $_POST['photo_3'];
+    $data['photo_4'] = $_POST['photo_4'];
+    $data['photo_5'] = $_POST['photo_5'];
+    $data['photo_6'] = $_POST['photo_6'];
+    $data['photo_7'] = $_POST['photo_7'];
+    $data['photo_8'] = $_POST['photo_8'];
     $data['package'] = $_POST['package'];
 
     $data['thanh_toan'] = ($data['thanh_toan'] == "cod") ? "Thanh toán khi nhận sim (COD) Phí ship từ 15 - 25k tùy địa điểm giao sim." : "Thanh toán chuyển khoản (Internet banking) Miễn phí ship và phí chuyển khoản.";
 
     $data['giao_sim'] = ($data['giao_sim'] == 'store') ? "Khách hàng đến trực tiếp cty lấy sim tại: 249 Minh Phụng, phường 2, Quận 11, TP.HCM." : "Giao tận nơi tại " . $data['address_delivery'];
 
-    $data['path_1'] = '';
-    $data['path_2'] = '';
-    if ($data['photo_1']) {
-        $data['path_1'] = processDataUrl($data['photo_1'], 'photo_1');
-    }
-    if ($data['photo_2']) {
-        $data['path_2'] = processDataUrl($data['photo_2'], 'photo_2');
+    for ($i = 1; $i <= 8; $i++){
+        $data['path_' . $i] = '';
+        if ($data['photo_' . $i])
+            $data['path_' . $i] = processDataUrl($data['photo_' . $i], 'photo_' . $i);
     }
 
     $template_mail = mail_buy($data);

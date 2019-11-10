@@ -17,7 +17,6 @@ get_header();
             <div class="title">THÔNG TIN CHI TIẾT SIM SỐ</div>
             <div class="number"><?=get_field('number')?></div>
         </div>
-
         <div class="simDetail">
             <table class="numberDetail">
                 <col width="30%">
@@ -50,7 +49,7 @@ get_header();
                 <tr>
                     <td>Gói cước khác (không bắt buộc)</td>
                     <td>
-                        <?php foreach (getList('goicuoc') as $key => $value) : ?>
+                        <?php foreach (getList('goicuoc',get_the_ID()) as $key => $value) : ?>
                             <label for="<?=$key?>">
                                 <input type="radio" value="<?=$key?>" id="<?=$key?>" name="package" <?=('CK150' == $key)? 'checked' : '' ?>>
                                 <?= $value?>
@@ -79,39 +78,100 @@ get_header();
                     <input type="text" class="address" name="address">
                 </div>
 
-                <div class="registerInfo">
-                    <label for="id">Số Chứng minh thư / Thẻ căn cước (áp dụng cho khách hàng tại Hồ Chí
-                        Minh.</label> <br>
-                    <div class="idUpload">
+                <div class="special">
+                    <div>Số Chứng minh thư / Thẻ căn cước của bạn</div>
+                    <div class="uploadContainer">
                         <input type="text" class="id" name="cmnd">
-                        <div>
-                            <div class="idUploadRequest">
-                                <img src="<?= base_url() ?>/assets/images/icon_upload.png" onclick="$('#file_upload').click()">
-                                <label for="file_upload">
-                                    
-                                    <input type="file" id="file_upload" style="display: none" onchange="previewImage(this)"  accept="image/*">
-                                </label>
-                                <div class="text">
-                                    Upload hình ảnh <br> CMND/ Thẻ căn cước
+                        <div class="uploadContainer">
+                            <div>
+                                <div class="uploadRequest">
+                                    <img src="<?= base_url() ?>/assets/images/icon_upload.png" onclick="$('#file_upload').click()">
+                                    <div>
+                                        <label for="file_upload">
+                                            <input type="file" id="file_upload" style="display: none" onchange="previewImage(this, '1|2')"  accept="image/*">
+                                        </label>
+                                    </div>
+                                    <div class="text">
+                                        Upload hình ảnh <br> CMND/ Thẻ căn cước
+                                    </div>
                                 </div>
                             </div>
-                            <div class="idUploadPhoto">
-                                <img src="" id="photo_1">
+                            <div class="uploadPhoto">
+                                <img src id="photo_1">mặt trước
                             </div>
-                            <div class="idUploadPhoto">
-                                <img src="" id="photo_2">
+                            <div class="uploadPhoto">
+                                <img src id="photo_2">mặt sau
                             </div>
-
                         </div>
+
                     </div>
 
                 </div>
+                <div class="document uploadContainer">
+                    <div class="requestText">Chụp ảnh chân dung của bạn</div>
+                    <div class="uploadRequest">
+                        <div>
+                            <label for="upload_avatar">
+                                <input type="file" class="hidden" id="upload_avatar" style="display: none" onchange="previewImage(this, '3')"  accept="image/*">
+                                <img src="<?= base_url() ?>/assets/images/icon_upload.png">
+                            </label>
+                            <div class="text">Upload hình ảnh <br>
+                                chân dung của bạn
+                            </div>
+                        </div>
+                        <div class="uploadPhoto">
+                            <img src id="photo_3">
+                        </div>
+                    </div>
+                </div>
+                <div class="document uploadContainer">
+                    <div class="requestText">Chụp chữ ký của bạn</div>
+                    <div class="uploadRequest">
+                        <div>
+                            <label for="upload_sign">
+                                <input type="file" class="hidden" id="upload_sign" style="display: none" onchange="previewImage(this, '4')"  accept="image/*">
+                                <img src="<?= base_url() ?>/assets/images/icon_upload.png"">
+                            </label>
+                            <div class="text">Upload hình ảnh <br>
+                                chữ ký của bạn
+                            </div>
+                        </div>
+                        <div class="uploadPhoto">
+                            <img src id="photo_4">
+                        </div>
+                    </div>
+                </div>
 
                 <div>
-                    Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm: <br>
-                    1. Hộ khẩu/ tạm trú.<br>
-                    2. Chụp mặt trước, sau của CMND/ Thẻ căn cước.<br>
-                    3. Chụp lại chữ ký.<br>
+                    <div class="noteText">Nếu nơi cấp CMND/ Thẻ căn cước không ở Hồ Chí Minh, vui lòng cung cấp thêm thông
+                        tin sau:
+                    </div>
+                    <div>Hộ khẩu/ tạm trú của bạn</div>
+                    <div class="uploadContainer">
+                        <div class="flexLeft">
+                            <label for="upload_hokhau">
+                                <input type="file" class="hidden" id="upload_hokhau" style="display: none" onchange="previewImage(this, '5|6|7|8')"  accept="image/*">
+                                <img src="<?= base_url() ?>/assets/images/icon_upload.png"">
+                            </label>
+                            <div class="text">Upload hình ảnh hộ khẩu/<br> tạm trú
+                            </div>
+                        </div>
+
+                        <div class="flexRight">
+                            <div class="uploadPhoto">
+                                <img src id="photo_5">mặt bìa trước
+                            </div>
+                            <div class="uploadPhoto">
+                                <img src id="photo_6">mặt 1
+                            </div>
+                            <div class="uploadPhoto">
+                                <img src id="photo_7">mặt 2
+                            </div>
+                            <div class="uploadPhoto">
+                                <img src id="photo_8">mặt có tên của bạn
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -164,7 +224,7 @@ get_header();
         <div class="buttonContainer">
             <button class="orderButton threeDimensionRedButton" type="button" onclick="submitData(this)">MUA NGAY
             </button>
-            <img class="img_loading" src="<?=base_url()?>/assets/images/loading.gif" width="150" alt="" style="display: none">
+            <img class="img_loading" src="<?=base_url()?>/assets/images/loading.gif" alt="" style="display: none;position: absolute; width: 15%;">
         </div>
 
         <div class="mapContainer">
