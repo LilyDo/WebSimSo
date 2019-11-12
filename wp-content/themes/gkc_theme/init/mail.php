@@ -14,8 +14,14 @@ function mail_buy($data)
 	<p><b>Hình thức thanh toán</b>: ' . $data["thanh_toan"] . '</p>
 	<p><b>Hình thức giao sim</b>: ' . $data["giao_sim"] . '</p>
 	<p><b>Gói cước đăng ký</b>: ' . $data["package"] . '</p>
-	<p><b>Hình ảnh 1</b>: <a href="' . $data["path_1"] . '" target="_blank">Open</a></p>
-	<a><b>Hình ảnh 2</b>: <a href="' . $data["path_2"] . '" target="_blank">Open</a></p>';
+	<p><b>Mặt trước CMND</b>: <a href="' . $data["path_1"] . '" target="_blank">Open</a></p>
+	<p><b>Mặt sau CMND</b>: <a href="' . $data["path_2"] . '" target="_blank">Open</a></p>
+	<p><b>Ảnh chân dung</b>: <a href="' . $data["path_3"] . '" target="_blank">Open</a></p>
+	<p><b>Ảnh chữ ký</b>: <a href="' . $data["path_4"] . '" target="_blank">Open</a></p>
+	<p><b>Mặt bìa trước hộ khẩu</b>: <a href="' . $data["path_5"] . '" target="_blank">Open</a></p>
+	<p><b>Mặt bìa 1 hộ khẩu</b>: <a href="' . $data["path_6"] . '" target="_blank">Open</a></p>
+	<p><b>Mặt bìa 2 hộ khẩu</b>: <a href="' . $data["path_7"] . '" target="_blank">Open</a></p>
+	<p><b>Mặt hộ khẩu có tên bạn</b>: <a href="' . $data["path_8"] . '" target="_blank">Open</a></p>';
 
 	return $content_mail;
 }

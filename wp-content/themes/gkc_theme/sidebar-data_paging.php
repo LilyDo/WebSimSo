@@ -49,8 +49,11 @@
         ];
     }
     if (isset($_GET['so']) && $_GET['so'] != ''){
-        $arr = explode('*', $_GET['so']);
-        $str = '^' . $dauso . str_replace('*', '.*', $_GET['so']) . "$";
+        $so = $_GET['so'];
+        $index = strpos( $_GET['so'], '*');
+        if ($index === false)
+            $so = '*' . $so;
+        $str = '^' . $dauso . str_replace('*', '.*', $so) . "$";
         $meta_query[] = [
             'key' => 'number',
             'value' => $str,

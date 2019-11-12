@@ -107,14 +107,22 @@
         return str.join("&");
     }
 
-    function previewImage(element) {
+    function previewImage(element, tar) {
         if (element.files && element.files[0]) {
-            let previewElement = '#photo_1';
-            if ($(previewElement).attr('src') != '')
-                previewElement = '#photo_2';
+            let num = tar.split('|');
+
+            let select = '';
+            $.each(num, function (i, el) {
+                let ele = '#photo_' + el;
+                if ($(ele).attr('src') === ""){
+                    select = ele;
+                    return false;
+                }
+            });
+            // console.log(select);
             let reader = new FileReader();
             reader.onload = function (e) {
-                $(previewElement).attr('src', e.target.result);
+                $(select).attr('src', e.target.result);
             };
             reader.readAsDataURL(element.files[0]);
         }
@@ -137,17 +145,14 @@
             alert('Thiếu mục '+ getTextRequired('address_delivery') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
             return;
         }
-        let photo_1 = $('#photo_1').attr('src');
-        let photo_2 = $('#photo_2').attr('src');
-        if (!photo_1){
-            alert('Thiếu mục '+ getTextRequired('photo_1') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
-            return;
+        for (let i = 1; i <= 8; i++){
+            let photo = $('#photo_' + i).attr('src');
+            if (!photo){
+                alert('Thiếu mục '+ getTextRequired('photo_' + i) +'| MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
+                return;
+            }
+            data.push({name: 'photo_' + i, value: photo});
         }
-        if (!photo_2){
-            alert('Thiếu mục '+ getTextRequired('photo_2') +' MobiFone không thể đăng ký chính chủ được cho Quý khách. Vui lòng bổ sung thông tin. Xin trân trọng cám ơn.');
-            return;
-        }
-        data.push({name: 'photo_1', value: photo_1}, {name: 'photo_2', value: photo_2});
         data.unshift({name: 'action', value: 'buySim'});
         $(element).prop('disabled', true);
         $('.img_loading').css('display', 'block');
@@ -217,11 +222,11 @@
 
     function locationRegister4G(str){
         // Safari 3.0+ "[object HTMLElementConstructor]"
-        var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-        if (isSafari == true)
-            location.href = 'sms:909&' + str;
-        else
-            location.href = 'iMessage://909?' + str;
+        // var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+        // if (isSafari == true)
+        //     location.href = 'iMessage://909?' + str;
+        // else
+        location.href = 'sms:909&' + str;
     }
 
     function getTextRequired(text){
@@ -233,6 +238,12 @@
             case 'cmnd': response = 'CMND'; break;
             case 'photo_1': response = 'hình mặt trước CMND'; break;
             case 'photo_2': response = 'hình mặt sau CMND'; break;
+            case 'photo_3': response = 'ảnh chân dung'; break;
+            case 'photo_4': response = 'ảnh chữ ký'; break;
+            case 'photo_5': response = 'mặt bìa trước hô khẩu'; break;
+            case 'photo_6': response = 'mặt 1 hô khẩu'; break;
+            case 'photo_7': response = 'mặt 2 hô khẩu'; break;
+            case 'photo_8': response = 'mặt hô khẩu có tên của bạn'; break;
             case 'address_delivery': response = 'địa chỉ giao hàng'; break;
         }
 

@@ -1,0 +1,77 @@
+.currentPlan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.switchSimFee tr th,
+table.switchSimFee tr td {
+  border: 1px solid #707070;
+  text-align: left;
+}
+table.switchSimFee tr th {
+  width: 40%;
+}
+
+.switchSimFee span {
+  font-family: "Montserrat-SemiBold";
+}
+
+table.prePaidPlan,
+table.postPaidPlan {
+  color: black;
+}
+
+table.choosePlanResult tr th {
+  color: black;
+}
+
+table tr.planchosen {
+  color: black;
+}
+
+.switchText,
+.totalText {
+  text-align: right;
+}
+
+table th {
+  font-family: "Montserrat-SemiBold";
+}
+
+tr.bluerow {
+  background-color: #198fef;
+  color: white;
+  font-family: "Montserrat-SemiBold";
+}
+
+td.PackageContent {
+  white-space: pre-line;
+  width: 40%;
+  text-align: left;
+}
+table thead tbody th tr td,
+table thead tbody th tr td {
+  width: 15%;
+  border-bottom: 1px solid #0081b5;
+  /* padding: 20px; */
+}
+
+tr td {
+  border-bottom: 1px solid #0081b5;
+  border-top: 1px solid #0081b5;
+}
+
+.switchSimNote {
+  white-space: pre-line;
+}
+
+.switchSimNote span {
+  font-family: "Montserrat-SemiBold";
+}
