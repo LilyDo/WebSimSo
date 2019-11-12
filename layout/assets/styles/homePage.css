@@ -434,13 +434,15 @@ a[href^="tel"] {
 }
 .simTableHead th div {
   height: 58px;
-  min-width: 100px;
-  width: auto;
+  padding: 5px;
+  min-width: 85px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(#0081b5, #329ac3);
 }
+
 .simTableHead .boxShadowTopBottomLeft {
   -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75),
     0 5px 5px -5px rgba(0, 0, 0, 0.75), -5px 0 5px -5px rgba(0, 0, 0, 0.75);
@@ -469,6 +471,10 @@ a[href^="tel"] {
   border-bottom-right-radius: 100px;
 }
 
+.fixed-left-body {
+  text-align: center;
+}
+
 /* body */
 
 .dataContent {
@@ -476,37 +482,10 @@ a[href^="tel"] {
   overflow-y: visible;
 }
 
-.simTableBody .freezedHeaderColumn {
-  background-color: #0081b5;
-  color: white !important;
-}
-
-.freezedHeaderColumn {
-  padding: 0 !important;
-  margin: 0 !important;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.freezedBodyColumn {
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .simTableBody tr div {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.invisibleTD {
-  width: 100px;
-  display: block;
 }
 
 .simTable thead tr th {
@@ -516,10 +495,10 @@ a[href^="tel"] {
 
 .simTable tbody tr td div {
   color: #677897;
-  padding: 5px 10px;
+  padding: 5px;
 }
 
-.simTable tbody tr {
+.simTable tbody tr td {
   border-bottom: 1px solid #0081b5;
 }
 
@@ -534,7 +513,7 @@ a[href^="tel"] {
 }
 
 .simTable .cart {
-  margin-right: 10px;
+  margin-right: 5px;
   display: flex;
   display: -webkit-flex;
   align-items: center;

@@ -126,20 +126,49 @@
     padding-left: 0 !important;
   }
   /* sim table */
-  .freezedHeaderColumn {
-    width: 100px;
+
+  div.dataContent {
+    overflow-x: scroll;
+    margin-right: 135px;
+    margin-left: 90px;
   }
-  .freezedHeaderColumn,
-  .freezedBodyColumn {
+
+  table.simTable tr td {
+    text-align: center;
+  }
+
+  .simTable th td {
+    margin: 0;
+    border: 3px solid grey;
+    border-top-width: 0px;
+    white-space: nowrap;
+  }
+
+  .fixed-left-header,
+  .fixed-left-body {
     position: absolute;
+    width: 90px !important;
+    left: 0;
+    top: auto;
+    border-right: 0px none black;
   }
-  .freezedBodyColumn div {
+
+  .fixed-right-header,
+  .fixed-right-body {
+    position: absolute;
+    width: 135px;
+    right: 0;
+    top: auto;
+    border-right: 0px none black;
+  }
+
+  .fixed-left-body div {
     background-color: white;
     color: #0081b5 !important;
   }
+
   .simTableBody tr div {
     height: 40px;
-    min-width: 100px;
     width: max-content;
   }
   .simTable .cart {
@@ -652,17 +681,7 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  .invisibleTD {
-    display: none;
-  }
-  .freezedHeaderColumn {
-    width: auto;
-  }
-  .freezedHeaderColumn,
-  .freezedBodyColumn {
-    position: initial;
-    display: table-cell;
-  }
+
   .simTable .cart {
     padding: 10px 20px;
   }
